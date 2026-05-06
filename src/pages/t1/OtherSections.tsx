@@ -69,13 +69,13 @@ export const CertificatesSection = () => {
       <div className="absolute inset-0 pointer-events-none">
         <video
           autoPlay muted loop playsInline preload="auto"
-          className="w-full h-full object-cover opacity-[0.35]"
+          className="w-full h-full object-cover"
           style={{ willChange: "transform" }}
           src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/documentation-video.mp4"
           disablePictureInPicture
           disableRemotePlayback
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-[#0a0a0a]/85 to-[#0a0a0a]/90" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
