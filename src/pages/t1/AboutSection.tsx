@@ -2,26 +2,34 @@ import { useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 import { IMG_PIPE, STATS, useVisible } from "./data";
 
-const useLoopVideo = () => {
+const useLoopVideo = (loopBeforeEnd: number = 0.25) => {
   const ref = useRef<HTMLVideoElement>(null);
   useEffect(() => {
     const v = ref.current;
     if (!v) return;
-    v.loop = true;
+    v.loop = false;
     v.muted = true;
     v.playsInline = true;
     const tryPlay = () => { v.play().catch(() => {}); };
-    const onEnded = () => { v.currentTime = 0; v.play().catch(() => {}); };
+    const restart = () => { try { v.currentTime = 0; } catch (e) { void e; } v.play().catch(() => {}); };
+    const onTimeUpdate = () => {
+      if (v.duration && isFinite(v.duration) && v.duration - v.currentTime < loopBeforeEnd) restart();
+    };
+    const onPause = () => { if (!v.ended && document.visibilityState === "visible") v.play().catch(() => {}); };
     v.addEventListener("loadedmetadata", tryPlay);
     v.addEventListener("canplay", tryPlay);
-    v.addEventListener("ended", onEnded);
+    v.addEventListener("ended", restart);
+    v.addEventListener("timeupdate", onTimeUpdate);
+    v.addEventListener("pause", onPause);
     tryPlay();
     return () => {
       v.removeEventListener("loadedmetadata", tryPlay);
       v.removeEventListener("canplay", tryPlay);
-      v.removeEventListener("ended", onEnded);
+      v.removeEventListener("ended", restart);
+      v.removeEventListener("timeupdate", onTimeUpdate);
+      v.removeEventListener("pause", onPause);
     };
-  }, []);
+  }, [loopBeforeEnd]);
   return ref;
 };
 
@@ -47,7 +55,7 @@ export const AboutSection = () => {
       {/* Фоновое видео */}
       <video
         ref={videoRef}
-        autoPlay muted loop playsInline preload="auto"
+        autoPlay muted playsInline preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
         style={{ willChange: "transform" }}
         src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/about-company-harbor-video.mp4?v=2"
