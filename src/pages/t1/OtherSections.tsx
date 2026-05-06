@@ -128,24 +128,6 @@ export const CertificatesSection = () => {
           ))}
         </div>
 
-        {/* CTA полоса */}
-        <div className={`mt-10 rounded-2xl overflow-hidden ${certVis.visible ? "animate-fadeInUp delay-700" : "opacity-0"}`}>
-          <div className="bg-gray-950 px-8 sm:px-12 py-8 flex flex-col sm:flex-row items-center justify-between gap-5">
-            <div>
-              <p className="t-h3 text-white mb-1">Нужны копии документов?</p>
-              <p className="t-body text-gray-400 text-[14px]">Направим полный пакет по запросу в течение 1 рабочего дня</p>
-            </div>
-            <a
-              href="#contacts"
-              className="btn-primary text-white px-8 py-3.5 font-bold uppercase tracking-widest text-[12px] hover:opacity-90 transition-opacity whitespace-nowrap flex items-center gap-2.5 group flex-shrink-0"
-              style={{ background: GRAD }}
-            >
-              Запросить документы
-              <Icon name="ArrowRight" size={13} className="group-hover:translate-x-1 transition-transform duration-300" />
-            </a>
-          </div>
-        </div>
-
       </div>
     </section>
   );
