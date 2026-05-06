@@ -61,9 +61,9 @@ const SiteHeader = () => {
                   <span className="text-[11px] text-gray-400 group-hover:text-orange-400 font-medium transition-colors duration-300 whitespace-nowrap">+7 812 642 67 42</span>
                 </div>
               </a>
-              <a href="mailto:teplofabrika@mail.ru" className="flex items-center gap-1.5 group">
+              <a href="mailto:t1izol@mail.ru" className="flex items-center gap-1.5 group">
                 <Icon name="Mail" size={13} className="text-orange-500/70 group-hover:text-orange-400 flex-shrink-0 transition-colors duration-300" />
-                <span className="text-[11px] text-gray-400 group-hover:text-orange-400 font-medium transition-colors duration-300 leading-none whitespace-nowrap">teplofabrika@mail.ru</span>
+                <span className="text-[11px] text-gray-400 group-hover:text-orange-400 font-medium transition-colors duration-300 leading-none whitespace-nowrap">t1izol@mail.ru</span>
               </a>
             </div>
             <a href="#contacts"
@@ -80,9 +80,9 @@ const SiteHeader = () => {
                 <Icon name="Phone" size={14} className="text-orange-500" />
                 <span className="text-gray-400 text-xs group-hover:text-orange-400 transition-colors duration-300">+7 812 642 67 42</span>
               </a>
-              <a href="mailto:teplofabrika@mail.ru" className="flex items-center gap-1.5 group">
+              <a href="mailto:t1izol@mail.ru" className="flex items-center gap-1.5 group">
                 <Icon name="Mail" size={14} className="text-orange-500" />
-                <span className="text-gray-400 text-xs group-hover:text-orange-400 transition-colors duration-300">teplofabrika@mail.ru</span>
+                <span className="text-gray-400 text-xs group-hover:text-orange-400 transition-colors duration-300">t1izol@mail.ru</span>
               </a>
             </div>
             <a href="#contacts"
@@ -117,9 +117,9 @@ const SiteHeader = () => {
               <Icon name="Phone" size={12} className="text-orange-500/60 flex-shrink-0" />
               +7 812 642 67 42
             </a>
-            <a href="mailto:teplofabrika@mail.ru" className="flex items-center gap-2 text-gray-400 text-xs">
+            <a href="mailto:t1izol@mail.ru" className="flex items-center gap-2 text-gray-400 text-xs">
               <Icon name="Mail" size={12} className="text-orange-500/60 flex-shrink-0" />
-              teplofabrika@mail.ru
+              t1izol@mail.ru
             </a>
           </div>
           <a href="#contacts" className="block mt-4 text-white text-center py-3 font-black text-xs uppercase tracking-widest"

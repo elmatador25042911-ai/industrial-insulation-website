@@ -258,9 +258,9 @@ export const SiteFooter = () => (
           <p className="text-gray-600 text-[13px] leading-relaxed mb-5">
             Промышленная теплоизоляция. Поставка и монтаж изоляции трубопроводов, оборудования и судов. По всей России.
           </p>
-          <a href="mailto:teplofabrika@mail.ru"
+          <a href="mailto:t1izol@mail.ru"
             className="text-gray-400 hover:text-orange-400 transition-colors text-[13px] font-medium">
-            teplofabrika@mail.ru
+            t1izol@mail.ru
           </a>
         </div>
 
