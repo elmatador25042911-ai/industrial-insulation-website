@@ -1,5 +1,28 @@
-
+import { useEffect, useRef } from "react";
 import { IMG_SHIP, IMG_BOILER, useVisible } from "./data";
+
+const useLoopVideo = () => {
+  const ref = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    const v = ref.current;
+    if (!v) return;
+    v.loop = true;
+    v.muted = true;
+    v.playsInline = true;
+    const tryPlay = () => { v.play().catch(() => {}); };
+    const onEnded = () => { v.currentTime = 0; v.play().catch(() => {}); };
+    v.addEventListener("loadedmetadata", tryPlay);
+    v.addEventListener("canplay", tryPlay);
+    v.addEventListener("ended", onEnded);
+    tryPlay();
+    return () => {
+      v.removeEventListener("loadedmetadata", tryPlay);
+      v.removeEventListener("canplay", tryPlay);
+      v.removeEventListener("ended", onEnded);
+    };
+  }, []);
+  return ref;
+};
 
 const SHIPYARD_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/shipyard-video.mp4";
 const PGS_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/industrial-pgs-section-video.mp4";
@@ -97,6 +120,8 @@ const CatalogCard = ({ name, sub, img, delay, visible }: {
 
 export const CatalogSection = () => {
   const catalogVis = useVisible(0.1);
+  const shipVideoRef = useLoopVideo();
+  const pgsVideoRef = useLoopVideo();
 
   return (
     <section id="catalog" className="bg-[#f4f0eb] overflow-hidden relative" ref={catalogVis.ref}>
@@ -119,6 +144,7 @@ export const CatalogSection = () => {
       {/* ── Судостроение ── */}
       <div className="relative min-h-[480px]">
         <video
+          ref={shipVideoRef}
           autoPlay muted loop playsInline preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ willChange: "transform" }}
@@ -151,15 +177,15 @@ export const CatalogSection = () => {
       {/* ── Промышленность и ПГС ── */}
       <div className="relative min-h-[480px]">
         <video
+          ref={pgsVideoRef}
           autoPlay muted loop playsInline preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ willChange: "transform" }}
           poster={IMG_BOILER}
+          src={PGS_VIDEO}
           disablePictureInPicture
           disableRemotePlayback
-        >
-          <source src={PGS_VIDEO} type="video/mp4" />
-        </video>
+        />
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/55 via-transparent to-[#0a0a0a]/65" />
 
