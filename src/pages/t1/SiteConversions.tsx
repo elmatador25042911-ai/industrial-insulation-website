@@ -3,19 +3,12 @@ import Icon from "@/components/ui/icon";
 import { LOGO_SYMBOL, IMG_SHIP, IMG_PIPE, IMG_BOILER, GRAD, NAV_LINKS, CONTACTS_INFO, useVisible } from "./data";
 
 const Logo = ({ className = "" }: { className?: string }) => (
-  <div className={`flex items-center gap-0 ${className}`}>
+  <div className={`flex items-center ${className}`}>
     <img
-      src={LOGO_SYMBOL}
-      alt=""
-      aria-hidden
-      className="object-contain flex-shrink-0 h-14 lg:h-[72px] w-auto -mr-1"
+      src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/e1571518-2651-4e86-8bc8-d46bcc148b11.jpeg"
+      alt="Т1 Изоляция"
+      className="object-contain flex-shrink-0 h-12 lg:h-14 w-auto"
     />
-    <span
-      className="text-white whitespace-nowrap leading-none uppercase text-xl lg:text-2xl"
-      style={{ fontFamily: "'Saira Semi Condensed', sans-serif", fontWeight: 800, letterSpacing: "0.04em" }}
-    >
-      Т1 ИЗОЛЯЦИЯ
-    </span>
   </div>
 );
 
