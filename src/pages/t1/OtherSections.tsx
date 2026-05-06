@@ -1,5 +1,5 @@
 import Icon from "@/components/ui/icon";
-import { IMG_BOILER, IMG_PIPE, IMG_SHIP, IMG_HERO, GRAD, INDUSTRIES, CERTIFICATES, PROCESS, useVisible } from "./data";
+import { IMG_BOILER, IMG_PIPE, IMG_SHIP, IMG_HERO, GRAD, INDUSTRIES, CERTIFICATES, PROCESS, useVisible, useLoopVideo } from "./data";
 
 /* ─── Industries ─────────────────────────────────────────────── */
 export const IndustriesSection = () => {
@@ -64,10 +64,12 @@ export const IndustriesSection = () => {
 /* ─── Certificates ───────────────────────────────────────────── */
 export const CertificatesSection = () => {
   const certVis = useVisible(0.1);
+  const certVideoRef = useLoopVideo();
   return (
     <section id="certificates" className="section-pad overflow-hidden relative bg-[#0a0a0a]" ref={certVis.ref}>
       <div className="absolute inset-0 pointer-events-none">
         <video
+          ref={certVideoRef}
           autoPlay muted loop playsInline preload="auto"
           className="w-full h-full object-cover bg-black"
           style={{ willChange: "transform", objectPosition: "center", transform: "scale(1)" }}

@@ -95,3 +95,27 @@ export function useVisible(threshold = 0.15) {
   }, [threshold]);
   return { ref, visible };
 }
+
+/* ─── Loop Video Hook ────────────────────────────── */
+export function useLoopVideo() {
+  const ref = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    const v = ref.current;
+    if (!v) return;
+    v.loop = true;
+    v.muted = true;
+    v.playsInline = true;
+    const tryPlay = () => { v.play().catch(() => {}); };
+    const onEnded = () => { v.currentTime = 0; v.play().catch(() => {}); };
+    v.addEventListener("loadedmetadata", tryPlay);
+    v.addEventListener("canplay", tryPlay);
+    v.addEventListener("ended", onEnded);
+    tryPlay();
+    return () => {
+      v.removeEventListener("loadedmetadata", tryPlay);
+      v.removeEventListener("canplay", tryPlay);
+      v.removeEventListener("ended", onEnded);
+    };
+  }, []);
+  return ref;
+}

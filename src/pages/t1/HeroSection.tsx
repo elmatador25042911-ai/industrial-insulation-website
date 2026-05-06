@@ -1,16 +1,18 @@
 import Icon from "@/components/ui/icon";
-import { IMG_HERO, GRAD, GRAD_H, useVisible } from "./data";
+import { IMG_HERO, GRAD, GRAD_H, useVisible, useLoopVideo } from "./data";
 
 const HERO_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/hero-video.mp4";
 
 export const HeroSection = () => {
   const heroVis = useVisible(0.1);
+  const heroVideoRef = useLoopVideo();
   return (
     <>
       <section className="relative min-h-screen flex items-center overflow-hidden" ref={heroVis.ref}>
         {/* Видео фон */}
         <div className="absolute inset-0">
           <video
+            ref={heroVideoRef}
             autoPlay muted loop playsInline preload="auto"
             className="w-full h-full object-cover"
             style={{ willChange: "transform" }}
