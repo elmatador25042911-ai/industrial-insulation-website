@@ -1,36 +1,4 @@
-import { useEffect, useRef } from "react";
-import { IMG_SHIP, IMG_BOILER, useVisible } from "./data";
-
-const useLoopVideo = (loopBeforeEnd: number = 0.25) => {
-  const ref = useRef<HTMLVideoElement>(null);
-  useEffect(() => {
-    const v = ref.current;
-    if (!v) return;
-    v.loop = false;
-    v.muted = true;
-    v.playsInline = true;
-    const tryPlay = () => { v.play().catch(() => {}); };
-    const restart = () => { try { v.currentTime = 0; } catch (e) { void e; } v.play().catch(() => {}); };
-    const onTimeUpdate = () => {
-      if (v.duration && isFinite(v.duration) && v.duration - v.currentTime < loopBeforeEnd) restart();
-    };
-    const onPause = () => { if (!v.ended && document.visibilityState === "visible") v.play().catch(() => {}); };
-    v.addEventListener("loadedmetadata", tryPlay);
-    v.addEventListener("canplay", tryPlay);
-    v.addEventListener("ended", restart);
-    v.addEventListener("timeupdate", onTimeUpdate);
-    v.addEventListener("pause", onPause);
-    tryPlay();
-    return () => {
-      v.removeEventListener("loadedmetadata", tryPlay);
-      v.removeEventListener("canplay", tryPlay);
-      v.removeEventListener("ended", restart);
-      v.removeEventListener("timeupdate", onTimeUpdate);
-      v.removeEventListener("pause", onPause);
-    };
-  }, [loopBeforeEnd]);
-  return ref;
-};
+import { IMG_SHIP, IMG_BOILER, useVisible, useLoopVideo } from "./data";
 
 const SHIPYARD_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/shipyard-video.mp4";
 const PGS_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/industrial-pgs-section-video.mp4?v=2";
@@ -153,7 +121,7 @@ export const CatalogSection = () => {
       <div className="relative min-h-[480px]">
         <video
           ref={shipVideoRef}
-          autoPlay muted playsInline preload="auto"
+          autoPlay muted loop playsInline preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ willChange: "transform" }}
           poster={IMG_SHIP}
@@ -186,7 +154,7 @@ export const CatalogSection = () => {
       <div className="relative min-h-[480px]">
         <video
           ref={pgsVideoRef}
-          autoPlay muted playsInline preload="auto"
+          autoPlay muted loop playsInline preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ willChange: "transform" }}
           poster={IMG_BOILER}
