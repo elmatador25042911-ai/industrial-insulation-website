@@ -69,8 +69,8 @@ export const CertificatesSection = () => {
       <div className="absolute inset-0 pointer-events-none">
         <video
           autoPlay muted loop playsInline preload="auto"
-          className="w-full h-full object-contain bg-black"
-          style={{ willChange: "transform" }}
+          className="w-full h-full object-cover bg-black"
+          style={{ willChange: "transform", objectPosition: "center", transform: "scale(1)" }}
           src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/documentation-video.mp4"
           disablePictureInPicture
           disableRemotePlayback
