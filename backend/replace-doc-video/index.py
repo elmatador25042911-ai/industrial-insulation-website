@@ -38,6 +38,10 @@ def handler(event, context):
         aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],
     )
     key = 'videos/documentation-video.mp4'
+    try:
+        s3.delete_object(Bucket='files', Key=key)
+    except Exception:
+        pass
     s3.put_object(
         Bucket='files',
         Key=key,
