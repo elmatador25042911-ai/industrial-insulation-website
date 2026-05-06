@@ -21,17 +21,18 @@ export const AboutSection = () => {
     <section id="about" className="py-32 lg:py-44 overflow-hidden relative" ref={aboutVis.ref}>
 
       {/* Фоновое видео */}
-      <video
-        ref={videoRef}
-        autoPlay muted loop playsInline preload="auto"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ willChange: "transform" }}
-        src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/about-company-harbor-video.mp4?v=2"
-        disablePictureInPicture
-        disableRemotePlayback
-      />
-      {/* Затемнение поверх видео */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 pointer-events-none">
+        <video
+          ref={videoRef}
+          autoPlay muted loop playsInline preload="auto"
+          className="w-full h-full object-cover"
+          style={{ willChange: "transform" }}
+          src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/about-company-harbor-video.mp4?v=3"
+          disablePictureInPicture
+          disableRemotePlayback
+        />
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
       {/* Фирменная полоска снизу */}
       <div className="absolute bottom-0 left-0 right-0 h-1"
         style={{ background: "linear-gradient(90deg, #e63012, #f97316, #fbbf24)" }} />

@@ -1,7 +1,7 @@
 import { IMG_SHIP, IMG_BOILER, useVisible, useLoopVideo } from "./data";
 
 const SHIPYARD_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/shipyard-video.mp4";
-const PGS_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/industrial-pgs-section-video.mp4?v=2";
+const PGS_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/industrial-pgs-section-video.mp4?v=3";
 
 const IMG_TUBES = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/3ddf0ad3-7940-400c-a688-3e907253b23d.jpg";
 const IMG_ROLLS = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/51e58607-a24b-44da-948e-737b95e9c9e0.jpg";
@@ -119,18 +119,20 @@ export const CatalogSection = () => {
 
       {/* ── Судостроение ── */}
       <div className="relative min-h-[480px]">
-        <video
-          ref={shipVideoRef}
-          autoPlay muted loop playsInline preload="auto"
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ willChange: "transform" }}
-          poster={IMG_SHIP}
-          src={SHIPYARD_VIDEO}
-          disablePictureInPicture
-          disableRemotePlayback
-        />
-        <div className="absolute inset-0 bg-black/15" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/45 via-transparent to-[#0a0a0a]/50" />
+        <div className="absolute inset-0 pointer-events-none">
+          <video
+            ref={shipVideoRef}
+            autoPlay muted loop playsInline preload="auto"
+            className="w-full h-full object-cover"
+            style={{ willChange: "transform" }}
+            poster={IMG_SHIP}
+            src={SHIPYARD_VIDEO}
+            disablePictureInPicture
+            disableRemotePlayback
+          />
+          <div className="absolute inset-0 bg-black/15" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/45 via-transparent to-[#0a0a0a]/50" />
+        </div>
 
         <div className="relative z-10 py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Подзаголовок */}
@@ -152,18 +154,20 @@ export const CatalogSection = () => {
 
       {/* ── Промышленность и ПГС ── */}
       <div className="relative min-h-[480px]">
-        <video
-          ref={pgsVideoRef}
-          autoPlay muted loop playsInline preload="auto"
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ willChange: "transform" }}
-          poster={IMG_BOILER}
-          src={PGS_VIDEO}
-          disablePictureInPicture
-          disableRemotePlayback
-        />
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/55 via-transparent to-[#0a0a0a]/65" />
+        <div className="absolute inset-0 pointer-events-none">
+          <video
+            ref={pgsVideoRef}
+            autoPlay muted loop playsInline preload="auto"
+            className="w-full h-full object-cover"
+            style={{ willChange: "transform" }}
+            poster={IMG_BOILER}
+            src={PGS_VIDEO}
+            disablePictureInPicture
+            disableRemotePlayback
+          />
+          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/55 via-transparent to-[#0a0a0a]/65" />
+        </div>
 
         <div className="relative z-10 py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`flex items-center gap-5 mb-8 transition-all duration-700 delay-200 ${catalogVis.visible ? "animate-fadeInUp" : "opacity-0"}`}>
