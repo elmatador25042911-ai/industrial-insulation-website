@@ -16,6 +16,7 @@ VIDEOS = {
     "pgs-section-video.mp4":     "videos/industrial-pgs-section-video.mp4",
     "hero-video.mp4":            "videos/hero-video.mp4",
     "shipyard-video.mp4":        "videos/shipyard-video.mp4",
+    "documentation-video.mp4":   "videos/documentation-video.mp4",
 }
 
 
