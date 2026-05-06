@@ -67,11 +67,13 @@ export const CertificatesSection = () => {
   return (
     <section id="certificates" className="section-pad overflow-hidden relative bg-[#0a0a0a]" ref={certVis.ref}>
       <div className="absolute inset-0 pointer-events-none">
-        <img
-          src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/97f3a39f-8642-429a-b959-c1bb797f681e.jpg"
-          alt=""
-          aria-hidden
-          className="w-full h-full object-cover opacity-[0.18]"
+        <video
+          autoPlay muted loop playsInline preload="auto"
+          className="w-full h-full object-cover opacity-[0.35]"
+          style={{ willChange: "transform" }}
+          src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/documentation-video.mp4"
+          disablePictureInPicture
+          disableRemotePlayback
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-[#0a0a0a]/85 to-[#0a0a0a]/90" />
       </div>
