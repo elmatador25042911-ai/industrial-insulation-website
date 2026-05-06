@@ -1,8 +1,10 @@
 import json
 import os
+import io
 import urllib.request
 import urllib.parse
 import boto3
+from boto3.s3.transfer import TransferConfig
 
 
 def handler(event, context):
@@ -20,15 +22,29 @@ def handler(event, context):
         }
 
     public_key = 'https://disk.yandex.ru/d/Zgbtf5Xmc47z2w'
-    api = 'https://cloud-api.yandex.net/v1/disk/public/resources/download?public_key=' + urllib.parse.quote(public_key)
+    file_path = '/documentation-video.mp4'
+    api = (
+        'https://cloud-api.yandex.net/v1/disk/public/resources/download'
+        '?public_key=' + urllib.parse.quote(public_key)
+        + '&path=' + urllib.parse.quote(file_path)
+    )
 
     req = urllib.request.Request(api, headers={'User-Agent': 'Mozilla/5.0'})
     with urllib.request.urlopen(req, timeout=20) as r:
         meta = json.loads(r.read().decode('utf-8'))
     download_url = meta['href']
 
+    # Узнаём размер
+    head_req = urllib.request.Request(download_url, method='HEAD', headers={'User-Agent': 'Mozilla/5.0'})
+    try:
+        with urllib.request.urlopen(head_req, timeout=20) as hr:
+            file_size = int(hr.headers.get('Content-Length') or 0)
+    except Exception:
+        file_size = 0
+
+    # Скачиваем (для небольших — целиком)
     dl_req = urllib.request.Request(download_url, headers={'User-Agent': 'Mozilla/5.0'})
-    with urllib.request.urlopen(dl_req, timeout=120) as r:
+    with urllib.request.urlopen(dl_req, timeout=600) as r:
         data = r.read()
 
     s3 = boto3.client(
@@ -40,8 +56,9 @@ def handler(event, context):
     key = 'videos/documentation-video.mp4'
     try:
         s3.delete_object(Bucket='files', Key=key)
-    except Exception:
+    except Exception as _e:
         pass
+
     s3.put_object(
         Bucket='files',
         Key=key,
@@ -58,5 +75,5 @@ def handler(event, context):
             'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json',
         },
-        'body': json.dumps({'ok': True, 'size': len(data), 'url': cdn_url}),
+        'body': json.dumps({'ok': True, 'size': len(data), 'head_size': file_size, 'url': cdn_url}),
     }
