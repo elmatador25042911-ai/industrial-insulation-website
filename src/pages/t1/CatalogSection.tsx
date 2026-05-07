@@ -162,7 +162,7 @@ export const CatalogSection = () => {
             loop
             playsInline
             preload="auto"
-            className="w-full h-full object-cover"
+            className="pgs-video w-full h-full object-cover"
             style={{ willChange: "transform" }}
             poster={IMG_BOILER}
           >

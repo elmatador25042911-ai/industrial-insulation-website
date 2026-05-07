@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Icon from "@/components/ui/icon";
 import { IMG_PIPE, STATS, useVisible, useLoopVideo } from "./data";
 
@@ -17,6 +18,27 @@ export const AboutSection = () => {
   const aboutVis = useVisible(0.1);
   const videoRef = useLoopVideo();
 
+  useEffect(() => {
+    const aboutVideo = document.querySelector<HTMLVideoElement>(".about-video");
+    const pgsVideo = document.querySelector<HTMLVideoElement>(".pgs-video");
+
+    [aboutVideo, pgsVideo].forEach((video) => {
+      if (!video) return;
+
+      video.loop = true;
+      video.muted = true;
+      video.autoplay = true;
+      video.playsInline = true;
+
+      const onEnded = () => {
+        video.currentTime = 0;
+        video.play().catch(() => {});
+      };
+      video.addEventListener("ended", onEnded);
+      video.play().catch(() => {});
+    });
+  }, []);
+
   return (
     <section id="about" className="py-32 lg:py-44 overflow-hidden relative" ref={aboutVis.ref}>
 
@@ -29,7 +51,7 @@ export const AboutSection = () => {
           loop
           playsInline
           preload="auto"
-          className="w-full h-full object-cover"
+          className="about-video w-full h-full object-cover"
           style={{ willChange: "transform" }}
         >
           <source src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/about-company-harbor-video.mp4?v=3" type="video/mp4" />
