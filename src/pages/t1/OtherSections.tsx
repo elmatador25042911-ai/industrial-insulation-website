@@ -110,7 +110,7 @@ export const CertificatesSection = () => {
 
               <div className="flex items-start justify-between gap-3 mb-4">
                 <div className="w-11 h-11 shrink-0 rounded-xl bg-white/[0.06] group-hover:bg-orange-500 flex items-center justify-center transition-all duration-300">
-                  <Icon name="Award" size={18} className="text-orange-400 group-hover:text-white transition-colors duration-300" />
+                  <Icon name={cert.icon} fallback="Award" size={18} className="text-orange-400 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
                 </div>
                 <span className="t-label text-gray-400 group-hover:text-orange-400 transition-colors bg-white/[0.05] group-hover:bg-orange-500/15 px-3 py-1.5 rounded-lg whitespace-nowrap">
                   {cert.category}
