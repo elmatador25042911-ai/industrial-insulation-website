@@ -1,6 +1,5 @@
-import { useEffect } from "react";
 import Icon from "@/components/ui/icon";
-import { IMG_PIPE, STATS, useVisible, useLoopVideo } from "./data";
+import { IMG_PIPE, STATS, useVisible } from "./data";
 
 const ABOUT_ADVANTAGES = [
   { icon: "SlidersHorizontal", text: "Подбор материалов под объект" },
@@ -16,28 +15,6 @@ const EXTRA_STATS = [
 
 export const AboutSection = () => {
   const aboutVis = useVisible(0.1);
-  const videoRef = useLoopVideo();
-
-  useEffect(() => {
-    const aboutVideo = document.querySelector<HTMLVideoElement>(".about-video");
-    const pgsVideo = document.querySelector<HTMLVideoElement>(".pgs-video");
-
-    [aboutVideo, pgsVideo].forEach((video) => {
-      if (!video) return;
-
-      video.loop = true;
-      video.muted = true;
-      video.autoplay = true;
-      video.playsInline = true;
-
-      const onEnded = () => {
-        video.currentTime = 0;
-        video.play().catch(() => {});
-      };
-      video.addEventListener("ended", onEnded);
-      video.play().catch(() => {});
-    });
-  }, []);
 
   return (
     <section id="about" className="py-32 lg:py-44 overflow-hidden relative" ref={aboutVis.ref}>
@@ -45,7 +22,6 @@ export const AboutSection = () => {
       {/* Фоновое видео */}
       <div className="absolute inset-0 pointer-events-none">
         <video
-          ref={videoRef}
           autoPlay
           muted
           loop

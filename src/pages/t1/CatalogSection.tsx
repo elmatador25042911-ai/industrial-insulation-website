@@ -97,7 +97,6 @@ const CatalogCard = ({ name, sub, img, delay, visible }: {
 export const CatalogSection = () => {
   const catalogVis = useVisible(0.1);
   const shipVideoRef = useLoopVideo();
-  const pgsVideoRef = useLoopVideo();
 
   return (
     <section id="catalog" className="bg-[#f4f0eb] overflow-hidden relative" ref={catalogVis.ref}>
@@ -156,7 +155,6 @@ export const CatalogSection = () => {
       <div className="relative min-h-[480px]">
         <div className="absolute inset-0 pointer-events-none">
           <video
-            ref={pgsVideoRef}
             autoPlay
             muted
             loop
