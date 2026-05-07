@@ -100,7 +100,7 @@ export const CertificatesSection = () => {
           {CERTIFICATES.map((cert, i) => (
             <div
               key={cert.title}
-              className={`group relative overflow-hidden border border-white/10 rounded-2xl p-6 hover:border-orange-400/40 hover:shadow-2xl transition-all duration-400 card-hover bg-white/[0.04] flex flex-col h-full min-h-[200px]
+              className={`group relative overflow-hidden border border-white/10 rounded-2xl p-6 hover:border-orange-400/30 hover:bg-white/[0.06] hover:shadow-xl hover:shadow-black/20 hover:scale-[1.02] transition-all duration-500 ease-out bg-white/[0.04] flex flex-col h-full min-h-[200px]
                 ${certVis.visible ? `animate-fadeInUp delay-${(i + 1) * 100}` : "opacity-0"}`}
               style={{ backdropFilter: "blur(8px)" }}
             >
