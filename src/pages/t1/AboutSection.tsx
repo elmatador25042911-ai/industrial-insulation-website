@@ -24,13 +24,16 @@ export const AboutSection = () => {
       <div className="absolute inset-0 pointer-events-none">
         <video
           ref={videoRef}
-          autoPlay muted loop playsInline preload="auto"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
           className="w-full h-full object-cover"
           style={{ willChange: "transform" }}
-          src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/about-company-harbor-video.mp4?v=3"
-          disablePictureInPicture
-          disableRemotePlayback
-        />
+        >
+          <source src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/about-company-harbor-video.mp4?v=3" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-black/60" />
       </div>
       {/* Фирменная полоска снизу */}
