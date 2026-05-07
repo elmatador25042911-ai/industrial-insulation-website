@@ -77,7 +77,7 @@ export const CertificatesSection = () => {
           disablePictureInPicture
           disableRemotePlayback
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/85 via-[#0a0a0a]/75 to-[#0a0a0a]/90" />
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -88,7 +88,7 @@ export const CertificatesSection = () => {
             <span className="t-label text-orange-500">Документация</span>
             <div className="w-10 h-px bg-orange-500/60" />
           </div>
-          <h2 className="t-h2 text-orange-400">
+          <h2 className="t-h2 text-white">
             Сертификаты, лицензии<br />и соответствие стандартам
           </h2>
           <div className="t-underline mx-auto justify-center" />
@@ -100,27 +100,35 @@ export const CertificatesSection = () => {
           {CERTIFICATES.map((cert, i) => (
             <div
               key={cert.title}
-              className={`group relative overflow-hidden border border-white/10 rounded-2xl p-6 hover:border-orange-400/30 hover:bg-white/[0.06] hover:shadow-xl hover:shadow-black/20 hover:scale-[1.02] transition-all duration-500 ease-out bg-white/[0.04] flex flex-col h-full min-h-[200px]
+              className={`group relative overflow-hidden border border-white/10 rounded-2xl p-6 hover:border-orange-500/40 hover:shadow-2xl hover:shadow-orange-500/10 hover:scale-[1.02] transition-all duration-500 ease-out flex flex-col h-full min-h-[200px]
                 ${certVis.visible ? `animate-fadeInUp delay-${(i + 1) * 100}` : "opacity-0"}`}
-              style={{ backdropFilter: "blur(8px)" }}
+              style={{
+                background: "linear-gradient(145deg, rgba(20,20,20,0.85) 0%, rgba(10,10,10,0.92) 100%)",
+                backdropFilter: "blur(10px)",
+                boxShadow: "0 8px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04)",
+              }}
             >
               {/* Линия сверху */}
-              <div className="absolute top-0 left-0 w-0 h-[3px] rounded-full group-hover:w-full transition-all duration-500"
-                style={{ background: "linear-gradient(90deg, #e63012, #f97316)" }} />
+              <div className="absolute top-0 left-0 w-0 h-[2px] rounded-full group-hover:w-full transition-all duration-500"
+                style={{ background: "linear-gradient(90deg, #e63012, #f97316, #fbbf24)" }} />
 
-              <div className="flex items-start justify-between gap-3 mb-4">
-                <div className="w-11 h-11 shrink-0 rounded-xl bg-white/[0.06] group-hover:bg-orange-500 flex items-center justify-center transition-all duration-300">
+              {/* Угловой акцент */}
+              <div className="absolute -top-12 -right-12 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                style={{ background: "radial-gradient(circle, rgba(249,115,22,0.18) 0%, transparent 70%)" }} />
+
+              <div className="relative flex items-start justify-between gap-3 mb-5">
+                <div className="w-11 h-11 shrink-0 rounded-xl border border-orange-500/25 bg-orange-500/[0.08] group-hover:bg-orange-500 group-hover:border-orange-500 flex items-center justify-center transition-all duration-300">
                   <Icon name={cert.icon} fallback="Award" size={18} className="text-orange-400 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
                 </div>
-                <span className="t-label text-gray-400 group-hover:text-orange-400 transition-colors bg-white/[0.05] group-hover:bg-orange-500/15 px-3 py-1.5 rounded-lg whitespace-nowrap">
+                <span className="t-label text-orange-400/80 bg-orange-500/[0.08] border border-orange-500/15 group-hover:border-orange-500/40 px-3 py-1.5 rounded-lg whitespace-nowrap transition-all duration-300">
                   {cert.category}
                 </span>
               </div>
 
-              <h3 className="font-bold text-[16px] text-white mb-2 leading-snug" style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "-0.01em" }}>
+              <h3 className="relative font-bold text-[16px] text-white mb-2 leading-snug" style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "-0.01em" }}>
                 {cert.title}
               </h3>
-              <p className="t-body text-gray-400 text-[13px] leading-snug">{cert.desc}</p>
+              <p className="relative t-body text-gray-400 group-hover:text-gray-300 text-[13px] leading-snug transition-colors duration-300">{cert.desc}</p>
             </div>
           ))}
         </div>
