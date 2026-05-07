@@ -96,11 +96,11 @@ export const CertificatesSection = () => {
         </div>
 
         {/* Карточки */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-[136px]">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-[136px] auto-rows-fr">
           {CERTIFICATES.map((cert, i) => (
             <div
               key={cert.title}
-              className={`group relative overflow-hidden border border-white/10 rounded-2xl p-8 hover:border-orange-400/40 hover:shadow-2xl transition-all duration-400 card-hover bg-white/[0.04]
+              className={`group relative overflow-hidden border border-white/10 rounded-2xl p-6 hover:border-orange-400/40 hover:shadow-2xl transition-all duration-400 card-hover bg-white/[0.04] flex flex-col h-full min-h-[200px]
                 ${certVis.visible ? `animate-fadeInUp delay-${(i + 1) * 100}` : "opacity-0"}`}
               style={{ backdropFilter: "blur(8px)" }}
             >
@@ -108,24 +108,19 @@ export const CertificatesSection = () => {
               <div className="absolute top-0 left-0 w-0 h-[3px] rounded-full group-hover:w-full transition-all duration-500"
                 style={{ background: "linear-gradient(90deg, #e63012, #f97316)" }} />
 
-              <div className="flex items-start justify-between mb-6">
-                <div className="w-11 h-11 rounded-xl bg-white/[0.06] group-hover:bg-orange-500 flex items-center justify-center transition-all duration-300">
+              <div className="flex items-start justify-between gap-3 mb-4">
+                <div className="w-11 h-11 shrink-0 rounded-xl bg-white/[0.06] group-hover:bg-orange-500 flex items-center justify-center transition-all duration-300">
                   <Icon name="Award" size={18} className="text-orange-400 group-hover:text-white transition-colors duration-300" />
                 </div>
-                <span className="t-label text-gray-400 group-hover:text-orange-400 transition-colors bg-white/[0.05] group-hover:bg-orange-500/15 px-3 py-1.5 rounded-lg">
+                <span className="t-label text-gray-400 group-hover:text-orange-400 transition-colors bg-white/[0.05] group-hover:bg-orange-500/15 px-3 py-1.5 rounded-lg whitespace-nowrap">
                   {cert.category}
                 </span>
               </div>
 
-              <h3 className="font-bold text-[17px] text-white mb-2 leading-snug" style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "-0.01em" }}>
+              <h3 className="font-bold text-[16px] text-white mb-2 leading-snug" style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "-0.01em" }}>
                 {cert.title}
               </h3>
-              <p className="t-body text-gray-400 mb-5 text-[14px]">{cert.desc}</p>
-
-              <div className="flex items-center gap-2 text-green-400">
-                <Icon name="CheckCircle2" size={14} />
-                <span className="text-[12px] font-semibold">Действующий документ</span>
-              </div>
+              <p className="t-body text-gray-400 text-[13px] leading-snug">{cert.desc}</p>
             </div>
           ))}
         </div>
