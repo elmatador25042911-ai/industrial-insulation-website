@@ -77,7 +77,7 @@ export const CertificatesSection = () => {
           disablePictureInPicture
           disableRemotePlayback
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/85 via-[#0a0a0a]/75 to-[#0a0a0a]/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/55 via-[#0a0a0a]/45 to-[#0a0a0a]/65" />
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -128,7 +128,7 @@ export const CertificatesSection = () => {
               <h3 className="relative font-bold text-[16px] text-white mb-2 leading-snug" style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "-0.01em" }}>
                 {cert.title}
               </h3>
-              <p className="relative t-body text-[13px] leading-snug transition-colors duration-300" style={{ color: "#94a3b8" }}>{cert.desc}</p>
+              <p className="relative t-body text-[13px] leading-snug transition-colors duration-300 group-hover:!text-white" style={{ color: "#94a3b8" }}>{cert.desc}</p>
             </div>
           ))}
         </div>
