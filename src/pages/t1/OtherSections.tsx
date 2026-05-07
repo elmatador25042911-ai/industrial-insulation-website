@@ -128,7 +128,7 @@ export const CertificatesSection = () => {
               <h3 className="relative font-bold text-[16px] text-white mb-2 leading-snug" style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "-0.01em" }}>
                 {cert.title}
               </h3>
-              <p className="relative t-body text-gray-400 group-hover:text-gray-300 text-[13px] leading-snug transition-colors duration-300">{cert.desc}</p>
+              <p className="relative t-body text-gray-200 group-hover:text-white text-[13px] leading-snug transition-colors duration-300">{cert.desc}</p>
             </div>
           ))}
         </div>
