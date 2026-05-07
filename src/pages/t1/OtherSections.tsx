@@ -92,7 +92,7 @@ export const CertificatesSection = () => {
             Сертификаты, лицензии<br />и соответствие стандартам
           </h2>
           <div className="t-underline mx-auto justify-center" />
-          <p className="t-body text-gray-400 max-w-lg mx-auto">Полный комплект документов к каждому объекту</p>
+          <p className="t-body max-w-lg mx-auto text-[#ffffff]">Полный комплект документов к каждому объекту</p>
         </div>
 
         {/* Карточки */}
