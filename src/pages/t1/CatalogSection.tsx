@@ -103,6 +103,7 @@ const CatalogCard = ({ name, sub, img, delay, visible }: {
 export const CatalogSection = () => {
   const catalogVis = useVisible(0.1);
   const shipVideoRef = useLoopVideo();
+  const pgsVideoRef = useLoopVideo();
 
   return (
     <section id="catalog" className="bg-[#f4f0eb] overflow-hidden relative" ref={catalogVis.ref}>
@@ -161,17 +162,15 @@ export const CatalogSection = () => {
       <div className="relative min-h-[480px]">
         <div className="absolute inset-0 pointer-events-none">
           <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
+            ref={pgsVideoRef}
+            autoPlay muted loop playsInline preload="auto"
             className="pgs-video w-full h-full object-cover"
             style={{ willChange: "transform" }}
             poster={IMG_BOILER}
-          >
-            <source src={PGS_VIDEO} type="video/mp4" />
-          </video>
+            src={PGS_VIDEO}
+            disablePictureInPicture
+            disableRemotePlayback
+          />
           <div className="absolute inset-0 bg-black/30" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/55 via-transparent to-[#0a0a0a]/65" />
         </div>

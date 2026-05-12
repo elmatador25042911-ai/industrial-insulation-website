@@ -1,5 +1,7 @@
 import Icon from "@/components/ui/icon";
-import { IMG_PIPE, STATS, useVisible } from "./data";
+import { IMG_PIPE, STATS, useVisible, useLoopVideo } from "./data";
+
+const ABOUT_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/about-company-harbor-video.mp4?v=3";
 
 const ABOUT_ADVANTAGES = [
   { icon: "SlidersHorizontal", text: "Подбор материалов под объект" },
@@ -15,6 +17,7 @@ const EXTRA_STATS = [
 
 export const AboutSection = () => {
   const aboutVis = useVisible(0.1);
+  const aboutVideoRef = useLoopVideo();
 
   return (
     <section id="about" className="py-32 lg:py-44 overflow-hidden relative" ref={aboutVis.ref}>
@@ -22,16 +25,15 @@ export const AboutSection = () => {
       {/* Фоновое видео */}
       <div className="absolute inset-0 pointer-events-none">
         <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
+          ref={aboutVideoRef}
+          autoPlay muted loop playsInline preload="auto"
           className="about-video w-full h-full object-cover"
           style={{ willChange: "transform" }}
-        >
-          <source src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/about-company-harbor-video.mp4?v=3" type="video/mp4" />
-        </video>
+          poster={IMG_PIPE}
+          src={ABOUT_VIDEO}
+          disablePictureInPicture
+          disableRemotePlayback
+        />
         <div className="absolute inset-0 bg-black/60" />
       </div>
       {/* Фирменная полоска снизу */}
