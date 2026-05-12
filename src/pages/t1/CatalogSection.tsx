@@ -60,20 +60,26 @@ const CatalogCard = ({ name, sub, img, delay, visible }: {
       src={img}
       alt=""
       aria-hidden
-      className="absolute inset-0 w-full h-full object-cover transition-[opacity,transform] duration-[380ms] ease-out opacity-0 scale-[1.06] group-hover:opacity-100 group-hover:scale-100"
-      style={{ filter: "brightness(1.15) contrast(1.08) saturate(1.05)" }}
+      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[380ms] ease-out opacity-0 group-hover:opacity-100"
+      style={{
+        objectPosition: "center",
+        filter: "brightness(1.02) contrast(1.05) saturate(1.03)",
+        willChange: "opacity",
+        backfaceVisibility: "hidden",
+      }}
       loading="lazy"
+      decoding="async"
     />
 
     {/* Базовый тёмный фон — скрывается при hover */}
     <div
-      className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-[380ms]"
+      className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-[380ms] ease-out pointer-events-none"
       style={{ background: "linear-gradient(135deg, #141210 0%, #1c1814 60%, #1f1510 100%)" }}
     />
-    {/* Overlay при hover — лёгкое затемнение слева только под текстом */}
+    {/* Overlay при hover — затемнение слева под текстом для читаемости */}
     <div
-      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-[380ms]"
-      style={{ background: "linear-gradient(100deg, rgba(5,4,3,0.55) 0%, rgba(5,4,3,0.20) 55%, rgba(5,4,3,0) 100%)" }}
+      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-[380ms] ease-out pointer-events-none"
+      style={{ background: "linear-gradient(100deg, rgba(5,4,3,0.78) 0%, rgba(5,4,3,0.45) 45%, rgba(5,4,3,0.10) 75%, rgba(5,4,3,0) 100%)" }}
     />
 
     {/* Полоска слева */}
