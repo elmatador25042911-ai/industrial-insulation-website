@@ -3,29 +3,27 @@ import { IMG_SHIP, IMG_BOILER, useVisible, useLoopVideo } from "./data";
 const SHIPYARD_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/shipyard-video.mp4";
 const PGS_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/industrial-pgs-section-video.mp4?v=3";
 
-const IMG_TUBES_SHIP   = "https://cdn.poehali.dev/files/98db9f34-7758-4e3e-90c8-461bca0b999e.jpg";
-const IMG_TUBES_PGS    = "https://cdn.poehali.dev/files/243c0531-1bad-4599-ac46-9768e750c042.jpg";
-const IMG_ROLLS_SHIP   = "https://cdn.poehali.dev/files/a4222653-ac37-45cc-8ed7-fad68be09260.jpg";
-const IMG_GLUE_SHIP    = "https://cdn.poehali.dev/files/9ace0816-cad6-4634-bdfa-6e2057a1c84b.jpg";
-const IMG_NOISE_PGS    = "https://cdn.poehali.dev/files/039b37db-0454-46b0-b6f8-6dde4db5a2b9.jpg";
+const IMG_TUBES = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/3ddf0ad3-7940-400c-a688-3e907253b23d.jpg";
+const IMG_ROLLS = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/51e58607-a24b-44da-948e-737b95e9c9e0.jpg";
+const IMG_GLUE  = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/a8546888-733b-4725-826e-b8ddc828706d.jpg";
 
 const CATALOG_SHIP: { name: string; sub: string; img: string }[] = [
-  { name: "Трубная изоляция",          sub: "Вспененный каучук для трубопроводов",    img: IMG_TUBES_SHIP },
-  { name: "Рулонная изоляция",         sub: "Вспененный каучук для поверхностей",     img: IMG_ROLLS_SHIP },
-  { name: "Монтажные материалы",       sub: "Ленты, клеи, очистители",               img: IMG_GLUE_SHIP },
+  { name: "Трубная изоляция",          sub: "Вспененный каучук для трубопроводов",    img: IMG_TUBES },
+  { name: "Рулонная изоляция",         sub: "Вспененный каучук для поверхностей",     img: IMG_ROLLS },
+  { name: "Монтажные материалы",       sub: "Ленты, клеи, очистители",               img: IMG_GLUE },
   { name: "Защитные покрытия",         sub: "Металл и полимерные решения",            img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/d0ed56cb-322d-46c3-9571-f0e5a4f43703.jpg" },
   { name: "Термочехлы",                sub: "Для оборудования и трубопроводов",       img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/6a3cb15e-2c7a40d3-a075-c99e7ed457f2.jpg" },
   { name: "Антиконденсатные покрытия", sub: "Тепло- и влагозащита поверхностей",     img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/62c10ffd-18cb-4f61-a83e-97bfa3120d57.jpg" },
 ];
 
 const CATALOG_INDUSTRY: { name: string; sub: string; img: string }[] = [
-  { name: "Трубная изоляция",          sub: "Вспененный каучук для трубопроводов",      img: IMG_TUBES_PGS },
-  { name: "Рулонная изоляция",         sub: "Вспененный каучук для поверхностей",       img: IMG_ROLLS_SHIP },
-  { name: "Монтажные материалы",       sub: "Ленты, клеи, очистители",                 img: IMG_GLUE_SHIP },
+  { name: "Трубная изоляция",          sub: "Вспененный каучук для трубопроводов",      img: IMG_TUBES },
+  { name: "Рулонная изоляция",         sub: "Вспененный каучук для поверхностей",       img: IMG_ROLLS },
+  { name: "Монтажные материалы",       sub: "Ленты, клеи, очистители",                 img: IMG_GLUE },
   { name: "Защитные материалы",         sub: "Металл и полимерные решения",              img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/d0ed56cb-322d-46c3-9571-f0e5a4f43703.jpg" },
   { name: "Термочехлы",                sub: "Для оборудования и трубопроводов",         img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/03841964-0c63-4461-be67-e7e5fe5dd7f1.jpg" },
   { name: "Каменная вата",             sub: "Теплоизоляция для инженерных систем",      img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/62c10ffd-18cb-4f61-a83e-97bfa3120d57.jpg" },
-  { name: "Шумоизоляция",              sub: "Снижение шума оборудования и систем",      img: IMG_NOISE_PGS },
+  { name: "Шумоизоляция",              sub: "Снижение шума оборудования и систем",      img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/ea11e02a-fb71-4dc6-9b16-04ad25dd97fa.jpg" },
   { name: "Опоры и подвесы",           sub: "Крепление трубопроводов и систем",         img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/6a3cb15e-2c7a40d3-a075-c99e7ed457f2.jpg" },
 ];
 
