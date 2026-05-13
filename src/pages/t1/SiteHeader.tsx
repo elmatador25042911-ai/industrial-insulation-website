@@ -109,7 +109,7 @@ const SiteHeader = () => {
             </a>
           ))}
           <div className="mt-4 pt-4 border-t border-white/5 flex flex-col gap-2">
-            <a href="https://yandex.ru/maps/?text=Санкт-Петербург%2C+ул.+Решетникова%2C+13А" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-500 text-xs hover:text-orange-400 transition-colors">
+            <a href="https://yandex.ru/maps/org/t1_izolyatsiya/83301899150/?ll=30.327649%2C59.878585&z=19" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-500 text-xs hover:text-orange-400 transition-colors">
               <Icon name="MapPin" size={12} className="text-orange-500/60 flex-shrink-0" />
               Санкт-Петербург, Решетникова ул., 13А
             </a>

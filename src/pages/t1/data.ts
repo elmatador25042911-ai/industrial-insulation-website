@@ -78,7 +78,7 @@ export const CERTIFICATES = [
 export const CONTACTS_INFO = [
   { icon: "Phone",     label: "Телефон",         value: "+7 812 642 67 42",            sub: "Офис",                          href: "tel:+78126426742" },
   { icon: "Mail",      label: "Email",          value: "t1izol@mail.ru",        sub: "Ответим за 1 рабочий день",     href: "mailto:t1izol@mail.ru" },
-  { icon: "MapPin",    label: "Адрес",          value: "196105, Санкт-Петербург",     sub: "ул. Решетникова, 13А",          href: "https://yandex.ru/maps/?text=Санкт-Петербург%2C+ул.+Решетникова%2C+13А" },
+  { icon: "MapPin",    label: "Адрес",          value: "196105, Санкт-Петербург",     sub: "ул. Решетникова, 13А",          href: "https://yandex.ru/maps/org/t1_izolyatsiya/83301899150/?ll=30.327649%2C59.878585&z=19" },
   { icon: "Clock",     label: "Режим работы",   value: "ПН–ПТ: 09:00–18:00",          sub: "СБ–ВС — по договорённости",    href: "#" },
 ];
 
