@@ -89,11 +89,11 @@ const CatalogCard = ({ name, sub, img, delay, visible }: {
     />
 
     {/* Контент */}
-    <div className="relative z-10 flex flex-col justify-center h-full px-6 py-0">
-      <p className="text-white font-bold text-[14.5px] leading-tight tracking-wide">
+    <div className="relative z-10 flex flex-col justify-center h-full px-7 sm:px-8 py-5">
+      <p className="text-white font-bold text-[15.5px] leading-tight tracking-wide">
         {name}
       </p>
-      <p className="text-gray-500 group-hover:text-gray-300 text-[11px] leading-snug mt-2 transition-colors duration-[380ms]">
+      <p className="text-gray-500 group-hover:text-gray-300 text-[12px] leading-snug mt-2.5 transition-colors duration-[380ms]">
         {sub}
       </p>
     </div>
@@ -147,7 +147,7 @@ export const CatalogSection = () => {
             <div className="flex-1 h-px bg-white/15" />
             <span className="t-label text-orange-400/70 whitespace-nowrap">{CATALOG_SHIP.length} позиций</span>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 auto-rows-[112px]">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 auto-rows-[150px]">
             {CATALOG_SHIP.map((item, i) => (
               <CatalogCard key={item.name} name={item.name} sub={item.sub} img={item.img} delay={i * 55} visible={catalogVis.visible} />
             ))}
@@ -181,7 +181,7 @@ export const CatalogSection = () => {
             <div className="flex-1 h-px bg-white/10" />
             <span className="t-label text-orange-500/55 whitespace-nowrap">{CATALOG_INDUSTRY.length} позиций</span>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 auto-rows-[112px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 auto-rows-[150px]">
             {CATALOG_INDUSTRY.map((item, i) => (
               <CatalogCard key={item.name} name={item.name} sub={item.sub} img={item.img} delay={i * 55} visible={catalogVis.visible} />
             ))}
