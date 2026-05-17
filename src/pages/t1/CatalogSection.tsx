@@ -1,3 +1,5 @@
+import type { ElementType } from "react";
+import { Link } from "react-router-dom";
 import { IMG_SHIP, IMG_BOILER, useVisible, useLoopVideo } from "./data";
 
 const SHIPYARD_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/shipyard-video.mp4";
@@ -7,8 +9,8 @@ const IMG_TUBES = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbe
 const IMG_ROLLS = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/51e58607-a24b-44da-948e-737b95e9c9e0.jpg";
 const IMG_GLUE  = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/a8546888-733b-4725-826e-b8ddc828706d.jpg";
 
-const CATALOG_SHIP: { name: string; sub: string; img: string }[] = [
-  { name: "Трубная изоляция",          sub: "Вспененный каучук для трубопроводов",    img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/trubnaya-sud.jpg" },
+const CATALOG_SHIP: { name: string; sub: string; img: string; href?: string }[] = [
+  { name: "Трубная изоляция",          sub: "Вспененный каучук для трубопроводов",    img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/trubnaya-sud.jpg", href: "/catalog/trubnaya-izolyaciya" },
   { name: "Рулонная изоляция",         sub: "Вспененный каучук для поверхностей",     img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/rilonaya-sud.jpg" },
   { name: "Монтажные материалы",       sub: "Ленты, клеи, очистители",               img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/montajniemateriali-sud.jpg" },
   { name: "Защитные покрытия",         sub: "Металл и полимерные решения",            img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/zaqshitnieporitiya-sud.jpg" },
@@ -16,8 +18,8 @@ const CATALOG_SHIP: { name: string; sub: string; img: string }[] = [
   { name: "Антиконденсатные покрытия", sub: "Тепло- и влагозащита поверхностей",     img: "https://cdn.poehali.dev/files/fd19cb44-689d-42fb-a507-66e8b6bcbd0a.jpg" },
 ];
 
-const CATALOG_INDUSTRY: { name: string; sub: string; img: string }[] = [
-  { name: "Трубная изоляция",          sub: "Вспененный каучук для трубопроводов",      img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/trubnaya-pgs.jpg" },
+const CATALOG_INDUSTRY: { name: string; sub: string; img: string; href?: string }[] = [
+  { name: "Трубная изоляция",          sub: "Вспененный каучук для трубопроводов",      img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/trubnaya-pgs.jpg", href: "/catalog/trubnaya-izolyaciya" },
   { name: "Рулонная изоляция",         sub: "Вспененный каучук для поверхностей",       img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/rilonaya-sud.jpg" },
   { name: "Монтажные материалы",       sub: "Ленты, клеи, очистители",                 img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/montajniemateriali-pgs.jpg" },
   { name: "Защитные материалы",         sub: "Металл и полимерные решения",              img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/zashitniemateriali-pgs.jpg" },
@@ -27,11 +29,15 @@ const CATALOG_INDUSTRY: { name: string; sub: string; img: string }[] = [
   { name: "Опоры и подвесы",           sub: "Крепление трубопроводов и систем",         img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/podves-pgs.jpg" },
 ];
 
-const CatalogCard = ({ name, sub, img, delay, visible }: {
-  name: string; sub: string; img: string; delay: number; visible: boolean;
-}) => (
-  <div
-    className={`group relative overflow-hidden cursor-default select-none w-full h-full
+const CatalogCard = ({ name, sub, img, delay, visible, href }: {
+  name: string; sub: string; img: string; delay: number; visible: boolean; href?: string;
+}) => {
+  const Wrapper: ElementType = href ? Link : "div";
+  const wrapperProps = href ? { to: href } : {};
+  return (
+  <Wrapper
+    {...wrapperProps}
+    className={`group relative overflow-hidden ${href ? "cursor-pointer" : "cursor-default"} select-none w-full h-full block
       ${visible ? "animate-fadeInUp" : "opacity-0"}`}
     style={{
       animationDelay: `${delay}ms`,
@@ -97,8 +103,9 @@ const CatalogCard = ({ name, sub, img, delay, visible }: {
         {sub}
       </p>
     </div>
-  </div>
-);
+  </Wrapper>
+  );
+};
 
 export const CatalogSection = () => {
   const catalogVis = useVisible(0.1);
@@ -149,7 +156,7 @@ export const CatalogSection = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 auto-rows-[150px]">
             {CATALOG_SHIP.map((item, i) => (
-              <CatalogCard key={item.name} name={item.name} sub={item.sub} img={item.img} delay={i * 55} visible={catalogVis.visible} />
+              <CatalogCard key={item.name} name={item.name} sub={item.sub} img={item.img} delay={i * 55} visible={catalogVis.visible} href={item.href} />
             ))}
           </div>
         </div>
@@ -183,7 +190,7 @@ export const CatalogSection = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 auto-rows-[150px]">
             {CATALOG_INDUSTRY.map((item, i) => (
-              <CatalogCard key={item.name} name={item.name} sub={item.sub} img={item.img} delay={i * 55} visible={catalogVis.visible} />
+              <CatalogCard key={item.name} name={item.name} sub={item.sub} img={item.img} delay={i * 55} visible={catalogVis.visible} href={item.href} />
             ))}
           </div>
         </div>
