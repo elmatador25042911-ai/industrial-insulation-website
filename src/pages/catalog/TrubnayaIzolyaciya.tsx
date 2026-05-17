@@ -51,13 +51,13 @@ const APPLICATIONS: { icon: string; title: string; text: string }[] = [
   },
 ];
 
-const COATINGS: { code: string; title: string; img: string }[] = [
-  { code: "STD", title: "Стандартный материал без покрытия", img: "stdAngle01" },
-  { code: "CM", title: "Трубка с самоклеящимся слоем", img: "cmAngle01" },
-  { code: "METALL", title: "Покрытие из армированной алюминиевой фольги", img: "metallAngle01" },
-  { code: "TITAN", title: "Комбинированное защитное покрытие", img: "titanAngle01" },
-  { code: "PROM FORMA", title: "Покрытие из стеклоткани", img: "promformaFront01" },
-  { code: "PROM FORMA FOIL", title: "Стеклоткань и алюминиевая фольга", img: "promformaFoilFront01" },
+const COATINGS: { num: string; code: string; title: string; img: string }[] = [
+  { num: "01", code: "STD", title: "Стандартный материал без покрытия", img: "stdAngle01" },
+  { num: "02", code: "CM", title: "Трубка с самоклеящимся слоем", img: "cmAngle01" },
+  { num: "03", code: "METALL", title: "Покрытие из армированной алюминиевой фольги", img: "metallAngle01" },
+  { num: "04", code: "TITAN", title: "Комбинированное защитное покрытие", img: "titanAngle01" },
+  { num: "05", code: "PROM FORMA", title: "Покрытие из стеклоткани", img: "promformaFront01" },
+  { num: "06", code: "PROM FORMA FOIL", title: "Стеклоткань и алюминиевая фольга", img: "promformaFoilFront01" },
 ];
 
 const DESCRIPTION_CARDS: { icon: string; title: string; text: string }[] = [
@@ -379,7 +379,7 @@ const TrubnayaIzolyaciya = () => {
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-            {COATINGS.map((c, i) => (
+            {COATINGS.map((c) => (
               <div
                 key={c.code}
                 className="group relative overflow-hidden rounded-sm border border-white/10 bg-[#101012] transition-all duration-300 hover:border-orange-500/50 hover:-translate-y-1"
@@ -422,7 +422,7 @@ const TrubnayaIzolyaciya = () => {
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-[11px] tracking-[0.22em] text-orange-500/70 font-semibold">
-                      0{i + 1}
+                      {c.num}
                     </span>
                     <span className="h-px flex-1 bg-white/10" />
                   </div>
