@@ -45,7 +45,7 @@ export const IndustriesSection = () => {
                 className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 scale-[1.06] group-hover:scale-100 transition-[opacity,transform] duration-[380ms] ease-out"
               />
               {/* Overlay для читаемости текста */}
-              <div className="absolute inset-0 bg-gray-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-[380ms]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-950/75 via-gray-950/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[380ms]" />
               {/* Контент */}
               <div className="relative z-10 flex flex-col items-center">
                 <Icon name={ind.icon} size={26} className="text-gray-500 group-hover:text-orange-400 transition-colors duration-300 mb-3" />
