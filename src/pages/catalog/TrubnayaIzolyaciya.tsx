@@ -97,24 +97,66 @@ const TrubnayaIzolyaciya = () => {
             {/* Изображение */}
             <div className="lg:col-span-6 xl:col-span-5">
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-orange-500/20 via-transparent to-transparent blur-2xl" />
-                <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#161616] to-[#0d0d0d]">
+                {/* Внешнее свечение */}
+                <div className="absolute -inset-6 bg-gradient-to-br from-orange-500/15 via-transparent to-orange-600/10 blur-[60px]" />
+                <div className="absolute -inset-2 bg-gradient-to-tr from-transparent via-white/[0.03] to-transparent blur-xl" />
+
+                {/* Стеклянная графитовая карточка */}
+                <div
+                  className="relative aspect-[4/3] overflow-hidden rounded-sm border border-white/10 backdrop-blur-sm shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)]"
+                  style={{
+                    background:
+                      "radial-gradient(120% 90% at 20% 0%, rgba(255,138,0,0.10) 0%, rgba(20,20,22,0.85) 45%, rgba(10,10,12,0.95) 100%)",
+                  }}
+                >
+                  {/* Тонкая сетка внутри карточки */}
+                  <div
+                    className="absolute inset-0 opacity-[0.06] pointer-events-none"
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
+                      backgroundSize: "40px 40px",
+                    }}
+                  />
+
+                  {/* Само фото с мягким вписыванием в фон */}
                   <img
                     src={tubeImages.allTypesAngle}
                     alt="Трубная изоляция — все типы трубок"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-contain p-6 sm:p-8 mix-blend-luminosity opacity-95"
+                    style={{ filter: "contrast(1.05) saturate(0.9)" }}
                     loading="eager"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/40 via-transparent to-transparent" />
-                  {/* Уголки */}
-                  <div className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-orange-500" />
-                  <div className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-orange-500" />
+                  {/* Цветной слой поверх — возвращает естественные тона, но мягче */}
+                  <img
+                    src={tubeImages.allTypesAngle}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-contain p-6 sm:p-8 opacity-80"
+                  />
+
+                  {/* Виньетка по краям, чтобы белый фон фото растворился в карточке */}
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background:
+                        "radial-gradient(ellipse at center, transparent 45%, rgba(10,10,12,0.55) 85%, rgba(10,10,12,0.9) 100%)",
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/55 via-transparent to-[#0a0a0a]/20 pointer-events-none" />
+
+                  {/* Оранжевые угловые акценты */}
+                  <div className="absolute top-3 left-3 w-7 h-7 border-t-2 border-l-2 border-orange-500" />
+                  <div className="absolute bottom-3 right-3 w-7 h-7 border-b-2 border-r-2 border-orange-500" />
+
+                  {/* Тонкая оранжевая линия внизу */}
+                  <div className="absolute left-6 right-6 bottom-0 h-px bg-gradient-to-r from-transparent via-orange-500/60 to-transparent" />
                 </div>
 
                 {/* Подпись под фото */}
-                <div className="mt-4 flex items-center justify-between text-[12px] tracking-[0.18em] text-gray-500 uppercase">
-                  <span>T1 · Trubnaya Izolyaciya</span>
-                  <span className="text-orange-500/80">01 / 23</span>
+                <div className="mt-4 flex items-center gap-3 text-[12px] tracking-[0.18em] text-gray-500 uppercase">
+                  <span className="h-px w-6 bg-orange-500/60" />
+                  <span>Т1 ИЗОЛЯЦИЯ / ТРУБНАЯ ИЗОЛЯЦИЯ</span>
                 </div>
               </div>
             </div>
