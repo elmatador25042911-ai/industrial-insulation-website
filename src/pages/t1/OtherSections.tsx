@@ -118,7 +118,7 @@ export const CertificatesSection = () => {
 
               <div className="relative flex items-start justify-between gap-3 mb-5">
                 <div className="w-11 h-11 shrink-0 rounded-xl border border-orange-500/25 bg-orange-500/[0.08] group-hover:bg-orange-500 group-hover:border-orange-500 flex items-center justify-center transition-all duration-300">
-                  <Icon name={cert.icon} fallback="Award" size={18} className="text-orange-400 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
+                  <Icon name={cert.icon} fallback="Award" size={18} className={`text-orange-400 group-hover:text-white transition-colors duration-300 ${cert.iconRotate ? `rotate-${cert.iconRotate}` : ""}`} strokeWidth={1.5} />
                 </div>
                 <span className="t-label text-orange-400/80 bg-orange-500/[0.08] border border-orange-500/15 group-hover:border-orange-500/40 px-3 py-1.5 rounded-lg whitespace-nowrap transition-all duration-300">
                   {cert.category}
