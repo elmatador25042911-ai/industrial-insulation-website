@@ -3,6 +3,7 @@ import SpecsSection from "./trubnaya-izolyaciya/SpecsSection";
 import ApplicationsSection from "./trubnaya-izolyaciya/ApplicationsSection";
 import MarkingSection from "./trubnaya-izolyaciya/MarkingSection";
 import TubeTypesSection from "./trubnaya-izolyaciya/TubeTypesSection";
+import TechnicalSpecsSection from "./trubnaya-izolyaciya/TechnicalSpecsSection";
 
 const TrubnayaIzolyaciya = () => {
   return (
@@ -12,6 +13,7 @@ const TrubnayaIzolyaciya = () => {
       <ApplicationsSection />
       <MarkingSection />
       <TubeTypesSection />
+      <TechnicalSpecsSection />
     </main>
   );
 };
