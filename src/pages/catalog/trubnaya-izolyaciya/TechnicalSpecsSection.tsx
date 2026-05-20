@@ -10,15 +10,13 @@ const THERMAL: { temp: string; value: string }[] = [
 
 type Spec = { label: string; value: string; icon: string; accent?: boolean };
 
-const PHYSICAL: Spec[] = [
+const OPERATION: Spec[] = [
   { label: "Температура применения", value: "от −200 до +110 °C", icon: "Thermometer", accent: true },
   { label: "Сопротивление диффузии пара, μ", value: "≥ 10 000", icon: "Droplets" },
-  { label: "Плотность", value: "55 ± 15 кг/м³", icon: "Layers" },
-  { label: "Показатель кислотности pH", value: "Нейтральный", icon: "Beaker" },
-  { label: "Условная прочность при растяжении", value: "0,07 МПа", icon: "Maximize2" },
-  { label: "Относительное удлинение при разрыве", value: "50 %", icon: "MoveHorizontal" },
   { label: "Коэффициент паропроницаемости", value: "0,0034 мг/(м·ч·Па)", icon: "Wind" },
-  { label: "Цвет", value: "Чёрный", icon: "Palette" },
+  { label: "Масло- и бензостойкость", value: "Хорошая", icon: "Fuel" },
+  { label: "Биологическая стойкость", value: "Хорошая", icon: "Leaf" },
+  { label: "Экология", value: "Без асбеста, без CFC/HCFC", icon: "Sprout" },
 ];
 
 const SAFETY: Spec[] = [
@@ -28,11 +26,13 @@ const SAFETY: Spec[] = [
   { label: "Токсичность продуктов горения", value: "Т2", icon: "AlertTriangle" },
 ];
 
-const RESISTANCE: Spec[] = [
-  { label: "Масло- и бензостойкость", value: "Хорошая", icon: "Fuel" },
-  { label: "Биологическая стойкость", value: "Хорошая", icon: "Leaf" },
+const PHYSICAL: Spec[] = [
+  { label: "Плотность", value: "55 ± 15 кг/м³", icon: "Layers" },
+  { label: "Условная прочность при растяжении", value: "0,07 МПа", icon: "Maximize2" },
+  { label: "Относительное удлинение при разрыве", value: "50 %", icon: "MoveHorizontal" },
+  { label: "Показатель кислотности pH", value: "Нейтральный", icon: "Beaker" },
   { label: "Запах", value: "Нейтральный", icon: "Wind" },
-  { label: "Экология", value: "Без асбеста, без CFC/HCFC", icon: "Sprout" },
+  { label: "Цвет", value: "Чёрный", icon: "Palette" },
 ];
 
 const SpecRow = ({ s }: { s: Spec }) => (
@@ -47,10 +47,10 @@ const SpecRow = ({ s }: { s: Spec }) => (
       <Icon name={s.icon} size={18} className="text-orange-400" />
     </div>
     <div className="flex-1 min-w-0">
-      <div className="text-[11px] sm:text-[12px] tracking-[0.14em] text-gray-500 uppercase leading-snug">
+      <div className="text-[11px] sm:text-[12px] tracking-[0.14em] text-gray-500 uppercase leading-[1.55]">
         {s.label}
       </div>
-      <div className="text-white font-semibold text-[15px] sm:text-base leading-tight mt-1 truncate">
+      <div className="text-white font-semibold text-[15px] sm:text-base leading-[1.35] mt-1.5">
         {s.value}
       </div>
     </div>
@@ -83,9 +83,9 @@ export const TechnicalSpecsSection = () => {
           Технические <span className="text-orange-500">характеристики</span>
         </h2>
 
-        {/* ── Теплопроводность ── */}
-        <div className="mb-10">
-          <GroupHeader num="01" label="ТЕПЛОПРОВОДНОСТЬ" icon="Snowflake" />
+        {/* ── 01 Теплотехнические свойства ── */}
+        <div className="mb-12 sm:mb-14">
+          <GroupHeader num="01" label="ТЕПЛОТЕХНИЧЕСКИЕ СВОЙСТВА" icon="Snowflake" />
 
           <div className="relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-6 sm:p-8">
             <div className="absolute top-0 left-0 h-[2px] w-16 bg-orange-500" />
@@ -122,19 +122,19 @@ export const TechnicalSpecsSection = () => {
           </div>
         </div>
 
-        {/* ── Физические свойства ── */}
-        <div className="mb-10">
-          <GroupHeader num="02" label="ФИЗИЧЕСКИЕ СВОЙСТВА" icon="Atom" />
+        {/* ── 02 Эксплуатационные параметры ── */}
+        <div className="mb-12 sm:mb-14">
+          <GroupHeader num="02" label="ЭКСПЛУАТАЦИОННЫЕ ПАРАМЕТРЫ" icon="Settings" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-            {PHYSICAL.map((s) => (
+            {OPERATION.map((s) => (
               <SpecRow key={s.label} s={s} />
             ))}
           </div>
         </div>
 
-        {/* ── Пожарная безопасность ── */}
-        <div className="mb-10">
+        {/* ── 03 Пожарная безопасность ── */}
+        <div className="mb-12 sm:mb-14">
           <GroupHeader num="03" label="ПОЖАРНАЯ БЕЗОПАСНОСТЬ" icon="Flame" />
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
@@ -160,12 +160,12 @@ export const TechnicalSpecsSection = () => {
           </div>
         </div>
 
-        {/* ── Стойкость и экология ── */}
-        <div className="mb-10">
-          <GroupHeader num="04" label="СТОЙКОСТЬ И ЭКОЛОГИЯ" icon="Sprout" />
+        {/* ── 04 Физико-механические свойства ── */}
+        <div className="mb-12 sm:mb-14">
+          <GroupHeader num="04" label="ФИЗИКО-МЕХАНИЧЕСКИЕ СВОЙСТВА" icon="Atom" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-            {RESISTANCE.map((s) => (
+            {PHYSICAL.map((s) => (
               <SpecRow key={s.label} s={s} />
             ))}
           </div>

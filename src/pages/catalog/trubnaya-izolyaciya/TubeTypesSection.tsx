@@ -159,34 +159,38 @@ const TubeCard = ({ tube, reverse }: { tube: TubeType; reverse: boolean }) => (
 
       {/* Контент */}
       <div className="lg:col-span-7 p-7 sm:p-9 lg:p-10">
-        <div className="flex items-center gap-3 mb-3">
+        <div className="flex items-center gap-3 mb-4">
           <span className="text-[11px] tracking-[0.22em] text-orange-500/80 font-semibold">
             {tube.num}
           </span>
           <span className="h-px flex-1 bg-white/10" />
         </div>
 
-        <h3 className="text-white text-2xl sm:text-3xl font-bold tracking-wide mb-2">
+        <h3 className="text-white text-2xl sm:text-3xl font-bold tracking-wide mb-3 leading-[1.2]">
           {tube.name}
         </h3>
-        <p className="text-gray-400 text-[14px] sm:text-[15px] leading-relaxed mb-7 max-w-2xl">
+        <p className="text-gray-400 text-[14px] sm:text-[15px] leading-[1.75] mb-8 sm:mb-9 max-w-2xl">
           {tube.subtitle}
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div className="h-px w-full bg-white/5 mb-7 sm:mb-8" />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-7 sm:gap-9">
           {/* Свойства */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-5">
               <Icon name="CheckCircle2" size={16} className="text-orange-400" />
               <span className="text-[11px] tracking-[0.22em] text-orange-500/80 font-semibold uppercase">
                 Свойства
               </span>
             </div>
-            <ul className="space-y-2.5">
+            <ul className="space-y-3.5">
               {tube.properties.map((p) => (
-                <li key={p} className="flex items-start gap-2.5">
-                  <span className="mt-2 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-orange-500" />
-                  <span className="text-gray-200 text-[14px] leading-relaxed">{p}</span>
+                <li key={p} className="flex items-start gap-3">
+                  <span className="mt-[9px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-orange-500" />
+                  <span className="text-gray-200 text-[14px] sm:text-[14.5px] leading-[1.7]">
+                    {p}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -194,17 +198,17 @@ const TubeCard = ({ tube, reverse }: { tube: TubeType; reverse: boolean }) => (
 
           {/* Области применения */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-5">
               <Icon name="Layers" size={16} className="text-orange-400" />
               <span className="text-[11px] tracking-[0.22em] text-orange-500/80 font-semibold uppercase">
                 Области применения
               </span>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 sm:gap-2.5">
               {tube.applications.map((a) => (
                 <span
                   key={a}
-                  className="px-3 py-1.5 rounded-sm border border-white/10 bg-white/[0.03] text-gray-200 text-[13px] hover:border-orange-500/40 transition-colors"
+                  className="px-3 py-2 rounded-sm border border-white/10 bg-white/[0.03] text-gray-200 text-[13px] leading-[1.5] hover:border-orange-500/40 transition-colors"
                 >
                   {a}
                 </span>
