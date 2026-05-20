@@ -1,7 +1,7 @@
 import Icon from "@/components/ui/icon";
 import { IMG_PIPE, STATS, useVisible, useLoopVideo } from "./data";
 
-const ABOUT_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/about-company-harbor-video.mp4?v=3";
+const ABOUT_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/about-company-harbor-video.mp4";
 
 const ABOUT_ADVANTAGES = [
   { icon: "SlidersHorizontal", text: "Подбор материалов под объект" },
@@ -27,7 +27,8 @@ export const AboutSection = () => {
         <video
           ref={aboutVideoRef}
           autoPlay muted loop playsInline preload="auto"
-          className="about-video w-full h-full object-cover"
+          controls={false}
+          className="w-full h-full object-cover"
           style={{ willChange: "transform" }}
           poster={IMG_PIPE}
           src={ABOUT_VIDEO}

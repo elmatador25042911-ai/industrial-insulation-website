@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { IMG_SHIP, IMG_BOILER, useVisible, useLoopVideo } from "./data";
 
 const SHIPYARD_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/shipyard-video.mp4";
-const PGS_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/industrial-pgs-section-video.mp4?v=3";
+const PGS_VIDEO = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/videos/industrial-pgs-section-video.mp4";
 
 const IMG_TUBES = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/3ddf0ad3-7940-400c-a688-3e907253b23d.jpg";
 const IMG_ROLLS = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/51e58607-a24b-44da-948e-737b95e9c9e0.jpg";
@@ -171,7 +171,8 @@ export const CatalogSection = () => {
           <video
             ref={pgsVideoRef}
             autoPlay muted loop playsInline preload="auto"
-            className="pgs-video w-full h-full object-cover"
+            controls={false}
+            className="w-full h-full object-cover"
             style={{ willChange: "transform" }}
             poster={IMG_BOILER}
             src={PGS_VIDEO}
