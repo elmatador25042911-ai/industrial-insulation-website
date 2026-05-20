@@ -1,12 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
 import { getCatalogReturnPath } from "@/lib/catalog-return";
+import InternalLayout from "@/components/layouts/InternalLayout";
 
 const TrubnayaIzolyaciyaPgs = () => {
   const { pathname } = useLocation();
   const catalogReturnPath = getCatalogReturnPath(pathname);
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white flex items-center justify-center px-4">
+    <InternalLayout>
+      <main className="min-h-screen bg-[#0a0a0a] text-white flex items-center justify-center px-4 pt-24">
       <div className="max-w-2xl w-full text-center">
         <h1
           className="text-white mb-6"
@@ -31,7 +33,8 @@ const TrubnayaIzolyaciyaPgs = () => {
           Вернуться в каталог
         </Link>
       </div>
-    </main>
+      </main>
+    </InternalLayout>
   );
 };
 
