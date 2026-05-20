@@ -1,6 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { getCatalogReturnPath } from "@/lib/catalog-return";
 
 const TrubnayaIzolyaciyaPgs = () => {
+  const { pathname } = useLocation();
+  const catalogReturnPath = getCatalogReturnPath(pathname);
+
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center">
@@ -21,7 +25,7 @@ const TrubnayaIzolyaciyaPgs = () => {
           Страница в разработке
         </p>
         <Link
-          to="/"
+          to={catalogReturnPath}
           className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold tracking-wide rounded-sm transition-colors"
         >
           Вернуться в каталог

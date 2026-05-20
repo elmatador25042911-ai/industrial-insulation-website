@@ -131,7 +131,7 @@ export const CatalogSection = () => {
       </div>
 
       {/* ── Судостроение ── */}
-      <div className="relative min-h-[480px]">
+      <div id="catalog-sudostroenie" className="relative min-h-[480px] scroll-mt-24">
         <div className="absolute inset-0 pointer-events-none">
           <video
             ref={shipVideoRef}
@@ -166,7 +166,7 @@ export const CatalogSection = () => {
       <div className="h-12 bg-[#f4f0eb]" />
 
       {/* ── Промышленность и ПГС ── */}
-      <div className="relative min-h-[480px]">
+      <div id="catalog-pgs" className="relative min-h-[480px] scroll-mt-24">
         <div className="absolute inset-0 pointer-events-none">
           <video
             ref={pgsVideoRef}

@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import { tubeImages } from "@/assets/trubnaya-izolyaciya/assets";
+import { getCatalogReturnPath } from "@/lib/catalog-return";
 
 const BADGES = [
   { icon: "Thermometer", text: "от −200 до +110 °C" },
@@ -9,6 +10,9 @@ const BADGES = [
 ];
 
 export const HeroSection = () => {
+  const { pathname } = useLocation();
+  const catalogReturnPath = getCatalogReturnPath(pathname);
+
   return (
     <section className="relative overflow-hidden">
       {/* Фоновое свечение */}
@@ -84,7 +88,7 @@ export const HeroSection = () => {
                 />
               </Link>
               <Link
-                to="/#catalog"
+                to={catalogReturnPath}
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 border border-white/20 hover:border-orange-500 hover:text-orange-400 text-white font-semibold tracking-wide transition-colors rounded-sm"
               >
                 <Icon name="ArrowLeft" size={18} />
