@@ -2,7 +2,7 @@ import Icon from "@/components/ui/icon";
 import { tubeImages } from "@/assets/trubnaya-izolyaciya/assets";
 
 const MARKING_PARTS: { code: string; label: string; accent?: boolean }[] = [
-  { code: "T1", label: "Бренд" },
+  { code: "UNIONFLEX", label: "Бренд производителя" },
   { code: "HD", label: "Марка продукции" },
   { code: "09", label: "Толщина стенки, мм" },
   { code: "042", label: "Внутренний диаметр, мм" },
@@ -69,9 +69,9 @@ export const MarkingSection = () => {
 
               {/* Сама маркировка */}
               <div className="relative overflow-x-auto pb-2 mb-8">
-                <div className="flex items-end gap-1.5 sm:gap-2 font-mono">
+                <div className="flex items-end flex-wrap gap-1.5 sm:gap-2 font-mono">
                   <span className="text-gray-500 text-lg sm:text-xl pr-1">Трубка</span>
-                  <span className="text-white text-xl sm:text-3xl font-bold">T1</span>
+                  <span className="text-white text-xl sm:text-3xl font-bold">UNIONFLEX</span>
                   <span className="text-white text-xl sm:text-3xl font-bold">HD</span>
                   <span className="text-orange-400 text-xl sm:text-3xl font-bold">09</span>
                   <span className="text-gray-500 text-xl sm:text-3xl">×</span>
@@ -91,7 +91,7 @@ export const MarkingSection = () => {
                     className="flex items-center gap-4 p-3 rounded-sm bg-white/[0.025] border border-white/5 hover:border-orange-500/40 transition-colors"
                   >
                     <div className="flex-shrink-0 min-w-[64px] h-10 px-3 rounded-sm border border-orange-500/30 bg-orange-500/5 flex items-center justify-center">
-                      <span className="text-orange-400 font-mono font-bold text-sm tracking-wide">
+                      <span className="text-orange-400 font-mono font-bold text-sm tracking-wide whitespace-nowrap">
                         {p.code}
                       </span>
                     </div>
