@@ -17,7 +17,7 @@ const EXTRA_STATS = [
 
 export const AboutSection = () => {
   const aboutVis = useVisible(0.1);
-  const aboutVideoRef = useLoopVideo();
+  const aboutVideoRef = useLoopVideo(0.7);
 
   return (
     <section id="about" className="py-32 lg:py-44 overflow-hidden relative" ref={aboutVis.ref}>

@@ -110,7 +110,7 @@ const CatalogCard = ({ name, sub, img, delay, visible, href }: {
 export const CatalogSection = () => {
   const catalogVis = useVisible(0.1);
   const shipVideoRef = useLoopVideo();
-  const pgsVideoRef = useLoopVideo();
+  const pgsVideoRef = useLoopVideo(0.7);
 
   return (
     <section id="catalog" className="bg-[#f4f0eb] overflow-hidden relative" ref={catalogVis.ref}>

@@ -100,7 +100,7 @@ export function useVisible(threshold = 0.15) {
 }
 
 /* ─── Loop Video Hook ────────────────────────────── */
-export function useLoopVideo() {
+export function useLoopVideo(playbackRate: number = 1) {
   const ref = useRef<HTMLVideoElement>(null);
   useEffect(() => {
     const v = ref.current;
@@ -108,17 +108,28 @@ export function useLoopVideo() {
     v.loop = true;
     v.muted = true;
     v.playsInline = true;
-    const tryPlay = () => { v.play().catch(() => {}); };
-    const onEnded = () => { v.currentTime = 0; v.play().catch(() => {}); };
+    const applyRate = () => {
+      try { v.playbackRate = playbackRate; } catch { /* noop */ }
+    };
+    const tryPlay = () => {
+      applyRate();
+      v.play().catch(() => {});
+    };
+    const onEnded = () => {
+      v.currentTime = 0;
+      applyRate();
+      v.play().catch(() => {});
+    };
     v.addEventListener("loadedmetadata", tryPlay);
     v.addEventListener("canplay", tryPlay);
     v.addEventListener("ended", onEnded);
+    applyRate();
     tryPlay();
     return () => {
       v.removeEventListener("loadedmetadata", tryPlay);
       v.removeEventListener("canplay", tryPlay);
       v.removeEventListener("ended", onEnded);
     };
-  }, []);
+  }, [playbackRate]);
   return ref;
 }
