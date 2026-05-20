@@ -32,9 +32,9 @@ export const HeroSection = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 lg:pt-32 pb-20 sm:pb-24 lg:pb-28">
         {/* Хлебная крошка / надзаголовок */}
-        <div className="flex items-center gap-3 mb-8">
-          <span className="h-px w-10 bg-orange-500" />
-          <span className="t-label text-orange-400/90 tracking-[0.18em]">
+        <div className="flex items-center gap-3 mb-8 flex-wrap">
+          <span className="h-px w-10 bg-orange-500 flex-shrink-0" />
+          <span className="t-label text-orange-400/90 tracking-[0.18em] leading-relaxed">
             КАТАЛОГ / СУДОСТРОЕНИЕ / ТРУБНАЯ ИЗОЛЯЦИЯ
           </span>
         </div>
@@ -77,8 +77,8 @@ export const HeroSection = () => {
 
             {/* Кнопки */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Link
-                to="/#contact"
+              <a
+                href="#request"
                 className="group inline-flex items-center justify-center gap-2 px-7 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold tracking-wide transition-colors rounded-sm"
               >
                 Оставить заявку
@@ -87,7 +87,7 @@ export const HeroSection = () => {
                   size={18}
                   className="transition-transform group-hover:translate-x-1"
                 />
-              </Link>
+              </a>
               <Link
                 to={catalogReturnPath}
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 border border-white/20 hover:border-orange-500 hover:text-orange-400 text-white font-semibold tracking-wide transition-colors rounded-sm"

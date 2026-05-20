@@ -30,20 +30,21 @@ export const RequestSection = () => {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Левая колонка — заголовок + контакты */}
           <div className="lg:col-span-5">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-3">
               <span className="h-px w-10 bg-orange-500" />
               <span className="t-label text-orange-400/90 tracking-[0.18em]">ЗАЯВКА</span>
             </div>
-            <h2 className="t-h2 text-white leading-[1.05] mb-6">
-              Нужна трубная изоляция <span className="text-orange-500">для вашего объекта?</span>
+            <h2 className="t-h2 text-white mb-6 max-w-3xl">
+              Нужна трубная изоляция{" "}
+              <span className="text-orange-500">для судна или судового объекта?</span>
             </h2>
-            <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-10">
+            <p className="text-gray-400 text-base sm:text-lg leading-[1.7] mb-10">
               Подберём тип трубной изоляции, покрытие, толщину стенки и исполнение под условия
-              эксплуатации вашего объекта.
+              эксплуатации судна, верфи, дока или судоремонтного проекта.
             </p>
 
             {/* Преимущества */}
-            <ul className="space-y-3 mb-10">
+            <ul className="space-y-3.5 mb-10">
               {[
                 "Расчёт под параметры объекта",
                 "Подбор покрытия и толщины стенки",
@@ -56,7 +57,7 @@ export const RequestSection = () => {
                   >
                     <Icon name="Check" size={11} className="text-white" />
                   </span>
-                  <span className="text-gray-300 text-[14px]">{t}</span>
+                  <span className="text-gray-300 text-[14px] leading-snug">{t}</span>
                 </li>
               ))}
             </ul>
@@ -185,7 +186,7 @@ export const RequestSection = () => {
                     <textarea
                       value={data.message}
                       onChange={(e) => setData({ ...data, message: e.target.value })}
-                      placeholder="Диаметр трубопровода, тип среды, температура, объём, сроки..."
+                      placeholder="Тип судна / объекта, диаметр трубопровода, температурный режим, объём, сроки..."
                       rows={4}
                       className={`${inputCls} resize-none`}
                     />
