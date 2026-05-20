@@ -4,6 +4,7 @@ import ApplicationsSection from "./trubnaya-izolyaciya/ApplicationsSection";
 import MarkingSection from "./trubnaya-izolyaciya/MarkingSection";
 import TubeTypesSection from "./trubnaya-izolyaciya/TubeTypesSection";
 import TechnicalSpecsSection from "./trubnaya-izolyaciya/TechnicalSpecsSection";
+import RequestSection from "./trubnaya-izolyaciya/RequestSection";
 import InternalLayout from "@/components/layouts/InternalLayout";
 
 const TrubnayaIzolyaciya = () => {
@@ -16,6 +17,7 @@ const TrubnayaIzolyaciya = () => {
         <MarkingSection />
         <TubeTypesSection />
         <TechnicalSpecsSection />
+        <RequestSection />
       </main>
     </InternalLayout>
   );
