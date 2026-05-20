@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import { LOGO_SYMBOL, IMG_SHIP, IMG_PIPE, IMG_BOILER, GRAD, NAV_LINKS, CONTACTS_INFO, useVisible } from "./data";
 
@@ -242,72 +243,82 @@ export const ContactsSection = () => {
 };
 
 /* ─── Footer ─────────────────────────────────────────────────── */
-export const SiteFooter = () => (
-  <footer id="privacy" className="bg-[#060606] border-t border-white/[0.06]">
-    {/* Фирменная полоска сверху */}
-    <div className="h-[3px]" style={{ background: "linear-gradient(90deg, #e63012, #f97316, #fbbf24)" }} />
+export const SiteFooter = () => {
+  const { pathname } = useLocation();
+  const isHome = pathname === "/";
+  const toHash = (href: string) =>
+    href.startsWith("#") ? (isHome ? href : `/${href}`) : href;
 
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12 mb-14">
+  return (
+    <footer id="privacy" className="bg-[#060606] border-t border-white/[0.06]">
+      {/* Фирменная полоска сверху */}
+      <div className="h-[3px]" style={{ background: "linear-gradient(90deg, #e63012, #f97316, #fbbf24)" }} />
 
-        {/* Brand */}
-        <div>
-          <a href="#" className="inline-block mb-6">
-            <Logo />
-          </a>
-          <p className="text-gray-600 text-[13px] leading-relaxed mb-5">
-            Промышленная теплоизоляция. Поставка и монтаж изоляции трубопроводов, оборудования и судов. По всей России.
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12 mb-14">
+
+          {/* Brand */}
+          <div>
+            <RouterLink to="/" className="inline-block mb-6">
+              <Logo />
+            </RouterLink>
+            <p className="text-gray-600 text-[13px] leading-relaxed mb-5">
+              Промышленная теплоизоляция. Поставка и монтаж изоляции трубопроводов, оборудования и судов. По всей России.
+            </p>
+            <a href="mailto:t1izol@mail.ru"
+              className="text-gray-400 hover:text-orange-400 transition-colors text-[13px] font-medium">
+              t1izol@mail.ru
+            </a>
+          </div>
+
+          {/* Nav */}
+          <div>
+            <h4 className="t-label text-gray-500 mb-5">Навигация</h4>
+            <ul className="space-y-3">
+              {NAV_LINKS.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={toHash(link.href)}
+                    className="text-gray-500 hover:text-orange-400 text-[13px] transition-colors flex items-center gap-2 group"
+                  >
+                    <span className="w-0 h-px bg-orange-500 group-hover:w-3 transition-all duration-300 flex-shrink-0" />
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contacts */}
+          <div>
+            <h4 className="t-label text-gray-500 mb-5">Контакты</h4>
+            <ul className="space-y-4">
+              {CONTACTS_INFO.map((c) => (
+                <li key={c.label}>
+                  <a href={c.href} className="flex items-start gap-3 group">
+                    <Icon name={c.icon} size={13} className="text-orange-500/70 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <div className="text-gray-400 group-hover:text-gray-200 text-[13px] transition-colors leading-snug">{c.value}</div>
+                      <div className="text-gray-700 text-[11px] mt-0.5">{c.sub}</div>
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom */}
+        <div className="border-t border-white/[0.05] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-gray-700 text-[12px]">
+            © {new Date().getFullYear()} Т1 ИЗОЛЯЦИЯ. Все права защищены.
           </p>
-          <a href="mailto:t1izol@mail.ru"
-            className="text-gray-400 hover:text-orange-400 transition-colors text-[13px] font-medium">
-            t1izol@mail.ru
-          </a>
-        </div>
-
-        {/* Nav */}
-        <div>
-          <h4 className="t-label text-gray-500 mb-5">Навигация</h4>
-          <ul className="space-y-3">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <a href={link.href} className="text-gray-500 hover:text-orange-400 text-[13px] transition-colors flex items-center gap-2 group">
-                  <span className="w-0 h-px bg-orange-500 group-hover:w-3 transition-all duration-300 flex-shrink-0" />
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Contacts */}
-        <div>
-          <h4 className="t-label text-gray-500 mb-5">Контакты</h4>
-          <ul className="space-y-4">
-            {CONTACTS_INFO.map((c) => (
-              <li key={c.label}>
-                <a href={c.href} className="flex items-start gap-3 group">
-                  <Icon name={c.icon} size={13} className="text-orange-500/70 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <div className="text-gray-400 group-hover:text-gray-200 text-[13px] transition-colors leading-snug">{c.value}</div>
-                    <div className="text-gray-700 text-[11px] mt-0.5">{c.sub}</div>
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="flex flex-wrap justify-center gap-6">
+            <a href={toHash("#privacy")} className="text-gray-700 hover:text-gray-400 text-[12px] transition-colors">Политика конфиденциальности</a>
+            <a href={toHash("#privacy")} className="text-gray-700 hover:text-gray-400 text-[12px] transition-colors">Обработка персональных данных</a>
+          </div>
         </div>
       </div>
-
-      {/* Bottom */}
-      <div className="border-t border-white/[0.05] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-gray-700 text-[12px]">
-          © {new Date().getFullYear()} Т1 ИЗОЛЯЦИЯ. Все права защищены.
-        </p>
-        <div className="flex flex-wrap justify-center gap-6">
-          <a href="#privacy" className="text-gray-700 hover:text-gray-400 text-[12px] transition-colors">Политика конфиденциальности</a>
-          <a href="#privacy" className="text-gray-700 hover:text-gray-400 text-[12px] transition-colors">Обработка персональных данных</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
