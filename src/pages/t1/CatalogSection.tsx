@@ -10,7 +10,7 @@ const IMG_ROLLS = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbe
 const IMG_GLUE  = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/a8546888-733b-4725-826e-b8ddc828706d.jpg";
 
 const CATALOG_SHIP: { name: string; sub: string; img: string; href?: string }[] = [
-  { name: "Трубная изоляция",          sub: "Вспененный каучук для трубопроводов",    img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/trubnaya-sud.jpg", href: "/catalog/trubnaya-izolyaciya" },
+  { name: "Трубная изоляция",          sub: "Вспененный каучук для трубопроводов",    img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/trubnaya-sud.jpg", href: "/catalog/sudostroenie/trubnaya-izolyaciya" },
   { name: "Рулонная изоляция",         sub: "Вспененный каучук для поверхностей",     img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/rilonaya-sud.jpg" },
   { name: "Монтажные материалы",       sub: "Ленты, клеи, очистители",               img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/montajniemateriali-sud.jpg" },
   { name: "Защитные покрытия",         sub: "Металл и полимерные решения",            img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/zaqshitnieporitiya-sud.jpg" },
@@ -19,7 +19,7 @@ const CATALOG_SHIP: { name: string; sub: string; img: string; href?: string }[] 
 ];
 
 const CATALOG_INDUSTRY: { name: string; sub: string; img: string; href?: string }[] = [
-  { name: "Трубная изоляция",          sub: "Вспененный каучук для трубопроводов",      img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/trubnaya-pgs.jpg", href: "/catalog/trubnaya-izolyaciya" },
+  { name: "Трубная изоляция",          sub: "Вспененный каучук для трубопроводов",      img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/trubnaya-pgs.jpg", href: "/catalog/pgs/trubnaya-izolyaciya" },
   { name: "Рулонная изоляция",         sub: "Вспененный каучук для поверхностей",       img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/rilonaya-sud.jpg" },
   { name: "Монтажные материалы",       sub: "Ленты, клеи, очистители",                 img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/montajniemateriali-pgs.jpg" },
   { name: "Защитные материалы",         sub: "Металл и полимерные решения",              img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/zashitniemateriali-pgs.jpg" },
