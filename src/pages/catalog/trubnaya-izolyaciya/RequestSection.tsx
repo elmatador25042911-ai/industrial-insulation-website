@@ -32,23 +32,24 @@ export const RequestSection = () => {
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3 mb-3">
               <span className="h-px w-10 bg-orange-500" />
-              <span className="t-label text-orange-400/90 tracking-[0.18em]">ЗАЯВКА</span>
+              <span className="t-label text-orange-400/90 tracking-[0.18em]">ЗАПРОС РАСЧЁТА</span>
             </div>
             <h2 className="t-h2 text-white mb-6 max-w-3xl">
-              Нужна трубная изоляция{" "}
-              <span className="text-orange-500">для судна или судового объекта?</span>
+              Запрос параметров и расчёта{" "}
+              <span className="text-orange-500">под объект</span>
             </h2>
             <p className="text-gray-400 text-base sm:text-lg leading-[1.7] mb-10">
-              Подберём тип трубной изоляции, покрытие, толщину стенки и исполнение под условия
-              эксплуатации судна, верфи, дока или судоремонтного проекта.
+              Передайте параметры объекта — диаметр трубопровода, температурный режим, требования
+              по пожарным группам и условия эксплуатации. Подберём тип изоляции, покрытие, толщину
+              стенки и исполнение.
             </p>
 
-            {/* Преимущества */}
+            {/* Что входит в работу */}
             <ul className="space-y-3.5 mb-10">
               {[
-                "Расчёт под параметры объекта",
-                "Подбор покрытия и толщины стенки",
-                "Сертифицированный материал",
+                "Подбор типа изоляции и толщины стенки",
+                "Подбор покрытия под условия эксплуатации",
+                "Расчёт по предоставленным параметрам объекта",
               ].map((t) => (
                 <li key={t} className="flex items-center gap-3">
                   <span
@@ -116,11 +117,11 @@ export const RequestSection = () => {
               <div className="flex items-center gap-3 mb-2">
                 <Icon name="FileText" size={18} className="text-orange-400" />
                 <h3 className="text-white text-xl sm:text-2xl font-bold" style={{ fontFamily: "'Oswald', sans-serif" }}>
-                  Оставить заявку
+                  Передать параметры объекта
                 </h3>
               </div>
               <p className="text-gray-500 text-[13px] mb-8">
-                Ответим в течение 1 рабочего дня
+                Технический специалист свяжется в течение 1 рабочего дня
               </p>
 
               {submitted ? (
@@ -135,9 +136,9 @@ export const RequestSection = () => {
                     className="text-white text-xl mb-2"
                     style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700 }}
                   >
-                    Заявка отправлена!
+                    Запрос отправлен
                   </h4>
-                  <p className="text-gray-400 text-[14px]">Мы свяжемся с вами в ближайшее время</p>
+                  <p className="text-gray-400 text-[14px]">Технический специалист свяжется в ближайшее рабочее время</p>
                 </div>
               ) : (
                 <form
@@ -196,7 +197,7 @@ export const RequestSection = () => {
                     className="group w-full text-white py-4 font-bold uppercase tracking-widest text-[12px] hover:opacity-90 transition-opacity flex items-center justify-center gap-2.5 rounded-sm"
                     style={{ background: GRAD }}
                   >
-                    Отправить заявку
+                    Отправить запрос
                     <Icon
                       name="ArrowRight"
                       size={14}

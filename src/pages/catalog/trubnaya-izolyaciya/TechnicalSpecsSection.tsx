@@ -93,10 +93,10 @@ export const TechnicalSpecsSection = () => {
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-7">
               <div>
                 <div className="text-white text-lg sm:text-xl font-semibold leading-tight">
-                  Коэффициент теплопроводности
+                  Коэффициент теплопроводности λ
                 </div>
                 <div className="text-gray-500 text-[13px] tracking-wide mt-1">
-                  Зависимость λ от температуры эксплуатации
+                  Зависимость от температуры эксплуатации
                 </div>
               </div>
               <div className="text-[11px] tracking-[0.2em] text-gray-500 uppercase">
@@ -177,7 +177,8 @@ export const TechnicalSpecsSection = () => {
           <div className="flex items-start gap-3 p-4 sm:p-5">
             <Icon name="Info" size={14} className="text-orange-400/80 mt-0.5 flex-shrink-0" />
             <p className="text-gray-500 text-[12px] sm:text-[13px] leading-relaxed">
-              Для материала с самоклеящимся покрытием температура применения может отличаться.
+              Для исполнений с самоклеящимся покрытием допустимая температура применения может
+              отличаться. Уточняйте параметры по конкретной марке.
             </p>
           </div>
         </div>

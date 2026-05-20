@@ -50,14 +50,14 @@ export const HeroSection = () => {
 
             <p className="text-gray-200 text-lg sm:text-xl leading-relaxed max-w-2xl mb-5">
               Теплоизоляционные трубки из вспененного синтетического каучука для судовых
-              трубопроводов, инженерных систем, вентиляции, кондиционирования и технологических
+              трубопроводов, систем вентиляции, кондиционирования и технологических
               коммуникаций.
             </p>
 
             <p className="text-gray-400 text-[15px] sm:text-base leading-relaxed max-w-2xl mb-10">
-              Материал применяется на судах, верфях, в доках и судоремонтных проектах для
-              снижения теплопотерь, защиты трубопроводов от конденсата, влаги, перепадов
-              температур и внешних воздействий.
+              Применяется при строительстве и ремонте судов, на верфях и в доках — для снижения
+              теплопотерь, ограничения образования конденсата и защиты трубопроводов от влаги
+              и перепадов температур.
             </p>
 
             {/* Бейджи */}
@@ -81,7 +81,7 @@ export const HeroSection = () => {
                 href="#request"
                 className="group inline-flex items-center justify-center gap-2 px-7 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold tracking-wide transition-colors rounded-sm"
               >
-                Оставить заявку
+                Запросить расчёт
                 <Icon
                   name="ArrowRight"
                   size={18}

@@ -5,32 +5,32 @@ const APPLICATIONS: { icon: string; title: string; text: string }[] = [
   {
     icon: "Ship",
     title: "Судовые трубопроводы",
-    text: "Теплоизоляция трубопроводов водоснабжения и инженерных коммуникаций на судах.",
+    text: "Системы водоснабжения, отопления и судовых инженерных коммуникаций.",
   },
   {
     icon: "Cog",
-    title: "Машинные отделения",
-    text: "Снижение теплопотерь и защита трубопроводов в машинных и котельных отделениях.",
+    title: "Машинные и котельные отделения",
+    text: "Теплоизоляция трубопроводов в условиях повышенных температур и вибрации.",
   },
   {
     icon: "Wind",
-    title: "Вентиляция на судах",
-    text: "Изоляция вентиляционных каналов и воздуховодов судовых систем.",
+    title: "Вентиляция",
+    text: "Изоляция воздуховодов и каналов судовых вентиляционных систем.",
   },
   {
     icon: "Snowflake",
     title: "Кондиционирование",
-    text: "Защита трасс кондиционирования от конденсата и перепадов температур в каютах и отсеках.",
+    text: "Изоляция трасс кондиционирования для контроля конденсата в каютах и отсеках.",
   },
   {
     icon: "Factory",
     title: "Технологические коммуникации",
-    text: "Решения для технологических линий, инженерных систем и производственных контуров.",
+    text: "Технологические линии и инженерные контуры судовых и береговых объектов.",
   },
   {
     icon: "Anchor",
-    title: "Верфи, доки и судоремонт",
-    text: "Применяется при строительстве, переоборудовании и ремонте судов на верфях и в доках.",
+    title: "Верфи, доки, судоремонт",
+    text: "Применяется при строительстве, переоборудовании и ремонте судов.",
   },
 ];
 
@@ -57,7 +57,7 @@ export const ApplicationsSection = () => {
             <span className="t-label text-orange-400/90 tracking-[0.18em]">ПРИМЕНЕНИЕ</span>
           </div>
           <h2 className="t-h2 text-white mb-12 max-w-3xl">
-            Где применяется <span className="text-orange-500">трубная изоляция</span>
+            Области применения <span className="text-orange-500">в судостроении</span>
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
@@ -89,8 +89,9 @@ export const ApplicationsSection = () => {
                 <Icon name="Info" size={18} className="text-orange-400" />
               </div>
               <p className="text-gray-300 text-[14px] sm:text-[15px] leading-relaxed">
-                Изоляция подходит для применения в помещениях, на открытом воздухе и под землёй.
-                Для удобства монтажа доступны варианты <span className="text-white font-medium">с самоклеящимся слоем</span>.
+                Допускается применение во внутренних помещениях, в условиях открытой палубы и на
+                наружных участках трасс. Доступны исполнения{" "}
+                <span className="text-white font-medium">с самоклеящимся слоем</span> для ускоренного монтажа.
               </p>
             </div>
           </div>
@@ -109,7 +110,7 @@ export const ApplicationsSection = () => {
             <span className="t-label text-orange-400/90 tracking-[0.18em]">ПОКРЫТИЯ</span>
           </div>
           <h2 className="t-h2 text-white mb-12 max-w-3xl">
-            Варианты <span className="text-orange-500">покрытий</span>
+            Исполнения <span className="text-orange-500">покрытий</span>
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">

@@ -13,18 +13,18 @@ const SPECS: { label: string; value: string; icon: string }[] = [
 const DESCRIPTION_CARDS: { icon: string; title: string; text: string }[] = [
   {
     icon: "Thermometer",
-    title: "Широкий диапазон температур",
-    text: "Материал применяется при температурах от −200 до +110 °C, сохраняя структуру и теплоизоляционные свойства в любых инженерных системах.",
+    title: "Диапазон температур",
+    text: "Сохраняет рабочие характеристики при температурах от −200 до +110 °C, применим на горячих и холодных трубопроводах.",
   },
   {
     icon: "ShieldCheck",
-    title: "Пожарная безопасность",
-    text: "Теплоизоляция из вспененного каучука относится к слабогорючим материалам и не поддерживает горение без источника открытого огня.",
+    title: "Пожарно-технические показатели",
+    text: "Группа горючести Г1, воспламеняемости В1. Материал не поддерживает горение в отсутствии источника открытого огня.",
   },
   {
     icon: "Snowflake",
-    title: "Низкая теплопроводность",
-    text: "Коэффициент теплопроводности — 0,034 Вт/(м·°C) при 0 °C. Это обеспечивает эффективное снижение теплопотерь на трубопроводах.",
+    title: "Теплопроводность",
+    text: "Коэффициент теплопроводности λ = 0,034 Вт/(м·°C) при 0 °C. Используется для снижения теплопотерь и контроля конденсата.",
   },
 ];
 
@@ -42,7 +42,7 @@ export const SpecsSection = () => {
             <span className="t-label text-orange-400/90 tracking-[0.18em]">ХАРАКТЕРИСТИКИ</span>
           </div>
           <h2 className="t-h2 text-white mb-12 max-w-3xl">
-            Ключевые показатели <span className="text-orange-500">материала</span>
+            Основные характеристики <span className="text-orange-500">материала</span>
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
@@ -82,7 +82,7 @@ export const SpecsSection = () => {
             <span className="t-label text-orange-400/90 tracking-[0.18em]">ОПИСАНИЕ МАТЕРИАЛА</span>
           </div>
           <h2 className="t-h2 text-white mb-12 max-w-3xl">
-            Свойства <span className="text-orange-500">в трёх тезисах</span>
+            Краткое <span className="text-orange-500">описание</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
