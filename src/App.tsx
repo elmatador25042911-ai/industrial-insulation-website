@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import TrubnayaIzolyaciya from "./pages/catalog/TrubnayaIzolyaciya";
 import TrubnayaIzolyaciyaPgs from "./pages/catalog/TrubnayaIzolyaciyaPgs";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/catalog/trubnaya-izolyaciya" element={<Navigate to="/catalog/sudostroenie/trubnaya-izolyaciya" replace />} />
