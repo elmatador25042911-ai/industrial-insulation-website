@@ -16,7 +16,7 @@ const OPERATION: Spec[] = [
   { label: "Коэффициент паропроницаемости", value: "0,0034 мг/(м·ч·Па)", icon: "Wind" },
   { label: "Масло- и бензостойкость", value: "Хорошая", icon: "Fuel" },
   { label: "Биологическая стойкость", value: "Хорошая", icon: "Leaf" },
-  { label: "Экология", value: "Без асбеста, без CFC/HCFC", icon: "Sprout" },
+  { label: "Экологическая безопасность", value: "Без асбеста, без CFC/HCFC", icon: "Sprout" },
 ];
 
 const SAFETY: Spec[] = [
@@ -68,7 +68,7 @@ const GroupHeader = ({ num, label, icon }: { num: string; label: string; icon: s
 
 export const TechnicalSpecsSection = () => {
   return (
-    <section className="relative border-t border-white/5">
+    <section className="relative overflow-hidden border-t border-white/5">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-orange-500/[0.05] blur-[160px]" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-orange-600/[0.05] blur-[160px]" />

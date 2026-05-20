@@ -12,7 +12,7 @@ export const RequestSection = () => {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section id="request" className="relative border-t border-white/5">
+    <section id="request" className="relative overflow-hidden border-t border-white/5">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-32 left-0 w-[600px] h-[600px] rounded-full bg-orange-500/[0.06] blur-[160px]" />
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-orange-600/[0.05] blur-[160px]" />

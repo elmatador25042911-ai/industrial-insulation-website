@@ -223,7 +223,7 @@ const TubeCard = ({ tube, reverse }: { tube: TubeType; reverse: boolean }) => (
 
 export const TubeTypesSection = () => {
   return (
-    <section className="relative border-t border-white/5">
+    <section className="relative overflow-hidden border-t border-white/5">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-orange-500/[0.05] blur-[160px]" />
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-orange-600/[0.05] blur-[160px]" />

@@ -32,7 +32,7 @@ export const SpecsSection = () => {
   return (
     <>
       {/* ── Ключевые характеристики ── */}
-      <section className="relative border-t border-white/5">
+      <section className="relative overflow-hidden border-t border-white/5">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/3 -right-32 w-[500px] h-[500px] rounded-full bg-orange-500/[0.06] blur-[140px]" />
         </div>
@@ -72,7 +72,7 @@ export const SpecsSection = () => {
       </section>
 
       {/* ── Описание материала ── */}
-      <section className="relative border-t border-white/5">
+      <section className="relative overflow-hidden border-t border-white/5">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute bottom-0 left-0 w-[600px] h-[400px] rounded-full bg-orange-600/[0.05] blur-[160px]" />
         </div>
