@@ -13,7 +13,7 @@ type TubeType = {
 const TUBE_TYPES: TubeType[] = [
   {
     num: "1 / 6",
-    name: "Трубки T1 STD",
+    name: "Трубки Unionflex STD",
     subtitle: "Трубка из вспененного каучука без покрытия",
     img: "stdAngle01",
     properties: [
@@ -32,7 +32,7 @@ const TUBE_TYPES: TubeType[] = [
   },
   {
     num: "2 / 6",
-    name: "Трубки T1 CM",
+    name: "Трубки Unionflex CM",
     subtitle: "Трубка из вспененного каучука с самоклеящимся слоем",
     img: "cmAngle01",
     properties: [
@@ -45,7 +45,7 @@ const TUBE_TYPES: TubeType[] = [
   },
   {
     num: "3 / 6",
-    name: "Трубки T1 METALL",
+    name: "Трубки Unionflex METALL",
     subtitle: "Трубка из вспененного каучука с покрытием из армированной алюминиевой фольги",
     img: "metallAngle01",
     properties: [
@@ -57,7 +57,7 @@ const TUBE_TYPES: TubeType[] = [
   },
   {
     num: "4 / 6",
-    name: "Трубки T1 TITAN",
+    name: "Трубки Unionflex TITAN",
     subtitle: "Трубка из вспененного каучука с комбинированным защитным покрытием",
     img: "titanAngle01",
     properties: [
@@ -69,7 +69,7 @@ const TUBE_TYPES: TubeType[] = [
   },
   {
     num: "5 / 6",
-    name: "Трубки T1 PROM FORMA",
+    name: "Трубки Unionflex PROM FORMA",
     subtitle: "Трубка из вспененного каучука с покрытием из стеклоткани",
     img: "promformaFront01",
     properties: [
@@ -87,7 +87,7 @@ const TUBE_TYPES: TubeType[] = [
   },
   {
     num: "6 / 6",
-    name: "Трубки T1 PROM FORMA FOIL",
+    name: "Трубки Unionflex PROM FORMA FOIL",
     subtitle: "Трубка из вспененного каучука с покрытием из стеклоткани и алюминиевой фольги",
     img: "promformaFoilFront01",
     properties: [
