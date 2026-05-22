@@ -144,7 +144,7 @@ const RulonnayaIzolyaciya = () => {
 
                     {/* Фото рулона */}
                     <img
-                      src={rollImages.blackSideClose01}
+                      src={rollImages.silverSideClose01}
                       alt="Рулонная изоляция — вспененный каучук"
                       className="absolute inset-0 w-full h-full object-cover"
                       loading="eager"
