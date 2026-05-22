@@ -50,6 +50,18 @@ const RulonnayaIzolyaciya = () => {
                   <span className="text-orange-500">для судостроения</span>
                 </h1>
 
+                <p className="text-gray-200 text-lg sm:text-xl leading-relaxed max-w-2xl mt-7 mb-5">
+                  Рулоны из вспененного синтетического каучука для изоляции судовых
+                  трубопроводов, вентиляционных каналов, воздуховодов, резервуаров и
+                  инженерных поверхностей.
+                </p>
+
+                <p className="text-gray-400 text-[15px] sm:text-base leading-relaxed max-w-2xl">
+                  Материал применяется при строительстве и ремонте судов, на верфях и в
+                  доках — для снижения теплопотерь, контроля конденсата и защиты
+                  изолируемых поверхностей в судовых инженерных системах.
+                </p>
+
                 <div className="mt-10">
                   <Link
                     to="/#catalog-sudostroenie"
