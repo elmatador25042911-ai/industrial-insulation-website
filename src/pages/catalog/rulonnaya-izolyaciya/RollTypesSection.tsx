@@ -1,9 +1,5 @@
 import Icon from "@/components/ui/icon";
-import {
-  rollImages,
-  coveringImages,
-  rollSpoolImages,
-} from "@/assets/rulonnaya-izolyaciya/assets";
+import { rollImages, coveringImages } from "@/assets/rulonnaya-izolyaciya/assets";
 
 type RollType = {
   num: string;
@@ -37,7 +33,7 @@ const ROLL_TYPES: RollType[] = [
     num: "2 / 7",
     name: "Рулоны Unionflex CM",
     subtitle: "Рулонный материал с самоклеящимся слоем.",
-    img: rollSpoolImages.cmSpoolPeel01,
+    img: rollImages.cmWithTubeAngle01,
     properties: [
       "Ускоренный монтаж",
       "Клеевой слой на внутренней стороне",
