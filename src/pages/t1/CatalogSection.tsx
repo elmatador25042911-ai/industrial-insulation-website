@@ -11,7 +11,7 @@ const IMG_GLUE  = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbe
 
 const CATALOG_SHIP: { name: string; sub: string; img: string; href?: string }[] = [
   { name: "Трубная изоляция",          sub: "Вспененный каучук для трубопроводов",    img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/trubnaya-sud.jpg", href: "/catalog/sudostroenie/trubnaya-izolyaciya" },
-  { name: "Рулонная изоляция",         sub: "Вспененный каучук для поверхностей",     img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/rilonaya-sud.jpg" },
+  { name: "Рулонная изоляция",         sub: "Вспененный каучук для поверхностей",     img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/rilonaya-sud.jpg", href: "/catalog/sudostroenie/rulonnaya-izolyaciya" },
   { name: "Монтажные материалы",       sub: "Ленты, клеи, очистители",               img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/montajniemateriali-sud.jpg" },
   { name: "Защитные покрытия",         sub: "Металл и полимерные решения",            img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/zaqshitnieporitiya-sud.jpg" },
   { name: "Термочехлы",                sub: "Для оборудования и трубопроводов",       img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/termochehol-sud.jpg" },

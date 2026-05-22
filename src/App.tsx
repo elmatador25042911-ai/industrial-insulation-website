@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import TrubnayaIzolyaciya from "./pages/catalog/TrubnayaIzolyaciya";
 import TrubnayaIzolyaciyaPgs from "./pages/catalog/TrubnayaIzolyaciyaPgs";
+import RulonnayaIzolyaciya from "./pages/catalog/RulonnayaIzolyaciya";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/catalog/trubnaya-izolyaciya" element={<Navigate to="/catalog/sudostroenie/trubnaya-izolyaciya" replace />} />
           <Route path="/catalog/sudostroenie/trubnaya-izolyaciya" element={<TrubnayaIzolyaciya />} />
+          <Route path="/catalog/sudostroenie/rulonnaya-izolyaciya" element={<RulonnayaIzolyaciya />} />
           <Route path="/catalog/pgs/trubnaya-izolyaciya" element={<TrubnayaIzolyaciyaPgs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
