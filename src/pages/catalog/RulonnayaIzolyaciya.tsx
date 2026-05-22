@@ -4,6 +4,7 @@ import InternalLayout from "@/components/layouts/InternalLayout";
 import { rollImages } from "@/assets/rulonnaya-izolyaciya/assets";
 import { TU_SUDOSTROENIE } from "@/lib/catalog-tu";
 import SpecsSection from "./rulonnaya-izolyaciya/SpecsSection";
+import DescriptionSection from "./rulonnaya-izolyaciya/DescriptionSection";
 
 const BADGES = [
   { icon: "Flame", text: "Г1 / В1" },
@@ -172,6 +173,7 @@ const RulonnayaIzolyaciya = () => {
         </section>
 
         <SpecsSection />
+        <DescriptionSection />
       </main>
     </InternalLayout>
   );
