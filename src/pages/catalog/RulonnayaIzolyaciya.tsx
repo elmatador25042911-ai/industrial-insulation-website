@@ -2,6 +2,14 @@ import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import InternalLayout from "@/components/layouts/InternalLayout";
 import { rollImages } from "@/assets/rulonnaya-izolyaciya/assets";
+import { TU_SUDOSTROENIE } from "@/lib/catalog-tu";
+
+const BADGES = [
+  { icon: "Flame", text: "Г1 / В1" },
+  { icon: "Droplets", text: "μ ≥ 10 000" },
+  { icon: "Ruler", text: "толщина 03–50 мм" },
+  { icon: "FileBadge", text: TU_SUDOSTROENIE },
+];
 
 const RulonnayaIzolyaciya = () => {
   return (
@@ -61,6 +69,21 @@ const RulonnayaIzolyaciya = () => {
                   доках — для снижения теплопотерь, контроля конденсата и защиты
                   изолируемых поверхностей в судовых инженерных системах.
                 </p>
+
+                {/* Бейджи */}
+                <div className="flex flex-wrap gap-3 mt-8">
+                  {BADGES.map((b) => (
+                    <div
+                      key={b.text}
+                      className="flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-sm"
+                    >
+                      <Icon name={b.icon} size={16} className="text-orange-400 flex-shrink-0" />
+                      <span className="text-[13px] sm:text-sm text-gray-200 tracking-wide">
+                        {b.text}
+                      </span>
+                    </div>
+                  ))}
+                </div>
 
                 <div className="mt-10">
                   <Link
