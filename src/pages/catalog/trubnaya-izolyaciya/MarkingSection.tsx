@@ -3,7 +3,7 @@ import { tubeImages } from "@/assets/trubnaya-izolyaciya/assets";
 
 const MARKING_PARTS: { code: string; label: string; accent?: boolean }[] = [
   { code: "UNIONFLEX", label: "Бренд производителя" },
-  { code: "HD", label: "Марка продукции" },
+  { code: "STD", label: "Марка продукции" },
   { code: "09", label: "Толщина стенки, мм" },
   { code: "042", label: "Внутренний диаметр, мм" },
   { code: "1", label: "Длина, м" },
@@ -72,7 +72,7 @@ export const MarkingSection = () => {
                 <div className="flex items-end flex-wrap gap-1.5 sm:gap-2 font-mono">
                   <span className="text-gray-500 text-lg sm:text-xl pr-1">Трубка</span>
                   <span className="text-white text-xl sm:text-3xl font-bold">UNIONFLEX</span>
-                  <span className="text-white text-xl sm:text-3xl font-bold">HD</span>
+                  <span className="text-white text-xl sm:text-3xl font-bold">STD</span>
                   <span className="text-orange-400 text-xl sm:text-3xl font-bold">09</span>
                   <span className="text-gray-500 text-xl sm:text-3xl">×</span>
                   <span className="text-orange-400 text-xl sm:text-3xl font-bold">042</span>
