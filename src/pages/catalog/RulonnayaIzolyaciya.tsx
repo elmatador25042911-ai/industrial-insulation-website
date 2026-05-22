@@ -6,6 +6,7 @@ import { TU_SUDOSTROENIE } from "@/lib/catalog-tu";
 import SpecsSection from "./rulonnaya-izolyaciya/SpecsSection";
 import DescriptionSection from "./rulonnaya-izolyaciya/DescriptionSection";
 import ApplicationsSection from "./rulonnaya-izolyaciya/ApplicationsSection";
+import CoatingsSection from "./rulonnaya-izolyaciya/CoatingsSection";
 
 const BADGES = [
   { icon: "Flame", text: "Г1 / В1" },
@@ -176,6 +177,7 @@ const RulonnayaIzolyaciya = () => {
         <SpecsSection />
         <DescriptionSection />
         <ApplicationsSection />
+        <CoatingsSection />
       </main>
     </InternalLayout>
   );
