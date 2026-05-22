@@ -9,6 +9,7 @@ import ApplicationsSection from "./rulonnaya-izolyaciya/ApplicationsSection";
 import CoatingsSection from "./rulonnaya-izolyaciya/CoatingsSection";
 import SizesSection from "./rulonnaya-izolyaciya/SizesSection";
 import MarkingSection from "./rulonnaya-izolyaciya/MarkingSection";
+import RollTypesSection from "./rulonnaya-izolyaciya/RollTypesSection";
 
 const BADGES = [
   { icon: "Flame", text: "Г1 / В1" },
@@ -182,6 +183,7 @@ const RulonnayaIzolyaciya = () => {
         <CoatingsSection />
         <SizesSection />
         <MarkingSection />
+        <RollTypesSection />
       </main>
     </InternalLayout>
   );
