@@ -85,7 +85,19 @@ const RulonnayaIzolyaciya = () => {
                   ))}
                 </div>
 
-                <div className="mt-10">
+                {/* Кнопки */}
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-10">
+                  <a
+                    href="#request"
+                    className="group inline-flex items-center justify-center gap-2 px-7 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold tracking-wide transition-colors rounded-sm"
+                  >
+                    Запросить расчёт
+                    <Icon
+                      name="ArrowRight"
+                      size={18}
+                      className="transition-transform group-hover:translate-x-1"
+                    />
+                  </a>
                   <Link
                     to="/#catalog-sudostroenie"
                     className="inline-flex items-center justify-center gap-2 px-7 py-4 border border-white/20 hover:border-orange-500 hover:text-orange-400 text-white font-semibold tracking-wide transition-colors rounded-sm"
