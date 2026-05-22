@@ -2,11 +2,13 @@ import { Link, useLocation } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import { tubeImages } from "@/assets/trubnaya-izolyaciya/assets";
 import { getCatalogReturnPath } from "@/lib/catalog-return";
+import { TU_SUDOSTROENIE } from "@/lib/catalog-tu";
 
 const BADGES = [
   { icon: "Thermometer", text: "от −200 до +110 °C" },
   { icon: "Flame", text: "Г1 / В1" },
   { icon: "Droplets", text: "μ ≥ 10 000" },
+  { icon: "FileBadge", text: TU_SUDOSTROENIE },
 ];
 
 export const HeroSection = () => {
