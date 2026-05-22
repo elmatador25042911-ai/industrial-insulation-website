@@ -309,14 +309,19 @@ export const SiteFooter = () => {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/[0.05] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-gray-700 text-[12px]">
-            © {new Date().getFullYear()} Т1 ИЗОЛЯЦИЯ. Все права защищены.
-          </p>
-          <div className="flex flex-wrap justify-center gap-6">
-            <a href={toHash("#privacy")} className="text-gray-700 hover:text-gray-400 text-[12px] transition-colors">Политика конфиденциальности</a>
-            <a href={toHash("#privacy")} className="text-gray-700 hover:text-gray-400 text-[12px] transition-colors">Обработка персональных данных</a>
+        <div className="border-t border-white/[0.05] pt-8 space-y-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-gray-700 text-[12px]">
+              © {new Date().getFullYear()} Т1 ИЗОЛЯЦИЯ. Все права защищены.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6">
+              <a href={toHash("#privacy")} className="text-gray-700 hover:text-gray-400 text-[12px] transition-colors">Политика конфиденциальности</a>
+              <a href={toHash("#privacy")} className="text-gray-700 hover:text-gray-400 text-[12px] transition-colors">Обработка персональных данных</a>
+            </div>
           </div>
+          <p className="text-gray-700 text-[11px] text-center sm:text-left leading-relaxed">
+            Сайт носит информационный характер и не является публичной офертой.
+          </p>
         </div>
       </div>
     </footer>
