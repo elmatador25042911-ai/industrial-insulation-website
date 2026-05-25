@@ -3,6 +3,7 @@ import Icon from "@/components/ui/icon";
 import InternalLayout from "@/components/layouts/InternalLayout";
 import { coveringImages } from "@/assets/zashchitnye-pokrytiya/assets";
 import { TU_SUDOSTROENIE_UNION } from "@/lib/catalog-tu";
+import CoatingsSection from "./zashchitnye-pokrytiya/CoatingsSection";
 
 const BADGES = [
   { icon: "Shield", text: "METALL / TITAN" },
@@ -168,6 +169,8 @@ const ZashchitnyePokrytiya = () => {
             </div>
           </div>
         </section>
+
+        <CoatingsSection />
       </main>
     </InternalLayout>
   );
