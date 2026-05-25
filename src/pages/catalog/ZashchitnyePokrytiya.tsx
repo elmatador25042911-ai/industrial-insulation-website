@@ -5,6 +5,7 @@ import { coveringImages } from "@/assets/zashchitnye-pokrytiya/assets";
 import { TU_SUDOSTROENIE_UNION } from "@/lib/catalog-tu";
 import CoatingsSection from "./zashchitnye-pokrytiya/CoatingsSection";
 import ApplicationsSection from "./zashchitnye-pokrytiya/ApplicationsSection";
+import SelectionSection from "./zashchitnye-pokrytiya/SelectionSection";
 
 const BADGES = [
   { icon: "Shield", text: "METALL / TITAN" },
@@ -173,6 +174,7 @@ const ZashchitnyePokrytiya = () => {
 
         <CoatingsSection />
         <ApplicationsSection />
+        <SelectionSection />
       </main>
     </InternalLayout>
   );
