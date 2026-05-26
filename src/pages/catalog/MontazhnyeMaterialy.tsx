@@ -3,6 +3,7 @@ import Icon from "@/components/ui/icon";
 import InternalLayout from "@/components/layouts/InternalLayout";
 import { kitPackagingImages } from "@/assets/montazhnye-materialy/assets";
 import { TU_SUDOSTROENIE_UNION } from "@/lib/catalog-tu";
+import KitSection from "./montazhnye-materialy/KitSection";
 
 const BADGES = [
   { icon: "Droplet", text: "Клей / очиститель" },
@@ -168,6 +169,8 @@ const MontazhnyeMaterialy = () => {
             </div>
           </div>
         </section>
+
+        <KitSection />
       </main>
     </InternalLayout>
   );
