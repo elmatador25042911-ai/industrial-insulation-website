@@ -99,26 +99,24 @@ const TapeCard = ({ tape, index }: { tape: Tape; index: number }) => (
 
     {/* Контент */}
     <div className="relative p-6 sm:p-7 flex-1 flex flex-col">
-      <div className="flex items-center gap-2.5 mb-3">
-        <span className="w-9 h-9 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
-          <Icon name="Layers" size={16} className="text-orange-400" />
+      <div className="flex items-center gap-3 mb-4">
+        <span className="w-10 h-10 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
+          <Icon name="Layers" size={18} className="text-orange-400" />
         </span>
-        <span className="t-label text-orange-400/90 tracking-[0.18em] text-[11px]">
-          ИСПОЛНЕНИЕ {String(index + 1).padStart(2, "0")}
-        </span>
+        <h3
+          className="text-white text-[22px] sm:text-[26px] leading-[1.05]"
+          style={{
+            fontFamily: "'Oswald', sans-serif",
+            fontWeight: 700,
+            letterSpacing: "0.02em",
+            textTransform: "uppercase",
+          }}
+        >
+          {tape.code}
+        </h3>
       </div>
 
-      <h3
-        className="text-white text-[18px] sm:text-[19px] leading-tight mb-3"
-        style={{
-          fontFamily: "'Oswald', sans-serif",
-          fontWeight: 700,
-          letterSpacing: "0.02em",
-          textTransform: "uppercase",
-        }}
-      >
-        {tape.code}
-      </h3>
+      <span className="h-px w-10 bg-orange-500/60 mb-4" />
 
       <p className="text-gray-400 text-[14px] leading-[1.65]">
         {tape.description}
