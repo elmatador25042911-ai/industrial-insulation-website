@@ -56,23 +56,22 @@ const ApplicationCard = ({ app, index }: { app: Application; index: number }) =>
       {String(index + 1).padStart(2, "0")}
     </div>
 
-    <div className="flex items-center gap-3 mb-4 mt-2">
+    <div className="flex items-center gap-3 mb-4 mt-2 pr-10">
       <span className="w-10 h-10 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
         <Icon name={app.icon} size={18} className="text-orange-400" />
       </span>
+      <h3
+        className="text-white text-[18px] sm:text-[19px] leading-tight"
+        style={{
+          fontFamily: "'Oswald', sans-serif",
+          fontWeight: 700,
+          letterSpacing: "0.01em",
+          textTransform: "uppercase",
+        }}
+      >
+        {app.title}
+      </h3>
     </div>
-
-    <h3
-      className="text-white text-[18px] sm:text-[19px] leading-tight mb-3"
-      style={{
-        fontFamily: "'Oswald', sans-serif",
-        fontWeight: 700,
-        letterSpacing: "0.01em",
-        textTransform: "uppercase",
-      }}
-    >
-      {app.title}
-    </h3>
 
     <p className="text-gray-400 text-[14px] leading-[1.7]">{app.text}</p>
 
