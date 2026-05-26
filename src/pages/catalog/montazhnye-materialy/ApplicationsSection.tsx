@@ -60,9 +60,6 @@ const ApplicationCard = ({ app, index }: { app: Application; index: number }) =>
       <span className="w-10 h-10 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
         <Icon name={app.icon} size={18} className="text-orange-400" />
       </span>
-      <span className="t-label text-orange-400/90 tracking-[0.18em] text-[11px]">
-        ОБЛАСТЬ {String(index + 1).padStart(2, "0")}
-      </span>
     </div>
 
     <h3
