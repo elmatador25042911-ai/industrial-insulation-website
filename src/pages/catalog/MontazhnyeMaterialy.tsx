@@ -7,6 +7,7 @@ import KitSection from "./montazhnye-materialy/KitSection";
 import TapesSection from "./montazhnye-materialy/TapesSection";
 import ApplicationsSection from "./montazhnye-materialy/ApplicationsSection";
 import TechnicalSpecsSection from "./montazhnye-materialy/TechnicalSpecsSection";
+import RequestSection from "./montazhnye-materialy/RequestSection";
 
 const BADGES = [
   { icon: "Droplet", text: "Клей / очиститель" },
@@ -177,6 +178,7 @@ const MontazhnyeMaterialy = () => {
         <TapesSection />
         <ApplicationsSection />
         <TechnicalSpecsSection />
+        <RequestSection />
       </main>
     </InternalLayout>
   );
