@@ -10,6 +10,7 @@ import TrubnayaIzolyaciya from "./pages/catalog/TrubnayaIzolyaciya";
 import TrubnayaIzolyaciyaPgs from "./pages/catalog/TrubnayaIzolyaciyaPgs";
 import RulonnayaIzolyaciya from "./pages/catalog/RulonnayaIzolyaciya";
 import ZashchitnyePokrytiya from "./pages/catalog/ZashchitnyePokrytiya";
+import MontazhnyeMaterialy from "./pages/catalog/MontazhnyeMaterialy";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/catalog/sudostroenie/trubnaya-izolyaciya" element={<TrubnayaIzolyaciya />} />
           <Route path="/catalog/sudostroenie/rulonnaya-izolyaciya" element={<RulonnayaIzolyaciya />} />
           <Route path="/catalog/sudostroenie/zashchitnye-pokrytiya" element={<ZashchitnyePokrytiya />} />
+          <Route path="/catalog/sudostroenie/montazhnye-materialy" element={<MontazhnyeMaterialy />} />
           <Route path="/catalog/pgs/trubnaya-izolyaciya" element={<TrubnayaIzolyaciyaPgs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
