@@ -67,28 +67,40 @@ const GroupHeader = ({
   label: string;
   icon: string;
 }) => (
-  <div className="flex items-center gap-3 sm:gap-4 mb-6">
+  <div className="flex items-center gap-3 sm:gap-5 mb-6">
+    {/* Номер */}
     <span
-      className="text-[12px] sm:text-[13px] tracking-[0.22em] text-orange-500/80 font-semibold"
+      className="text-[12px] sm:text-[13px] tracking-[0.28em] text-orange-500/80 font-semibold pt-1"
       style={{ fontFamily: "'JetBrains Mono', monospace" }}
     >
       {num}
     </span>
-    <span className="w-10 h-10 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
-      <Icon name={icon} size={18} className="text-orange-400" />
+
+    {/* Иконка с угловыми акцентами */}
+    <span className="relative w-11 h-11 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
+      <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-orange-500" />
+      <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-orange-500" />
+      <Icon name={icon} size={20} className="text-orange-400" />
     </span>
+
+    {/* Название */}
     <h3
-      className="text-white text-[20px] sm:text-[24px] leading-tight"
+      className="text-white text-[22px] sm:text-[28px] leading-[1.05] tracking-[0.02em]"
       style={{
         fontFamily: "'Oswald', sans-serif",
         fontWeight: 700,
-        letterSpacing: "0.01em",
         textTransform: "uppercase",
+        textShadow: "0 1px 0 rgba(0,0,0,0.4)",
       }}
     >
       {label}
     </h3>
-    <span className="h-px flex-1 bg-gradient-to-r from-orange-500/40 via-white/10 to-transparent ml-1" />
+
+    {/* Линия-акцент */}
+    <span className="hidden sm:flex flex-1 items-center gap-2 ml-1 min-w-0">
+      <span className="h-[2px] w-8 bg-orange-500 flex-shrink-0" />
+      <span className="h-px flex-1 bg-gradient-to-r from-orange-500/30 via-white/10 to-transparent" />
+    </span>
   </div>
 );
 
