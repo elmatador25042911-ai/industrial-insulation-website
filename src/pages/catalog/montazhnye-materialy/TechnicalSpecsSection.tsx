@@ -67,11 +67,28 @@ const GroupHeader = ({
   label: string;
   icon: string;
 }) => (
-  <div className="flex items-center gap-3 mb-5">
-    <span className="text-[11px] tracking-[0.22em] text-orange-500/80 font-semibold">{num}</span>
-    <Icon name={icon} size={16} className="text-orange-400" />
-    <span className="t-label text-orange-400/90 tracking-[0.18em]">{label}</span>
-    <span className="h-px flex-1 bg-white/10" />
+  <div className="flex items-center gap-3 sm:gap-4 mb-6">
+    <span
+      className="text-[12px] sm:text-[13px] tracking-[0.22em] text-orange-500/80 font-semibold"
+      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+    >
+      {num}
+    </span>
+    <span className="w-10 h-10 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
+      <Icon name={icon} size={18} className="text-orange-400" />
+    </span>
+    <h3
+      className="text-white text-[20px] sm:text-[24px] leading-tight"
+      style={{
+        fontFamily: "'Oswald', sans-serif",
+        fontWeight: 700,
+        letterSpacing: "0.01em",
+        textTransform: "uppercase",
+      }}
+    >
+      {label}
+    </h3>
+    <span className="h-px flex-1 bg-gradient-to-r from-orange-500/40 via-white/10 to-transparent ml-1" />
   </div>
 );
 
@@ -103,7 +120,7 @@ export const TechnicalSpecsSection = () => {
 
         {/* ── 01 Клей Unionflex ── */}
         <div className="mb-12 sm:mb-14">
-          <GroupHeader num="01" label="КЛЕЙ UNIONFLEX" icon="Droplet" />
+          <GroupHeader num="01" label="Клей Unionflex" icon="Droplet" />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {GLUE.map((s) => (
               <SpecRow key={s.label} s={s} />
@@ -113,7 +130,7 @@ export const TechnicalSpecsSection = () => {
 
         {/* ── 02 Очиститель Unionflex ── */}
         <div className="mb-12 sm:mb-14">
-          <GroupHeader num="02" label="ОЧИСТИТЕЛЬ UNIONFLEX" icon="SprayCan" />
+          <GroupHeader num="02" label="Очиститель Unionflex" icon="SprayCan" />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {CLEANER.map((s) => (
               <SpecRow key={s.label} s={s} />
@@ -123,7 +140,7 @@ export const TechnicalSpecsSection = () => {
 
         {/* ── 03 Стыковочные ленты Unionflex ── */}
         <div>
-          <GroupHeader num="03" label="СТЫКОВОЧНЫЕ ЛЕНТЫ UNIONFLEX" icon="Layers" />
+          <GroupHeader num="03" label="Стыковочные ленты Unionflex" icon="Layers" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-5">
             {TAPES.map((s) => (
