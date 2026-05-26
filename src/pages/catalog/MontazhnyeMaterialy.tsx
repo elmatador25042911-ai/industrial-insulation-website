@@ -6,6 +6,7 @@ import { TU_SUDOSTROENIE_UNION } from "@/lib/catalog-tu";
 import KitSection from "./montazhnye-materialy/KitSection";
 import TapesSection from "./montazhnye-materialy/TapesSection";
 import ApplicationsSection from "./montazhnye-materialy/ApplicationsSection";
+import TechnicalSpecsSection from "./montazhnye-materialy/TechnicalSpecsSection";
 
 const BADGES = [
   { icon: "Droplet", text: "Клей / очиститель" },
@@ -175,6 +176,7 @@ const MontazhnyeMaterialy = () => {
         <KitSection />
         <TapesSection />
         <ApplicationsSection />
+        <TechnicalSpecsSection />
       </main>
     </InternalLayout>
   );
