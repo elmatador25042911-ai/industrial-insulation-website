@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import InternalLayout from "@/components/layouts/InternalLayout";
+import FunctionsSection from "./termochekhly/FunctionsSection";
 
 const TU_TERMO = "ТУ 23.99.19-001-85495285-2018";
 
@@ -220,6 +221,8 @@ const Termochekhly = () => {
             </div>
           </div>
         </section>
+
+        <FunctionsSection />
       </main>
     </InternalLayout>
   );
