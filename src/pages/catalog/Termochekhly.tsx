@@ -3,6 +3,7 @@ import Icon from "@/components/ui/icon";
 import InternalLayout from "@/components/layouts/InternalLayout";
 import FunctionsSection from "./termochekhly/FunctionsSection";
 import ApplicationsSection from "./termochekhly/ApplicationsSection";
+import ProcessSection from "./termochekhly/ProcessSection";
 
 const TU_TERMO = "ТУ 23.99.19-001-85495285-2018";
 
@@ -225,6 +226,7 @@ const Termochekhly = () => {
 
         <FunctionsSection />
         <ApplicationsSection />
+        <ProcessSection />
       </main>
     </InternalLayout>
   );
