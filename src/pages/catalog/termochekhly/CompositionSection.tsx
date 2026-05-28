@@ -1,180 +1,219 @@
 import Icon from "@/components/ui/icon";
 
-type Layer = {
+type Param = { label: string; value: string };
+
+type Material = {
+  num: string;
+  title: string;
+  params: Param[];
+};
+
+type Group = {
   num: string;
   icon: string;
   title: string;
   short: string;
-  text: string;
+  materials?: Material[];
+  items?: string[];
 };
 
-const LAYERS: Layer[] = [
+const GROUPS: Group[] = [
   {
     num: "01",
     icon: "Shield",
     title: "Наружный защитный слой",
-    short: "Защита от внешних воздействий",
-    text: "Варианты наружного слоя подбираются по условиям эксплуатации: стеклоткань с силиконовой пропиткой, алюминизированное покрытие, армированное покрытие или кремнезёмная ткань.",
+    short:
+      "Наружный слой защищает теплоизоляционный материал от внешних воздействий и подбирается по температуре, условиям эксплуатации и требованиям к стойкости.",
+    materials: [
+      {
+        num: "1.1",
+        title: "Стеклоткань с двухсторонней силиконовой пропиткой",
+        params: [
+          { label: "Горючесть", value: "Г1" },
+          { label: "Рабочая температура", value: "от -60 до +250 °C" },
+          { label: "Стойкость к агрессивным веществам", value: "Устойчива" },
+        ],
+      },
+      {
+        num: "1.2",
+        title: "Стеклоткань с алюминизированным покрытием",
+        params: [
+          { label: "Горючесть", value: "НГ" },
+          { label: "Рабочая температура", value: "до +330 °C" },
+          { label: "Стойкость к агрессивным веществам", value: "Не устойчива" },
+        ],
+      },
+      {
+        num: "1.3",
+        title: "Стеклоткань с ПУ-покрытием, армированная металлической нитью",
+        params: [
+          { label: "Горючесть", value: "Г1" },
+          { label: "Рабочая температура", value: "до +450 °C" },
+          { label: "Стойкость к агрессивным веществам", value: "Устойчива" },
+        ],
+      },
+      {
+        num: "1.4",
+        title: "Кремнезёмная ткань с покрытием и без",
+        params: [
+          { label: "Горючесть", value: "НГ" },
+          { label: "Рабочая температура", value: "до +1100 °C" },
+          { label: "Стойкость к агрессивным веществам", value: "Устойчива" },
+        ],
+      },
+    ],
   },
   {
     num: "02",
     icon: "Layers",
-    title: "Теплоизоляционный слой",
-    short: "Внутреннее наполнение",
-    text: "Внутреннее наполнение подбирается по температурному режиму и задаче изоляции: вспененный каучук или полиэтилен, каменная вата, аэрогель, кремнезёмная вата.",
+    title: "Внутренний теплоизоляционный слой",
+    short:
+      "Внутренний слой подбирается по температуре поверхности, требуемой теплопроводности, плотности и условиям эксплуатации.",
+    materials: [
+      {
+        num: "2.1",
+        title: "Вспененный каучук",
+        params: [
+          { label: "Горючесть", value: "Г1" },
+          { label: "Температура применения", value: "от -200 до +150 °C" },
+          { label: "Плотность", value: "45–70 кг/м³" },
+          { label: "λ20", value: "0,038 Вт/(м·°C)" },
+        ],
+      },
+      {
+        num: "2.2",
+        title: "Каменная вата",
+        params: [
+          { label: "Горючесть", value: "НГ" },
+          { label: "Температура применения", value: "до +680 °C" },
+          { label: "Плотность", value: "80–130 кг/м³" },
+          { label: "λ20", value: "0,034 Вт/(м·°C)" },
+        ],
+      },
+      {
+        num: "2.3",
+        title: "Аэрогель",
+        params: [
+          { label: "Горючесть", value: "НГ / Г1" },
+          { label: "Температура применения", value: "от -180 до +650 °C" },
+          { label: "Плотность", value: "180 кг/м³" },
+          { label: "λ20", value: "0,021 Вт/(м·°C)" },
+        ],
+      },
+      {
+        num: "2.4",
+        title: "Кремнезёмная вата",
+        params: [
+          { label: "Горючесть", value: "НГ" },
+          { label: "Температура применения", value: "до +1100 °C" },
+          { label: "Плотность", value: "130 кг/м³" },
+          { label: "λ20", value: "0,025 Вт/(м·°C)" },
+        ],
+      },
+    ],
   },
   {
     num: "03",
     icon: "Link2",
-    title: "Крепления и фиксация",
-    short: "Съёмное соединение",
-    text: "Для фиксации применяются липучки ВЕЛКРО, D-образные полукольца, пружинные замки, люверсы, крючки и ремни.",
-  },
-  {
-    num: "04",
-    icon: "Ruler",
-    title: "Индивидуальная форма",
-    short: "Под конкретный узел",
-    text: "Изделие изготавливается под конкретный узел: арматуру, фланец, клапан, корпус оборудования или сложный участок трубопровода.",
+    title: "Элементы крепления и фиксации",
+    short:
+      "Крепления подбираются под форму узла, требования к съёмности, доступу для обслуживания и условия эксплуатации.",
+    items: [
+      "Пружинный замок",
+      "Люверсы",
+      "Металлические крючки",
+      "D-образные полукольца",
+      "Мультифиламентный ремень",
+      "Липучки ВЕЛКРО",
+    ],
   },
 ];
 
-const LayerCard = ({ layer }: { layer: Layer }) => (
-  <article
-    className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-6 sm:p-7 transition-colors duration-300 hover:border-orange-500/40 flex flex-col"
-    style={{ boxShadow: "0 24px 60px -25px rgba(0,0,0,0.8)" }}
-  >
-    <div className="absolute top-0 left-0 h-[2px] w-12 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
-
-    <div className="flex items-center gap-3 mb-5">
-      <span
-        className="text-[13px] tracking-[0.28em] text-orange-500/80 font-semibold"
-        style={{ fontFamily: "'JetBrains Mono', monospace" }}
-      >
-        {layer.num}
-      </span>
-      <span className="relative w-11 h-11 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
-        <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-orange-500" />
-        <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-orange-500" />
-        <Icon name={layer.icon} size={20} className="text-orange-400" />
-      </span>
-      <span className="h-px flex-1 bg-gradient-to-r from-orange-500/30 via-white/10 to-transparent" />
-    </div>
-
+const GroupHeader = ({ group }: { group: Group }) => (
+  <div className="flex items-center gap-3 sm:gap-4 mb-5">
+    <span
+      className="text-[12px] sm:text-[13px] tracking-[0.28em] text-orange-500/80 font-semibold"
+      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+    >
+      {group.num}
+    </span>
+    <span className="relative w-11 h-11 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
+      <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-orange-500" />
+      <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-orange-500" />
+      <Icon name={group.icon} size={20} className="text-orange-400" />
+    </span>
     <h3
-      className="text-white text-[19px] sm:text-[21px] leading-[1.15] mb-2"
+      className="text-white text-[20px] sm:text-[26px] leading-[1.05]"
       style={{
         fontFamily: "'Oswald', sans-serif",
         fontWeight: 700,
-        letterSpacing: "0.01em",
         textTransform: "uppercase",
+        letterSpacing: "0.01em",
       }}
     >
-      {layer.title}
+      {group.title}
     </h3>
+    <span className="hidden sm:flex flex-1 items-center gap-2 ml-1 min-w-0">
+      <span className="h-[2px] w-8 bg-orange-500 flex-shrink-0" />
+      <span className="h-px flex-1 bg-gradient-to-r from-orange-500/30 via-white/10 to-transparent" />
+    </span>
+  </div>
+);
 
-    <div
-      className="text-[11px] tracking-[0.22em] text-orange-400/80 uppercase mb-4"
-      style={{ fontFamily: "'JetBrains Mono', monospace" }}
-    >
-      {layer.short}
+const MaterialCard = ({ m }: { m: Material }) => (
+  <article
+    className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-5 sm:p-6 transition-colors duration-300 hover:border-orange-500/40"
+    style={{ boxShadow: "0 24px 60px -25px rgba(0,0,0,0.8)" }}
+  >
+    <div className="absolute top-0 left-0 h-[2px] w-10 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
+
+    <div className="flex items-start gap-3 mb-4">
+      <span
+        className="text-[12px] tracking-[0.22em] text-orange-500/80 font-semibold pt-1 flex-shrink-0"
+        style={{ fontFamily: "'JetBrains Mono', monospace" }}
+      >
+        {m.num}
+      </span>
+      <h4
+        className="text-white text-[15px] sm:text-[16px] leading-[1.3] font-semibold"
+        style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "0.01em" }}
+      >
+        {m.title}
+      </h4>
     </div>
 
-    <p className="text-gray-400 text-[14px] leading-[1.7]">{layer.text}</p>
+    <div className="space-y-0">
+      {m.params.map((p) => (
+        <div
+          key={p.label}
+          className="flex items-start justify-between gap-3 py-2.5 border-t border-white/[0.06]"
+        >
+          <span
+            className="text-[10.5px] sm:text-[11px] tracking-[0.18em] text-gray-500 uppercase leading-snug"
+            style={{ fontFamily: "'JetBrains Mono', monospace" }}
+          >
+            {p.label}
+          </span>
+          <span
+            className="text-[13px] sm:text-[14px] text-white font-semibold text-right leading-snug"
+            style={{ fontFamily: "'Oswald', sans-serif" }}
+          >
+            {p.value}
+          </span>
+        </div>
+      ))}
+    </div>
   </article>
 );
 
-const Diagram = () => (
-  <div className="relative">
-    <div className="absolute -inset-6 bg-gradient-to-br from-orange-500/12 via-transparent to-orange-600/8 blur-[60px]" />
-    <div
-      className="relative overflow-hidden rounded-sm border border-white/10 backdrop-blur-sm shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] p-8 sm:p-10"
-      style={{
-        background:
-          "radial-gradient(120% 90% at 20% 0%, rgba(255,138,0,0.08) 0%, rgba(20,20,22,0.85) 45%, rgba(10,10,12,0.95) 100%)",
-      }}
-    >
-      {/* Тонкая сетка */}
-      <div
-        className="absolute inset-0 opacity-[0.06] pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
-      />
-
-      {/* Угловые акценты */}
-      <div className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-orange-500" />
-      <div className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-orange-500" />
-
-      {/* Шильдик */}
-      <div
-        className="absolute top-3 right-3 text-[11px] tracking-[0.2em] text-gray-300 px-2 py-1 rounded-sm border border-white/10 bg-black/40 backdrop-blur-sm"
-        style={{ fontFamily: "'JetBrains Mono', monospace" }}
-      >
-        КОНСТРУКЦИЯ
-      </div>
-
-      {/* Схема слоёв */}
-      <div className="relative mt-10">
-        <div className="space-y-3">
-          {[
-            { num: "01", label: "НАРУЖНЫЙ ЗАЩИТНЫЙ СЛОЙ", h: "h-6" },
-            { num: "02", label: "ТЕПЛОИЗОЛЯЦИОННЫЙ СЛОЙ", h: "h-12" },
-            { num: "03", label: "КРЕПЛЕНИЯ / ФИКСАЦИЯ", h: "h-5" },
-            { num: "04", label: "УЗЕЛ ОБОРУДОВАНИЯ", h: "h-7" },
-          ].map((row, i) => (
-            <div key={row.num} className="flex items-center gap-3 sm:gap-4">
-              <span
-                className="text-[11px] sm:text-[12px] tracking-[0.22em] text-orange-500/80 font-semibold w-7 flex-shrink-0"
-                style={{ fontFamily: "'JetBrains Mono', monospace" }}
-              >
-                {row.num}
-              </span>
-              <div
-                className={`relative flex-1 ${row.h} rounded-sm border border-white/10 overflow-hidden`}
-                style={{
-                  background:
-                    i === 3
-                      ? "repeating-linear-gradient(45deg, rgba(255,255,255,0.06) 0 8px, rgba(255,255,255,0.02) 8px 16px)"
-                      : i === 2
-                      ? "linear-gradient(90deg, rgba(230,48,18,0.18), rgba(249,115,22,0.10))"
-                      : i === 1
-                      ? "linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02))"
-                      : "linear-gradient(90deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04))",
-                }}
-              >
-                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[10px] sm:text-[11px] tracking-[0.18em] text-gray-300 uppercase">
-                  {row.label}
-                </span>
-                <span className="absolute right-3 top-1/2 -translate-y-1/2 h-px w-6 bg-orange-500/60" />
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-8 flex items-center gap-2">
-          <span className="h-px w-6 bg-orange-500/60" />
-          <span
-            className="text-[10px] sm:text-[11px] tracking-[0.22em] text-gray-500 uppercase"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
-          >
-            Схема конструкции / условный разрез
-          </span>
-        </div>
-      </div>
-
-      {/* Виньетка */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, transparent 60%, rgba(10,10,12,0.45) 92%, rgba(10,10,12,0.85) 100%)",
-        }}
-      />
-      <div className="absolute left-6 right-6 bottom-0 h-px bg-gradient-to-r from-transparent via-orange-500/60 to-transparent" />
-    </div>
+const FixingChip = ({ text }: { text: string }) => (
+  <div className="flex items-center gap-2.5 px-4 py-3 rounded-sm border border-white/10 bg-white/[0.025] hover:border-orange-500/40 transition-colors">
+    <span className="w-7 h-7 rounded-sm border border-orange-500/30 bg-orange-500/5 flex items-center justify-center flex-shrink-0">
+      <Icon name="Check" size={12} className="text-orange-400" />
+    </span>
+    <span className="text-gray-200 text-[13.5px] sm:text-[14px] font-medium leading-snug">
+      {text}
+    </span>
   </div>
 );
 
@@ -206,25 +245,41 @@ export const CompositionSection = () => {
             Состав <span className="text-orange-500">термочехла</span>
           </h2>
           <p className="text-gray-400 text-base sm:text-lg leading-[1.7]">
-            Конструкция термочехла подбирается под форму узла, температурный режим,
-            условия эксплуатации и требования к демонтажу при обслуживании
+            Конструкция термочехла подбирается под температурный режим, форму
+            узла, условия эксплуатации и требования к демонтажу при обслуживании
             оборудования.
           </p>
         </div>
 
-        {/* Сетка: слева 4 карточки 2x2, справа схема */}
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
-            {LAYERS.map((l) => (
-              <LayerCard key={l.num} layer={l} />
-            ))}
-          </div>
-          <div className="lg:col-span-5">
-            <Diagram />
-          </div>
+        <div className="mt-14 space-y-14 sm:space-y-16">
+          {GROUPS.map((group) => (
+            <div key={group.num}>
+              <GroupHeader group={group} />
+
+              <p className="text-gray-400 text-[14.5px] sm:text-[15px] leading-[1.7] max-w-4xl mb-6 sm:mb-7">
+                {group.short}
+              </p>
+
+              {group.materials && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+                  {group.materials.map((m) => (
+                    <MaterialCard key={m.num} m={m} />
+                  ))}
+                </div>
+              )}
+
+              {group.items && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+                  {group.items.map((it) => (
+                    <FixingChip key={it} text={it} />
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
 
-        <div className="mt-12 flex items-start gap-3 max-w-3xl">
+        <div className="mt-14 flex items-start gap-3 max-w-3xl">
           <span className="mt-2 h-px w-8 bg-orange-500/60 flex-shrink-0" />
           <p className="text-gray-500 text-[13.5px] sm:text-sm leading-[1.7]">
             Окончательный состав термочехла определяется по параметрам объекта,
