@@ -14,7 +14,7 @@ const CATALOG_SHIP: { name: string; sub: string; img: string; href?: string }[] 
   { name: "Рулонная изоляция",         sub: "Вспененный каучук для поверхностей",     img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/rilonaya-sud.jpg", href: "/catalog/sudostroenie/rulonnaya-izolyaciya" },
   { name: "Монтажные материалы",       sub: "Ленты, клеи, очистители",               img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/montajniemateriali-sud.jpg", href: "/catalog/sudostroenie/montazhnye-materialy" },
   { name: "Защитные покрытия",         sub: "Металл и полимерные решения",            img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/zaqshitnieporitiya-sud.jpg", href: "/catalog/sudostroenie/zashchitnye-pokrytiya" },
-  { name: "Термочехлы",                sub: "Для оборудования и трубопроводов",       img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/termochehol-sud.jpg" },
+  { name: "Термочехлы",                sub: "Для оборудования и трубопроводов",       img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/termochehol-sud.jpg", href: "/catalog/sudostroenie/termochekhly" },
   { name: "Антиконденсатные покрытия", sub: "Тепло- и влагозащита поверхностей",     img: "https://cdn.poehali.dev/files/fd19cb44-689d-42fb-a507-66e8b6bcbd0a.jpg" },
 ];
 
