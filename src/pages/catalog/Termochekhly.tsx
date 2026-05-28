@@ -5,6 +5,7 @@ import FunctionsSection from "./termochekhly/FunctionsSection";
 import ApplicationsSection from "./termochekhly/ApplicationsSection";
 import ProcessSection from "./termochekhly/ProcessSection";
 import SpecsSection from "./termochekhly/SpecsSection";
+import CompositionSection from "./termochekhly/CompositionSection";
 
 const TU_TERMO = "ТУ 23.99.19-001-85495285-2018";
 
@@ -229,6 +230,7 @@ const Termochekhly = () => {
         <ApplicationsSection />
         <ProcessSection />
         <SpecsSection />
+        <CompositionSection />
       </main>
     </InternalLayout>
   );
