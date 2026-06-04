@@ -133,69 +133,27 @@ const Termochekhly = () => {
                         "radial-gradient(120% 90% at 20% 0%, rgba(255,138,0,0.10) 0%, rgba(20,20,22,0.85) 45%, rgba(10,10,12,0.95) 100%)",
                     }}
                   >
-                    {/* Тонкая сетка */}
-                    <div
-                      className="absolute inset-0 opacity-[0.08] pointer-events-none"
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
-                        backgroundSize: "40px 40px",
-                      }}
+                    {/* Hero-изображение */}
+                    <img
+                      src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/termochekhly/sudostroenie_termochekhly_hero_main_01.png"
+                      alt="Термочехлы ИТШМИ ПАНЦИРЬ для судостроения"
+                      loading="eager"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
 
-                    {/* Центральная техническая композиция */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center p-8">
-                      {/* Иконка */}
-                      <div className="relative mb-6">
-                        <div className="absolute -inset-3 rounded-full bg-orange-500/15 blur-2xl" />
-                        <div className="relative w-20 h-20 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center">
-                          <span className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-orange-500" />
-                          <span className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-orange-500" />
-                          <Icon
-                            name="ShieldHalf"
-                            size={36}
-                            className="text-orange-400"
-                          />
-                        </div>
-                      </div>
-
+                    {/* Технический низ */}
+                    <div className="absolute left-6 right-6 bottom-6 z-10 flex items-end justify-between gap-3">
                       <div
-                        className="text-white text-[22px] sm:text-[26px] leading-tight text-center"
-                        style={{
-                          fontFamily: "'Oswald', sans-serif",
-                          fontWeight: 700,
-                          textTransform: "uppercase",
-                          letterSpacing: "0.02em",
-                        }}
+                        className="text-[10px] sm:text-[11px] tracking-[0.22em] text-gray-300 uppercase"
+                        style={{ fontFamily: "'JetBrains Mono', monospace" }}
                       >
-                        ИТШМИ ПАНЦИРЬ
+                        −200 … +1200 °C
                       </div>
-
-                      <div className="mt-2 flex items-center gap-2">
-                        <span className="h-px w-6 bg-orange-500/60" />
-                        <span
-                          className="text-[11px] sm:text-[12px] tracking-[0.22em] text-gray-400 uppercase"
-                          style={{ fontFamily: "'JetBrains Mono', monospace" }}
-                        >
-                          Съёмная теплоизоляция
-                        </span>
-                        <span className="h-px w-6 bg-orange-500/60" />
-                      </div>
-
-                      {/* Технический низ */}
-                      <div className="absolute left-6 right-6 bottom-6 flex items-end justify-between gap-3">
-                        <div
-                          className="text-[10px] sm:text-[11px] tracking-[0.22em] text-gray-500 uppercase"
-                          style={{ fontFamily: "'JetBrains Mono', monospace" }}
-                        >
-                          −200 … +1200 °C
-                        </div>
-                        <div
-                          className="text-[10px] sm:text-[11px] tracking-[0.22em] text-gray-500 uppercase"
-                          style={{ fontFamily: "'JetBrains Mono', monospace" }}
-                        >
-                          {TU_TERMO}
-                        </div>
+                      <div
+                        className="text-[10px] sm:text-[11px] tracking-[0.22em] text-gray-300 uppercase"
+                        style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      >
+                        {TU_TERMO}
                       </div>
                     </div>
 
