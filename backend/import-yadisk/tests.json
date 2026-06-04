@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "name": "Missing file param returns 400",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 400,
+      "expectedBody": {"error": "string"},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
