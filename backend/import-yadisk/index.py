@@ -76,6 +76,53 @@ def handler(event: dict, context) -> dict:
     cors = {'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'}
 
     params = event.get('queryStringParameters') or {}
+
+    if params.get('list') is not None:
+        s3 = boto3.client(
+            's3',
+            endpoint_url='https://bucket.poehali.dev',
+            aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],
+            aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],
+        )
+        base = os.environ['AWS_ACCESS_KEY_ID']
+        prefix = params.get('list') or ''
+        if prefix in ('1', 'true', 'yes'):
+            prefix = ''
+        listed = []
+        token = None
+        while True:
+            kw = {'Bucket': 'files', 'Prefix': prefix}
+            if token:
+                kw['ContinuationToken'] = token
+            resp = s3.list_objects_v2(**kw)
+            for obj in resp.get('Contents', []):
+                key = obj['Key']
+                listed.append({
+                    'name': key.split('/')[-1],
+                    'key': key,
+                    'cdn_url': f'https://cdn.poehali.dev/projects/{base}/bucket/{key}',
+                    'size': obj.get('Size', 0),
+                })
+            if resp.get('IsTruncated'):
+                token = resp.get('NextContinuationToken')
+            else:
+                break
+        listed.sort(key=lambda x: x['key'])
+        return {'statusCode': 200, 'headers': cors, 'isBase64Encoded': False,
+                'body': json.dumps({'count': len(listed), 'files': listed}, ensure_ascii=False)}
+
+    if params.get('names') is not None:
+        target = params.get('names')
+        item = find_item('/', target)
+        if not item or item['type'] != 'dir':
+            return {'statusCode': 404, 'headers': cors, 'isBase64Encoded': False,
+                    'body': json.dumps({'error': f'Папка не найдена: {target}'}, ensure_ascii=False)}
+        imgs: list = []
+        list_images_in_dir(item['path'], imgs)
+        names = sorted([f['name'] for f in imgs])
+        return {'statusCode': 200, 'headers': cors, 'isBase64Encoded': False,
+                'body': json.dumps({'folder': target, 'count': len(names), 'names': names}, ensure_ascii=False)}
+
     target = params.get('file')
     if not target:
         return {'statusCode': 400, 'headers': cors, 'isBase64Encoded': False,
