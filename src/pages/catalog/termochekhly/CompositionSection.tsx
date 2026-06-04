@@ -12,13 +12,15 @@ type Material = {
 const CDN =
   "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/termochekhly/itshmi_pantsir_materials_fasteners_FINAL_ascii";
 
+type FixingItem = { text: string; img: string };
+
 type Group = {
   num: string;
   icon: string;
   title: string;
   short: string;
   materials?: Material[];
-  items?: string[];
+  items?: FixingItem[];
 };
 
 const GROUPS: Group[] = [
@@ -131,12 +133,12 @@ const GROUPS: Group[] = [
     short:
       "Крепления подбираются под форму узла, требования к съёмности, доступу для обслуживания и условия эксплуатации.",
     items: [
-      "Пружинный замок",
-      "Люверсы",
-      "Металлические крючки",
-      "D-образные полукольца",
-      "Мультифиламентный ремень",
-      "Липучки ВЕЛКРО",
+      { text: "Пружинный замок", img: `${CDN}/3_1_spring_latch.png` },
+      { text: "Люверсы", img: `${CDN}/3_2_grommets.png` },
+      { text: "Металлические крючки", img: `${CDN}/3_3_metal_hooks.png` },
+      { text: "D-образные полукольца", img: `${CDN}/3_4_d_rings.png` },
+      { text: "Мультифиламентный ремень", img: `${CDN}/3_5_multifilament_strap.png` },
+      { text: "Липучки ВЕЛКРО", img: `${CDN}/3_6_velcro_tapes.png` },
     ],
   },
 ];
@@ -240,14 +242,36 @@ const MaterialCard = ({ m }: { m: Material }) => (
   </article>
 );
 
-const FixingChip = ({ text }: { text: string }) => (
-  <div className="flex items-center gap-2.5 px-4 py-3 rounded-sm border border-white/10 bg-white/[0.025] hover:border-orange-500/40 transition-colors">
-    <span className="w-7 h-7 rounded-sm border border-orange-500/30 bg-orange-500/5 flex items-center justify-center flex-shrink-0">
-      <Icon name="Check" size={12} className="text-orange-400" />
-    </span>
-    <span className="text-gray-200 text-[13.5px] sm:text-[14px] font-medium leading-snug">
-      {text}
-    </span>
+const FixingChip = ({ item }: { item: FixingItem }) => (
+  <div className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] hover:border-orange-500/40 transition-colors flex flex-col h-full">
+    <div className="absolute top-0 left-0 z-20 h-[2px] w-10 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
+
+    <div className="relative aspect-[4/3] overflow-hidden border-b border-white/10 bg-[#0c0c0e]">
+      <img
+        src={item.img}
+        alt={item.text}
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+      />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(180deg, transparent 55%, rgba(10,10,12,0.55) 100%)",
+        }}
+      />
+      <span className="absolute top-2 left-2 w-5 h-5 border-t-2 border-l-2 border-orange-500" />
+      <span className="absolute bottom-2 right-2 w-5 h-5 border-b-2 border-r-2 border-orange-500" />
+    </div>
+
+    <div className="flex items-center gap-2.5 px-4 py-3.5">
+      <span className="w-6 h-6 rounded-sm border border-orange-500/30 bg-orange-500/5 flex items-center justify-center flex-shrink-0">
+        <Icon name="Check" size={11} className="text-orange-400" />
+      </span>
+      <span className="text-gray-200 text-[13.5px] sm:text-[14px] font-medium leading-snug">
+        {item.text}
+      </span>
+    </div>
   </div>
 );
 
@@ -305,7 +329,7 @@ export const CompositionSection = () => {
               {group.items && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                   {group.items.map((it) => (
-                    <FixingChip key={it} text={it} />
+                    <FixingChip key={it.text} item={it} />
                   ))}
                 </div>
               )}
