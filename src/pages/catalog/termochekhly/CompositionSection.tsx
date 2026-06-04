@@ -6,7 +6,11 @@ type Material = {
   num: string;
   title: string;
   params: Param[];
+  img?: string;
 };
+
+const CDN =
+  "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/termochekhly/itshmi_pantsir_materials_fasteners_FINAL_ascii";
 
 type Group = {
   num: string;
@@ -28,6 +32,7 @@ const GROUPS: Group[] = [
       {
         num: "1.1",
         title: "Стеклоткань с двухсторонней силиконовой пропиткой",
+        img: `${CDN}/1_1_fiberglass_silicone_impregnation.png`,
         params: [
           { label: "Горючесть", value: "Г1" },
           { label: "Рабочая температура", value: "от -60 до +250 °C" },
@@ -37,6 +42,7 @@ const GROUPS: Group[] = [
       {
         num: "1.2",
         title: "Стеклоткань с алюминизированным покрытием",
+        img: `${CDN}/1_2_fiberglass_aluminized_coating.png`,
         params: [
           { label: "Горючесть", value: "НГ" },
           { label: "Рабочая температура", value: "до +330 °C" },
@@ -46,6 +52,7 @@ const GROUPS: Group[] = [
       {
         num: "1.3",
         title: "Стеклоткань с ПУ-покрытием, армированная металлической нитью",
+        img: `${CDN}/1_3_fiberglass_pu_coating_metal_thread.png`,
         params: [
           { label: "Горючесть", value: "Г1" },
           { label: "Рабочая температура", value: "до +450 °C" },
@@ -55,6 +62,7 @@ const GROUPS: Group[] = [
       {
         num: "1.4",
         title: "Кремнезёмная ткань с покрытием и без",
+        img: `${CDN}/1_4_silica_fabric_coated_and_uncoated.png`,
         params: [
           { label: "Горючесть", value: "НГ" },
           { label: "Рабочая температура", value: "до +1100 °C" },
@@ -162,46 +170,68 @@ const GroupHeader = ({ group }: { group: Group }) => (
 
 const MaterialCard = ({ m }: { m: Material }) => (
   <article
-    className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-5 sm:p-6 transition-colors duration-300 hover:border-orange-500/40"
+    className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] transition-colors duration-300 hover:border-orange-500/40 flex flex-col h-full"
     style={{ boxShadow: "0 24px 60px -25px rgba(0,0,0,0.8)" }}
   >
-    <div className="absolute top-0 left-0 h-[2px] w-10 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
+    <div className="absolute top-0 left-0 z-20 h-[2px] w-10 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
 
-    <div className="flex items-start gap-3 mb-4">
-      <span
-        className="text-[12px] tracking-[0.22em] text-orange-500/80 font-semibold pt-1 flex-shrink-0"
-        style={{ fontFamily: "'JetBrains Mono', monospace" }}
-      >
-        {m.num}
-      </span>
-      <h4
-        className="text-white text-[15px] sm:text-[16px] leading-[1.3] font-semibold"
-        style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "0.01em" }}
-      >
-        {m.title}
-      </h4>
-    </div>
-
-    <div className="space-y-0">
-      {m.params.map((p) => (
+    {m.img && (
+      <div className="relative aspect-[4/3] overflow-hidden border-b border-white/10 bg-[#0c0c0e]">
+        <img
+          src={m.img}
+          alt={m.title}
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+        />
         <div
-          key={p.label}
-          className="flex items-start justify-between gap-3 py-2.5 border-t border-white/[0.06]"
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(180deg, transparent 55%, rgba(10,10,12,0.55) 100%)",
+          }}
+        />
+        <span className="absolute top-2 left-2 w-5 h-5 border-t-2 border-l-2 border-orange-500" />
+        <span className="absolute bottom-2 right-2 w-5 h-5 border-b-2 border-r-2 border-orange-500" />
+      </div>
+    )}
+
+    <div className="p-5 sm:p-6 flex flex-col flex-1">
+      <div className="flex items-start gap-3 mb-4">
+        <span
+          className="text-[12px] tracking-[0.22em] text-orange-500/80 font-semibold pt-1 flex-shrink-0"
+          style={{ fontFamily: "'JetBrains Mono', monospace" }}
         >
-          <span
-            className="text-[10.5px] sm:text-[11px] tracking-[0.18em] text-gray-500 uppercase leading-snug"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
+          {m.num}
+        </span>
+        <h4
+          className="text-white text-[15px] sm:text-[16px] leading-[1.3] font-semibold"
+          style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "0.01em" }}
+        >
+          {m.title}
+        </h4>
+      </div>
+
+      <div className="space-y-0 mt-auto">
+        {m.params.map((p) => (
+          <div
+            key={p.label}
+            className="flex items-start justify-between gap-3 py-2.5 border-t border-white/[0.06]"
           >
-            {p.label}
-          </span>
-          <span
-            className="text-[13px] sm:text-[14px] text-white font-semibold text-right leading-snug"
-            style={{ fontFamily: "'Oswald', sans-serif" }}
-          >
-            {p.value}
-          </span>
-        </div>
-      ))}
+            <span
+              className="text-[10.5px] sm:text-[11px] tracking-[0.18em] text-gray-500 uppercase leading-snug"
+              style={{ fontFamily: "'JetBrains Mono', monospace" }}
+            >
+              {p.label}
+            </span>
+            <span
+              className="text-[13px] sm:text-[14px] text-white font-semibold text-right leading-snug"
+              style={{ fontFamily: "'Oswald', sans-serif" }}
+            >
+              {p.value}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   </article>
 );
