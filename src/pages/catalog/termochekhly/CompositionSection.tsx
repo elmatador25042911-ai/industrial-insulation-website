@@ -81,6 +81,7 @@ const GROUPS: Group[] = [
       {
         num: "2.1",
         title: "Вспененный каучук",
+        img: `${CDN}/2_1_foamed_rubber.png`,
         params: [
           { label: "Горючесть", value: "Г1" },
           { label: "Температура применения", value: "от -200 до +150 °C" },
@@ -91,6 +92,7 @@ const GROUPS: Group[] = [
       {
         num: "2.2",
         title: "Каменная вата",
+        img: `${CDN}/2_4_stone_wool.png`,
         params: [
           { label: "Горючесть", value: "НГ" },
           { label: "Температура применения", value: "до +680 °C" },
@@ -101,6 +103,7 @@ const GROUPS: Group[] = [
       {
         num: "2.3",
         title: "Аэрогель",
+        img: `${CDN}/2_3_aerogel.png`,
         params: [
           { label: "Горючесть", value: "НГ / Г1" },
           { label: "Температура применения", value: "от -180 до +650 °C" },
@@ -111,6 +114,7 @@ const GROUPS: Group[] = [
       {
         num: "2.4",
         title: "Кремнезёмная вата",
+        img: `${CDN}/2_2_silica_wool.png`,
         params: [
           { label: "Горючесть", value: "НГ" },
           { label: "Температура применения", value: "до +1100 °C" },
