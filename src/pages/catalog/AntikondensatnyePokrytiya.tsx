@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import InternalLayout from "@/components/layouts/InternalLayout";
 import PurposeSection from "./antikondensat/PurposeSection";
+import PackagingSection from "./antikondensat/PackagingSection";
 
 const HERO_IMG =
   "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/antikondensat/akvaros_antikondensat_bucket_studio_01.png";
@@ -149,6 +150,8 @@ const AntikondensatnyePokrytiya = () => {
         </section>
 
         <PurposeSection />
+
+        <PackagingSection />
       </main>
     </InternalLayout>
   );
