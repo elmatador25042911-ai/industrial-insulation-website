@@ -63,44 +63,41 @@ const LimitationsSection = () => {
           </p>
         </div>
 
-        {/* Карточки ограничений */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 ak-grid">
+        {/* Карточки ограничений — плотная сетка */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 ak-grid">
           {CARDS.map((c) => (
             <article
               key={c.title}
-              className="ak-card group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-6 transition-colors duration-300 hover:border-orange-500/40"
-              style={{ boxShadow: "0 24px 60px -25px rgba(0,0,0,0.8)" }}
+              className="ak-card group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-5 transition-colors duration-300 hover:border-orange-500/40"
             >
-              <div className="absolute top-0 left-0 h-[2px] w-12 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
-              <div className="flex items-center gap-3 mb-3">
-                <span className="relative w-11 h-11 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
-                  <Icon name={c.icon} size={20} className="text-orange-400" />
-                </span>
-                <h3
-                  className="text-white text-[16px] sm:text-[17px] leading-[1.2]"
-                  style={{
-                    fontFamily: "'Oswald', sans-serif",
-                    fontWeight: 700,
-                    letterSpacing: "0.01em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  {c.title}
-                </h3>
-              </div>
-              <p className="ak-card-text text-gray-400">{c.text}</p>
+              <div className="absolute top-0 left-0 h-[2px] w-10 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
+              <span className="relative w-10 h-10 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0 mb-3">
+                <Icon name={c.icon} size={18} className="text-orange-400" />
+              </span>
+              <h3
+                className="text-white text-[14px] leading-[1.2] mb-2"
+                style={{
+                  fontFamily: "'Oswald', sans-serif",
+                  fontWeight: 700,
+                  letterSpacing: "0.01em",
+                  textTransform: "uppercase",
+                }}
+              >
+                {c.title}
+              </h3>
+              <p className="text-gray-400 text-[12.5px] leading-[1.6]">{c.text}</p>
             </article>
           ))}
         </div>
 
         {/* Техническая подпись */}
-        <div className="mt-8 flex items-start gap-3 rounded-sm border border-white/10 bg-white/[0.03] px-5 py-4">
+        <div className="mt-5 flex items-center gap-3 rounded-sm border-l-2 border-orange-500/60 border-y border-r border-white/10 bg-white/[0.025] px-5 py-3.5">
           <Icon
             name="Info"
-            size={18}
-            className="text-orange-400 mt-0.5 flex-shrink-0"
+            size={16}
+            className="text-orange-400 flex-shrink-0"
           />
-          <p className="text-gray-400 text-[13px] sm:text-[14px] leading-[1.7]">
+          <p className="text-gray-400 text-[13px] sm:text-[14px] leading-[1.6]">
             Перед нанесением поверхность должна быть сухой, очищенной,
             обезжиренной и подготовленной под тип основания.
           </p>

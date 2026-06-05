@@ -36,85 +36,110 @@ const PackagingSection = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ak-section">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Текст и карточки */}
-          <div className="lg:col-span-7 order-2 lg:order-2">
-            <div className="ak-label-row">
-              <span className="h-px w-10 bg-orange-500" />
-              <span className="ak-label text-orange-400/90">
-                ФАСОВКА
-              </span>
-            </div>
-            <h2 className="ak-h2 text-white">
-              Доступные <span className="text-orange-500">объёмы поставки</span>
-            </h2>
-            <p className="ak-lead text-gray-300 mb-4">
-              Покрытие ЗМ.ПАНЦИРЬ.АК поставляется в пластиковой таре разных
-              объёмов. Объём подбирается по площади нанесения, условиям объекта и
-              требуемому количеству слоёв.
-            </p>
-            <p className="ak-text text-gray-400">
-              Маркировка V в обозначении продукта указывает на объём тары.
-            </p>
-
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 ak-grid">
-              {VOLUMES.map((v) => (
-                <article
-                  key={v.volume}
-                  className="ak-card group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-5 transition-colors duration-300 hover:border-orange-500/40"
-                  style={{ boxShadow: "0 24px 60px -25px rgba(0,0,0,0.8)" }}
-                >
-                  <div className="absolute top-0 left-0 h-[2px] w-10 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="relative w-10 h-10 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center">
-                      <Icon
-                        name="PaintBucket"
-                        size={18}
-                        className="text-orange-400"
-                      />
-                    </span>
-                    <span
-                      className="text-white text-[18px] leading-none"
-                      style={{
-                        fontFamily: "'Oswald', sans-serif",
-                        fontWeight: 700,
-                        letterSpacing: "0.02em",
-                        textTransform: "uppercase",
-                      }}
-                    >
-                      {v.volume}
-                    </span>
-                  </div>
-                  <p className="ak-card-text text-gray-400">
-                    {v.text}
-                  </p>
-                </article>
-              ))}
-            </div>
+        {/* Заголовок */}
+        <div className="ak-head">
+          <div className="ak-label-row">
+            <span className="h-px w-10 bg-orange-500" />
+            <span className="ak-label text-orange-400/90">ФАСОВКА</span>
           </div>
+          <h2 className="ak-h2 text-white">
+            Доступные <span className="text-orange-500">объёмы поставки</span>
+          </h2>
+          <p className="ak-lead text-gray-300 mb-3">
+            Покрытие ЗМ.ПАНЦИРЬ.АК поставляется в пластиковой таре разных
+            объёмов. Объём подбирается по площади нанесения, условиям объекта и
+            требуемому количеству слоёв.
+          </p>
+          <p className="ak-text text-gray-400">
+            Маркировка V в обозначении продукта указывает на объём тары.
+          </p>
+        </div>
 
-          {/* Изображение банки */}
-          <div className="lg:col-span-5 order-1 lg:order-1">
-            <div className="relative">
+        {/* Продуктовая витрина + варианты */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+          {/* Продукт */}
+          <div className="lg:col-span-5 order-1">
+            <div className="relative h-full">
               <div className="absolute -inset-6 bg-gradient-to-br from-orange-500/15 via-transparent to-orange-600/10 blur-[60px]" />
               <div
-                className="relative aspect-[4/3] overflow-hidden rounded-sm border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)]"
+                className="relative h-full min-h-[340px] overflow-hidden rounded-sm border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] flex flex-col"
                 style={{
                   background:
                     "radial-gradient(120% 90% at 20% 0%, rgba(255,138,0,0.10) 0%, rgba(20,20,22,0.85) 45%, rgba(10,10,12,0.95) 100%)",
                 }}
               >
-                <img
-                  src={IMG}
-                  alt="Тара покрытия ЗМ.ПАНЦИРЬ.АК"
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-contain p-6"
-                />
+                {/* Фото тары */}
+                <div className="relative flex-1">
+                  <img
+                    src={IMG}
+                    alt="Тара покрытия ЗМ.ПАНЦИРЬ.АК"
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-contain p-8"
+                  />
+                </div>
+                {/* Подпись продукта */}
+                <div className="relative border-t border-white/10 bg-black/30 backdrop-blur-sm px-6 py-4 flex items-center justify-between gap-3">
+                  <div>
+                    <div
+                      className="text-[11px] tracking-[0.22em] text-gray-400 uppercase"
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    >
+                      Продукт
+                    </div>
+                    <div
+                      className="text-white text-[15px] leading-tight mt-1"
+                      style={{
+                        fontFamily: "'Oswald', sans-serif",
+                        fontWeight: 700,
+                        textTransform: "uppercase",
+                        letterSpacing: "0.02em",
+                      }}
+                    >
+                      ЗМ.ПАНЦИРЬ.АК
+                    </div>
+                  </div>
+                  <span className="text-[12px] tracking-[0.18em] text-orange-300 border border-orange-500/40 bg-orange-500/[0.08] rounded-sm px-3 py-1.5 whitespace-nowrap">
+                    3 / 10 / 20 л
+                  </span>
+                </div>
                 <div className="absolute top-3 left-3 w-7 h-7 border-t-2 border-l-2 border-orange-500" />
-                <div className="absolute bottom-3 right-3 w-7 h-7 border-b-2 border-r-2 border-orange-500" />
-                <div className="absolute left-6 right-6 bottom-0 h-px bg-gradient-to-r from-transparent via-orange-500/60 to-transparent" />
+                <div className="absolute top-3 right-3 w-7 h-7 border-t-2 border-r-2 border-orange-500" />
               </div>
             </div>
+          </div>
+
+          {/* Варианты объёмов */}
+          <div className="lg:col-span-7 order-2 flex flex-col gap-4">
+            {VOLUMES.map((v) => (
+              <article
+                key={v.volume}
+                className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-5 sm:p-6 flex items-center gap-5 transition-colors duration-300 hover:border-orange-500/40"
+                style={{ boxShadow: "0 24px 60px -25px rgba(0,0,0,0.8)" }}
+              >
+                <div className="absolute top-0 left-0 h-full w-[3px] bg-orange-500 opacity-70 transition-opacity duration-300 group-hover:opacity-100" />
+                {/* Крупный объём */}
+                <div className="flex flex-col items-center justify-center flex-shrink-0 w-20 sm:w-24 border-r border-white/10 pr-5">
+                  <Icon
+                    name="PaintBucket"
+                    size={20}
+                    className="text-orange-400 mb-1.5"
+                  />
+                  <span
+                    className="text-white text-[19px] sm:text-[21px] leading-none whitespace-nowrap"
+                    style={{
+                      fontFamily: "'Oswald', sans-serif",
+                      fontWeight: 700,
+                      letterSpacing: "0.02em",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    {v.volume}
+                  </span>
+                </div>
+                {/* Описание */}
+                <p className="ak-card-text text-gray-300 flex-1">{v.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </div>

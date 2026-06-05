@@ -1,3 +1,5 @@
+import Icon from "@/components/ui/icon";
+
 const SPECS: { label: string; value: string; accent?: boolean }[] = [
   {
     label: "Наименование",
@@ -103,24 +105,38 @@ const SpecsSection = () => {
           </p>
         </div>
 
-        {/* Сетка параметров */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-3">
-          {SPECS.map((s) => (
+        {/* Таблица параметров */}
+        <div className="overflow-hidden rounded-sm border border-white/10 bg-[#0e0e10] shadow-[0_30px_80px_-30px_rgba(0,0,0,0.8)]">
+          {/* Шапка таблицы */}
+          <div
+            className="hidden sm:grid grid-cols-[minmax(0,42%)_minmax(0,58%)] border-b border-white/10 bg-white/[0.03] px-6 py-3.5"
+            style={{ fontFamily: "'JetBrains Mono', monospace" }}
+          >
+            <span className="text-[11px] tracking-[0.2em] text-gray-500 uppercase">
+              Параметр
+            </span>
+            <span className="text-[11px] tracking-[0.2em] text-gray-500 uppercase">
+              Значение
+            </span>
+          </div>
+
+          {/* Строки */}
+          {SPECS.map((s, i) => (
             <div
               key={s.label}
-              className="group relative flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4 rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] px-5 py-4 transition-colors duration-300 hover:border-orange-500/40"
+              className={`group relative grid grid-cols-1 sm:grid-cols-[minmax(0,42%)_minmax(0,58%)] gap-1 sm:gap-6 px-6 py-3.5 transition-colors duration-200 hover:bg-white/[0.025] ${
+                i !== SPECS.length - 1 ? "border-b border-white/[0.06]" : ""
+              } ${i % 2 === 1 ? "bg-white/[0.012]" : ""}`}
             >
-              <span
-                className={`absolute left-0 top-0 bottom-0 w-[2px] ${
-                  s.accent ? "bg-orange-500" : "bg-white/10"
-                }`}
-              />
-              <span className="text-gray-400 text-[13px] sm:text-[14px] leading-[1.5] sm:w-[44%] flex-shrink-0">
+              {s.accent && (
+                <span className="absolute left-0 top-0 bottom-0 w-[2px] bg-orange-500" />
+              )}
+              <span className="text-gray-400 text-[13px] sm:text-[14px] leading-[1.55]">
                 {s.label}
               </span>
               <span
-                className={`text-[14px] sm:text-[15px] leading-[1.5] ${
-                  s.accent ? "text-orange-300" : "text-white"
+                className={`text-[14px] sm:text-[15px] leading-[1.55] ${
+                  s.accent ? "text-orange-300 font-medium" : "text-white"
                 }`}
               >
                 {s.value}
@@ -130,8 +146,12 @@ const SpecsSection = () => {
         </div>
 
         {/* Примечание */}
-        <div className="mt-8 flex items-start gap-3 rounded-sm border border-white/10 bg-white/[0.03] px-5 py-4">
-          <span className="h-px w-6 bg-orange-500 mt-3 flex-shrink-0" />
+        <div className="mt-6 flex items-start gap-3 rounded-sm border-l-2 border-orange-500/60 border-y border-r border-white/10 bg-white/[0.025] px-5 py-4">
+          <Icon
+            name="Info"
+            size={16}
+            className="text-orange-400 mt-0.5 flex-shrink-0"
+          />
           <p className="text-gray-400 text-[13px] sm:text-[14px] leading-[1.7]">
             Практический расход зависит от способа нанесения, шероховатости, формы
             поверхности и условий выполнения работ.
