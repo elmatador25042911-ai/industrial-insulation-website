@@ -4,6 +4,7 @@ import InternalLayout from "@/components/layouts/InternalLayout";
 import PurposeSection from "./antikondensat/PurposeSection";
 import PackagingSection from "./antikondensat/PackagingSection";
 import DifferenceSection from "./antikondensat/DifferenceSection";
+import ApplicationSection from "./antikondensat/ApplicationSection";
 
 const HERO_IMG =
   "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/antikondensat/akvaros_antikondensat_bucket_studio_01.png";
@@ -155,6 +156,8 @@ const AntikondensatnyePokrytiya = () => {
         <PackagingSection />
 
         <DifferenceSection />
+
+        <ApplicationSection />
       </main>
     </InternalLayout>
   );
