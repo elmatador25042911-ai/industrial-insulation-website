@@ -43,37 +43,37 @@ const DifferenceSection = () => {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ak-section">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Текст и карточки */}
           <div className="lg:col-span-7 order-2 lg:order-none">
-            <div className="flex items-center gap-3 mb-3">
+            <div className="ak-label-row">
               <span className="h-px w-10 bg-orange-500" />
-              <span className="t-label text-orange-400/90 tracking-[0.18em]">
+              <span className="ak-label text-orange-400/90">
                 РЕШЕНИЕ / ПРИМЕНЕНИЕ
               </span>
             </div>
-            <h2 className="t-h2 text-white mb-5">
+            <h2 className="ak-h2 text-white">
               Отличие от{" "}
               <span className="text-orange-500">классической изоляции</span>
             </h2>
-            <p className="text-gray-300 text-base sm:text-lg leading-[1.7] mb-4">
+            <p className="ak-lead text-gray-300 mb-4">
               ЗМ.ПАНЦИРЬ.АК применяется там, где требуется обработать поверхность
               без установки цилиндров, матов или съёмных чехлов. Покрытие
               наносится непосредственно на основание и повторяет геометрию
               трубопровода, оборудования или узла.
             </p>
-            <p className="text-gray-400 text-[15px] sm:text-base leading-[1.7]">
+            <p className="ak-text text-gray-400">
               Такой формат подходит для сложных участков: фланцевых соединений,
               арматуры, корпусов оборудования, фасонных элементов и поверхностей
               нестандартной формы.
             </p>
 
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 ak-grid">
               {CARDS.map((c) => (
                 <article
                   key={c.title}
-                  className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-5 transition-colors duration-300 hover:border-orange-500/40"
+                  className="ak-card group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-5 transition-colors duration-300 hover:border-orange-500/40"
                   style={{ boxShadow: "0 24px 60px -25px rgba(0,0,0,0.8)" }}
                 >
                   <div className="absolute top-0 left-0 h-[2px] w-10 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
@@ -91,7 +91,7 @@ const DifferenceSection = () => {
                   >
                     {c.title}
                   </h3>
-                  <p className="text-gray-400 text-[13px] leading-[1.65]">
+                  <p className="ak-card-text text-gray-400">
                     {c.text}
                   </p>
                 </article>

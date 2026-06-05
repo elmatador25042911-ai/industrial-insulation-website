@@ -53,19 +53,19 @@ const ApplicationSection = () => {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-        <div className="max-w-3xl">
-          <div className="flex items-center gap-3 mb-3">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ak-section">
+        <div className="ak-head">
+          <div className="ak-label-row">
             <span className="h-px w-10 bg-orange-500" />
-            <span className="t-label text-orange-400/90 tracking-[0.18em]">
+            <span className="ak-label text-orange-400/90">
               ТЕХНОЛОГИЯ НАНЕСЕНИЯ
             </span>
           </div>
-          <h2 className="t-h2 text-white mb-5">
+          <h2 className="ak-h2 text-white">
             Подготовка поверхности и{" "}
             <span className="text-orange-500">нанесение</span>
           </h2>
-          <p className="text-gray-300 text-base sm:text-lg leading-[1.7]">
+          <p className="ak-lead text-gray-300">
             Качество антиконденсатного покрытия зависит от подготовки основания и
             соблюдения технологии нанесения. Перед работой поверхность очищается,
             материал перемешивается до однородного состояния и наносится
@@ -73,7 +73,7 @@ const ApplicationSection = () => {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* Этапы — timeline */}
           <div className="lg:col-span-7 order-2 lg:order-2">
             <div className="relative">
@@ -112,7 +112,7 @@ const ApplicationSection = () => {
                           {s.title}
                         </h3>
                       </div>
-                      <p className="text-gray-400 text-[14px] leading-[1.7]">
+                      <p className="ak-card-text text-gray-400">
                         {s.text}
                       </p>
                     </div>

@@ -36,21 +36,21 @@ const RequestSection = () => {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ak-section">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Левая колонка */}
           <div className="lg:col-span-5">
-            <div className="flex items-center gap-3 mb-3">
+            <div className="ak-label-row">
               <span className="h-px w-10 bg-orange-500" />
-              <span className="t-label text-orange-400/90 tracking-[0.18em]">
+              <span className="ak-label text-orange-400/90">
                 ЗАПРОС РАСЧЁТА
               </span>
             </div>
-            <h2 className="t-h2 text-white mb-6 max-w-3xl">
+            <h2 className="ak-h2 text-white max-w-3xl">
               Подбор антиконденсатного покрытия{" "}
               <span className="text-orange-500">под объект</span>
             </h2>
-            <p className="text-gray-400 text-base sm:text-lg leading-[1.7] mb-10">
+            <p className="ak-lead text-gray-400 mb-10">
               Для подбора ЗМ.ПАНЦИРЬ.АК передайте параметры объекта: тип
               поверхности, площадь нанесения, температурный режим, влажность
               среды, место установки и требования к покрытию. По этим данным

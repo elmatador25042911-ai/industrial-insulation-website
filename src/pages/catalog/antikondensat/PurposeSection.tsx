@@ -43,38 +43,38 @@ const PurposeSection = () => {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-        <div className="max-w-3xl">
-          <div className="flex items-center gap-3 mb-3">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ak-section">
+        <div className="ak-head">
+          <div className="ak-label-row">
             <span className="h-px w-10 bg-orange-500" />
-            <span className="t-label text-orange-400/90 tracking-[0.18em]">
+            <span className="ak-label text-orange-400/90">
               МАТЕРИАЛ / ПРИМЕНЕНИЕ
             </span>
           </div>
-          <h2 className="t-h2 text-white mb-5">
+          <h2 className="ak-h2 text-white">
             Назначение, принцип действия и{" "}
             <span className="text-orange-500">области применения</span>
           </h2>
-          <p className="text-gray-300 text-base sm:text-lg leading-[1.7] mb-4">
+          <p className="ak-lead text-gray-300 mb-4">
             ЗМ.ПАНЦИРЬ.АК — готовое к применению защитное антиконденсатное
             покрытие. Материал наносится на поверхность оборудования,
             трубопроводов и металлических конструкций, формируя защитный слой для
             снижения риска образования конденсата.
           </p>
-          <p className="text-gray-400 text-[15px] sm:text-base leading-[1.7]">
+          <p className="ak-text text-gray-400">
             Покрытие применяется на объектах с повышенным риском выпадения влаги:
             в судовых технических помещениях, на трубопроводных линиях, элементах
             оборудования, корпусах, ёмкостях и узлах сложной формы.
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Карточки */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5 ak-grid">
             {CARDS.map((c) => (
               <article
                 key={c.title}
-                className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-6 transition-colors duration-300 hover:border-orange-500/40"
+                className="ak-card group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-6 transition-colors duration-300 hover:border-orange-500/40"
                 style={{ boxShadow: "0 24px 60px -25px rgba(0,0,0,0.8)" }}
               >
                 <div className="absolute top-0 left-0 h-[2px] w-12 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
@@ -92,7 +92,7 @@ const PurposeSection = () => {
                 >
                   {c.title}
                 </h3>
-                <p className="text-gray-400 text-[14px] leading-[1.7]">
+                <p className="ak-card-text text-gray-400">
                   {c.text}
                 </p>
               </article>

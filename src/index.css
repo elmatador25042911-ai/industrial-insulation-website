@@ -448,3 +448,75 @@
     transparent
   );
 }
+
+/* ── Антиконденсат: типографика и ритм ── */
+
+/* Заголовок секции — компактнее t-h2, легче читается */
+.ak-h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.875rem, 3.4vw, 2.875rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+/* Лейбл секции — чуть спокойнее */
+.ak-label {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.ak-label-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.875rem;
+}
+
+/* Вводный/основной текст секции — уже и удобнее для чтения */
+.ak-lead {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  max-width: 56ch;
+}
+.ak-text {
+  font-size: 0.9375rem;
+  line-height: 1.78;
+  max-width: 60ch;
+}
+.ak-card-text {
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+/* Единый вертикальный ритм блоков антиконденсата */
+.ak-section {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+}
+@media (min-width: 1024px) {
+  .ak-section {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+/* Заголовочный кластер: лейбл → заголовок → текст */
+.ak-head {
+  max-width: 60ch;
+  margin-bottom: 3rem;
+}
+
+/* Карточки выровнены по высоте */
+.ak-grid {
+  align-items: stretch;
+}
+.ak-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

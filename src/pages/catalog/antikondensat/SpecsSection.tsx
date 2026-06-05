@@ -83,19 +83,19 @@ const SpecsSection = () => {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-        <div className="max-w-3xl">
-          <div className="flex items-center gap-3 mb-3">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ak-section">
+        <div className="ak-head">
+          <div className="ak-label-row">
             <span className="h-px w-10 bg-orange-500" />
-            <span className="t-label text-orange-400/90 tracking-[0.18em]">
+            <span className="ak-label text-orange-400/90">
               ТЕХНИЧЕСКИЕ ДАННЫЕ
             </span>
           </div>
-          <h2 className="t-h2 text-white mb-5">
+          <h2 className="ak-h2 text-white">
             Технические параметры{" "}
             <span className="text-orange-500">ЗМ.ПАНЦИРЬ.АК</span>
           </h2>
-          <p className="text-gray-400 text-[15px] sm:text-base leading-[1.7]">
+          <p className="ak-text text-gray-400">
             Параметры приведены для предварительной оценки применимости покрытия.
             Окончательный подбор выполняется по условиям объекта, температуре
             поверхности, влажности среды, площади нанесения и требованиям к
@@ -104,7 +104,7 @@ const SpecsSection = () => {
         </div>
 
         {/* Сетка параметров */}
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-3">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-3">
           {SPECS.map((s) => (
             <div
               key={s.label}
