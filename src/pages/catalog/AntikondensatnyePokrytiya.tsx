@@ -14,7 +14,6 @@ const HERO_IMG =
 
 const BADGES = [
   { icon: "ShieldCheck", text: "ЗМ.ПАНЦИРЬ.АК" },
-  { icon: "Building2", text: "АкваРос" },
   { icon: "PackageOpen", text: "Фасовка 3 / 10 / 20 л" },
   { icon: "Pipette", text: "Для трубопроводов и оборудования" },
   { icon: "FileBadge", text: "ТУ 20.59.59-005-85495285-2020" },
