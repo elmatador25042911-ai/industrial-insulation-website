@@ -50,7 +50,7 @@ const RequestSection = () => {
               Подбор антиконденсатного покрытия{" "}
               <span className="text-orange-500">под объект</span>
             </h2>
-            <p className="ak-lead text-gray-400 mb-10">
+            <p className="ak-lead text-gray-400 mb-8">
               Для подбора ЗМ.ПАНЦИРЬ.АК передайте параметры объекта: тип
               поверхности, площадь нанесения, температурный режим, влажность
               среды, место установки и требования к покрытию. По этим данным
@@ -58,21 +58,29 @@ const RequestSection = () => {
               поставки.
             </p>
 
-            <ul className="space-y-3.5 mb-10">
-              {DATA_LIST.map((t) => (
-                <li key={t} className="flex items-center gap-3">
-                  <span
-                    className="w-5 h-5 rounded-sm flex items-center justify-center flex-shrink-0"
-                    style={{ background: "linear-gradient(135deg, #e63012, #f97316)" }}
-                  >
-                    <Icon name="Check" size={11} className="text-white" />
-                  </span>
-                  <span className="text-gray-300 text-[14px] leading-snug">{t}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="rounded-sm border border-white/10 bg-white/[0.02] p-5 mb-6">
+              <div
+                className="text-[11px] tracking-[0.2em] text-gray-500 uppercase mb-4"
+                style={{ fontFamily: "'JetBrains Mono', monospace" }}
+              >
+                Данные для расчёта
+              </div>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-2.5">
+                {DATA_LIST.map((t) => (
+                  <li key={t} className="flex items-start gap-2.5">
+                    <span
+                      className="w-4 h-4 mt-0.5 rounded-sm flex items-center justify-center flex-shrink-0"
+                      style={{ background: "linear-gradient(135deg, #e63012, #f97316)" }}
+                    >
+                      <Icon name="Check" size={10} className="text-white" />
+                    </span>
+                    <span className="text-gray-300 text-[13px] leading-snug">{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-            <div className="space-y-3 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <a
                 href="tel:+78126426742"
                 className="group flex items-center gap-3 p-4 rounded-sm border border-white/10 bg-white/[0.025] hover:border-orange-500/40 transition-colors"
@@ -84,7 +92,7 @@ const RequestSection = () => {
                   <div className="text-[11px] tracking-[0.18em] text-gray-500 uppercase">
                     Телефон
                   </div>
-                  <div className="text-white font-semibold text-[15px] mt-0.5 group-hover:text-orange-400 transition-colors">
+                  <div className="text-white font-semibold text-[14px] mt-0.5 group-hover:text-orange-400 transition-colors">
                     +7 812 642 67 42
                   </div>
                 </div>
@@ -100,35 +108,33 @@ const RequestSection = () => {
                   <div className="text-[11px] tracking-[0.18em] text-gray-500 uppercase">
                     Почта
                   </div>
-                  <div className="text-white font-semibold text-[15px] mt-0.5 group-hover:text-orange-400 transition-colors break-all">
+                  <div className="text-white font-semibold text-[14px] mt-0.5 group-hover:text-orange-400 transition-colors break-all">
                     t1izol@mail.ru
                   </div>
                 </div>
               </a>
             </div>
-
-            <a
-              href="tel:+78126426742"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/20 hover:border-orange-500 hover:text-orange-400 text-white font-semibold tracking-wide rounded-sm transition-colors text-[13px] uppercase"
-            >
-              <Icon name="PhoneCall" size={16} />
-              Связаться
-            </a>
           </div>
 
           {/* Правая колонка — форма */}
-          <div className="lg:col-span-7">
-            <div
-              className="relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-6 sm:p-10"
-              style={{ boxShadow: "0 30px 80px -20px rgba(0,0,0,0.8)" }}
-            >
+          <div className="lg:col-span-7 lg:sticky lg:top-24">
+            <div className="relative">
+              <div className="absolute -inset-5 bg-gradient-to-br from-orange-500/12 via-transparent to-orange-600/8 blur-[60px] pointer-events-none" />
               <div
-                className="absolute top-0 left-0 h-[3px] w-24"
-                style={{ background: GRAD }}
-              />
+                className="relative overflow-hidden rounded-sm border border-white/12 bg-gradient-to-br from-[#161618] to-[#0b0b0d] p-6 sm:p-10"
+                style={{ boxShadow: "0 40px 90px -25px rgba(0,0,0,0.85)" }}
+              >
+                <div
+                  className="absolute top-0 left-0 right-0 h-[3px]"
+                  style={{ background: GRAD }}
+                />
+                <div className="absolute top-4 right-4 w-7 h-7 border-t-2 border-r-2 border-orange-500/70" />
+                <div className="absolute bottom-4 left-4 w-7 h-7 border-b-2 border-l-2 border-orange-500/70" />
 
               <div className="flex items-center gap-3 mb-2">
-                <Icon name="FileText" size={18} className="text-orange-400" />
+                <span className="w-10 h-10 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
+                  <Icon name="FileText" size={18} className="text-orange-400" />
+                </span>
                 <h3
                   className="text-white text-xl sm:text-2xl font-bold"
                   style={{ fontFamily: "'Oswald', sans-serif" }}
@@ -136,9 +142,10 @@ const RequestSection = () => {
                   Передать параметры объекта
                 </h3>
               </div>
-              <p className="text-gray-500 text-[13px] mb-8">
+              <p className="text-gray-500 text-[13px] mb-6">
                 Технический специалист свяжется в течение 1 рабочего дня.
               </p>
+              <div className="h-px bg-gradient-to-r from-orange-500/30 via-white/10 to-transparent mb-7" />
 
               {submitted ? (
                 <div className="flex flex-col items-center justify-center py-16 text-center">
@@ -234,6 +241,7 @@ const RequestSection = () => {
                   </p>
                 </form>
               )}
+              </div>
             </div>
           </div>
         </div>

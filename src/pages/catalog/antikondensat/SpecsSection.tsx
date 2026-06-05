@@ -70,13 +70,12 @@ const SPECS: { label: string; value: string; accent?: boolean }[] = [
 
 const SpecsSection = () => {
   return (
-    <section className="relative overflow-hidden border-t border-white/5">
-      {/* Фоновое свечение */}
+    <section className="relative overflow-hidden border-t border-white/5 bg-black/25">
+      {/* Фоновое свечение — приглушённое (спокойный блок) */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-orange-500/[0.05] blur-[160px]" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-orange-600/[0.04] blur-[160px]" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-orange-500/[0.03] blur-[180px]" />
         <div
-          className="absolute inset-0 opacity-[0.035]"
+          className="absolute inset-0 opacity-[0.025]"
           style={{
             backgroundImage:
               "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
