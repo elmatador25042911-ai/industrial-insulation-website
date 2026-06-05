@@ -104,7 +104,7 @@ const PurposeSection = () => {
             <div className="relative">
               <div className="absolute -inset-6 bg-gradient-to-br from-orange-500/15 via-transparent to-orange-600/10 blur-[60px]" />
               <div
-                className="relative aspect-[4/3] overflow-hidden rounded-sm border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] bg-[#0c0c0e]"
+                className="relative aspect-[4/5] overflow-hidden rounded-sm border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] bg-[#0c0c0e]"
               >
                 <img
                   src={IMG}

@@ -38,7 +38,7 @@ const PackagingSection = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Текст и карточки */}
-          <div className="lg:col-span-7 order-2 lg:order-none">
+          <div className="lg:col-span-7 order-2 lg:order-2">
             <div className="flex items-center gap-3 mb-3">
               <span className="h-px w-10 bg-orange-500" />
               <span className="t-label text-orange-400/90 tracking-[0.18em]">
@@ -94,7 +94,7 @@ const PackagingSection = () => {
           </div>
 
           {/* Изображение банки */}
-          <div className="lg:col-span-5 order-1 lg:order-none">
+          <div className="lg:col-span-5 order-1 lg:order-1">
             <div className="relative">
               <div className="absolute -inset-6 bg-gradient-to-br from-orange-500/15 via-transparent to-orange-600/10 blur-[60px]" />
               <div

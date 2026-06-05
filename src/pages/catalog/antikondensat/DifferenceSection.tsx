@@ -103,7 +103,7 @@ const DifferenceSection = () => {
           <div className="lg:col-span-5 order-1 lg:order-none">
             <div className="relative">
               <div className="absolute -inset-6 bg-gradient-to-br from-orange-500/15 via-transparent to-orange-600/10 blur-[60px]" />
-              <div className="relative aspect-[3/4] sm:aspect-[4/3] lg:aspect-[3/4] overflow-hidden rounded-sm border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] bg-[#0c0c0e]">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] bg-[#0c0c0e]">
                 <img
                   src={IMG}
                   alt="Применение покрытия ЗМ.ПАНЦИРЬ.АК на объекте"
