@@ -59,7 +59,7 @@ const SelectionCard = ({ item, index }: { item: SelectionItem; index: number }) 
     <div className="absolute bottom-2.5 right-2.5 w-5 h-5 border-b-2 border-r-2 border-orange-500/70 transition-colors group-hover:border-orange-500" />
 
     <div className="relative">
-      <div className="flex items-start justify-between gap-3 mb-4">
+      <div className="flex items-start justify-between gap-3 mb-3.5">
         <div className="w-11 h-11 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
           <Icon name={item.icon} size={20} className="text-orange-400" />
         </div>
@@ -71,35 +71,29 @@ const SelectionCard = ({ item, index }: { item: SelectionItem; index: number }) 
         </span>
       </div>
 
-      {/* Условие */}
-      <div className="t-label text-orange-400/90 tracking-[0.18em] text-[11px] leading-none mb-2">
-        УСЛОВИЕ
-      </div>
+      {/* Условие — главный заголовок */}
       <h3
-        className="text-white text-[17px] sm:text-[18px] leading-snug mb-4 flex items-start"
-        style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, letterSpacing: "0.01em", textTransform: "uppercase", minHeight: "calc(2 * 1.375em)" }}
+        className="text-white text-[18px] sm:text-[19px] leading-snug"
+        style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, letterSpacing: "0.01em", textTransform: "uppercase" }}
       >
         {item.condition}
       </h3>
 
-      {/* Рекомендация */}
-      <div className="border-t border-white/10 pt-4 mb-4">
-        <div className="flex items-center gap-2 mb-2">
-          <Icon name="ArrowRight" size={14} className="text-orange-400 flex-shrink-0" />
-          <span className="t-label text-orange-400/90 tracking-[0.18em] text-[11px] leading-none">
-            РЕКОМЕНДУЕМОЕ ПОКРЫТИЕ
-          </span>
-        </div>
-        <div
-          className="text-white text-[20px] sm:text-[22px] leading-tight"
-          style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, letterSpacing: "0.01em" }}
+      {/* Рекомендуемое покрытие — второй акцент */}
+      <div className="mt-3 flex items-center gap-2">
+        <Icon name="ArrowRight" size={16} className="text-orange-500 flex-shrink-0" />
+        <span
+          className="text-orange-400 text-[21px] sm:text-[23px] leading-none"
+          style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, letterSpacing: "0.02em" }}
         >
           {item.recommended}
-        </div>
+        </span>
       </div>
 
       {/* Описание */}
-      <p className="text-gray-400 text-[14px] leading-[1.65]">{item.desc}</p>
+      <p className="mt-4 pt-4 border-t border-white/10 text-gray-400 text-[14px] leading-[1.65]">
+        {item.desc}
+      </p>
     </div>
   </article>
 );
