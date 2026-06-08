@@ -109,12 +109,14 @@ const KitCard = ({ item, index }: { item: KitItem; index: number }) => (
       </div>
 
       <h3
-        className="text-white text-[19px] sm:text-[20px] leading-tight mb-3"
+        className="text-white text-[19px] mb-3 flex items-end"
         style={{
           fontFamily: "'Oswald', sans-serif",
           fontWeight: 700,
+          lineHeight: 1.2,
           letterSpacing: "0.01em",
           textTransform: "uppercase",
+          minHeight: "calc(2 * 1.2em)",
         }}
       >
         {item.title}
