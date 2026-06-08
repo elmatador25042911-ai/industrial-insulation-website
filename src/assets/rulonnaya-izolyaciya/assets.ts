@@ -18,7 +18,7 @@ export const rollImages = {
 };
 
 export const coveringImages = {
-  aluTextureClose01: `${CDN}/02_coverings/covering_alu_texture_close_01.jpg`,
+  aluTextureClose01: `https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/609f990d-ea34-4ff2-8331-00d18f1222c4.png`,
   cmSheetAngle01: `${CDN}/02_coverings/covering_cm_sheet_angle_01.jpg`,
   metallCorner01: `${CDN}/02_coverings/covering_metall_corner_01.jpg`,
   metallCorner02: `${CDN}/02_coverings/covering_metall_corner_02.jpg`,
