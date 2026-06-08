@@ -44,7 +44,17 @@ export const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Текстовая часть */}
           <div className="lg:col-span-6 xl:col-span-7">
-            <h1 className="t-h1 text-white leading-[0.95] mb-7">
+            <h1
+              className="text-white mb-7"
+              style={{
+                fontFamily: "'Oswald', sans-serif",
+                fontWeight: 700,
+                fontSize: "clamp(2rem, 5vw, 3.75rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.01em",
+                textTransform: "uppercase",
+              }}
+            >
               Трубная изоляция
               <br />
               <span className="text-orange-500">для судостроения</span>
