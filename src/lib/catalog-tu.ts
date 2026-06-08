@@ -31,6 +31,13 @@ export const TU_SUDOSTROENIE_UNION = "ТУ 22.19.20-001-17563055-2020 изм. 4"
  */
 export const TU_SUDOSTROENIE = TU_SUDOSTROENIE_UNION;
 
+/**
+ * ТУ для каталога ПГС / промышленности.
+ * Точный номер ТУ пока не утверждён — используется временная заглушка.
+ * Не выдумывать номер: заменить здесь, когда ТУ будет утверждён.
+ */
+export const TU_PGS = "ТУ уточняется";
+
 /** Бренды продуктовых линеек каталога «Судостроение». */
 export const BRAND_UNION = "Union / Unionflex";
 export const BRAND_AKVAROS = "Акварос";

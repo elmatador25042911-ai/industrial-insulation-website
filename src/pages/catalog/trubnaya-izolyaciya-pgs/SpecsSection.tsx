@@ -1,0 +1,115 @@
+import Icon from "@/components/ui/icon";
+
+const SPECS: { label: string; value: string; icon: string }[] = [
+  { label: "Группа горючести", value: "Г1", icon: "Flame" },
+  { label: "Группа воспламеняемости", value: "В1", icon: "Sparkles" },
+  { label: "Дымообразующая способность", value: "Д3", icon: "CloudFog" },
+  { label: "Показатель токсичности", value: "Т2", icon: "AlertTriangle" },
+  { label: "Температура применения", value: "от −200 до +110 °C", icon: "Thermometer" },
+  { label: "Сопротивление диффузии пара, μ", value: "≥ 10 000", icon: "Droplets" },
+  { label: "Теплопроводность при 0 °C", value: "0,034 Вт/(м·°C)", icon: "Snowflake" },
+];
+
+const DESCRIPTION_CARDS: { icon: string; title: string; text: string }[] = [
+  {
+    icon: "Thermometer",
+    title: "Диапазон температур",
+    text: "Сохраняет рабочие характеристики при температурах от −200 до +110 °C, применим на горячих и холодных трубопроводах.",
+  },
+  {
+    icon: "ShieldCheck",
+    title: "Пожарно-технические показатели",
+    text: "Группа горючести Г1, воспламеняемости В1. Материал не поддерживает горение в отсутствии источника открытого огня.",
+  },
+  {
+    icon: "Snowflake",
+    title: "Теплопроводность",
+    text: "Коэффициент теплопроводности λ = 0,034 Вт/(м·°C) при 0 °C. Используется для снижения теплопотерь и контроля конденсата.",
+  },
+];
+
+export const SpecsSection = () => {
+  return (
+    <>
+      {/* ── Ключевые характеристики ── */}
+      <section className="relative overflow-hidden border-t border-white/5">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/3 -right-32 w-[500px] h-[500px] rounded-full bg-orange-500/[0.06] blur-[140px]" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="h-px w-10 bg-orange-500" />
+            <span className="cat-label text-orange-400/90">ХАРАКТЕРИСТИКИ</span>
+          </div>
+          <h2 className="cat-h2 text-white mb-12 max-w-3xl">
+            Основные характеристики <span className="text-orange-500">материала</span>
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            {SPECS.map((s, i) => (
+              <div
+                key={s.label}
+                className={`group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-6 transition-all duration-300 hover:border-orange-500/50 hover:-translate-y-1 ${
+                  i === 4 ? "sm:col-span-2 lg:col-span-2" : ""
+                }`}
+              >
+                <div className="absolute top-0 left-0 h-[2px] w-10 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
+                <div className="flex items-start gap-3 mb-5">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-sm border border-orange-500/30 bg-orange-500/5 flex items-center justify-center">
+                    <Icon name={s.icon} size={18} className="text-orange-400" />
+                  </div>
+                  <span className="text-[11px] sm:text-[12px] tracking-[0.14em] text-gray-500 uppercase leading-snug pt-1">
+                    {s.label}
+                  </span>
+                </div>
+                <div className="text-2xl sm:text-[26px] font-bold text-white leading-tight">
+                  {s.value}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Описание материала ── */}
+      <section className="relative overflow-hidden border-t border-white/5">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute bottom-0 left-0 w-[600px] h-[400px] rounded-full bg-orange-600/[0.05] blur-[160px]" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="h-px w-10 bg-orange-500" />
+            <span className="cat-label text-orange-400/90">ОПИСАНИЕ МАТЕРИАЛА</span>
+          </div>
+          <h2 className="cat-h2 text-white mb-12 max-w-3xl">
+            Краткое <span className="text-orange-500">описание</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {DESCRIPTION_CARDS.map((c, i) => (
+              <div
+                key={c.title}
+                className="group relative overflow-hidden rounded-sm border border-white/10 bg-[#101012] p-7 transition-all duration-300 hover:border-orange-500/40"
+              >
+                <div className="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-orange-500/[0.08] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative flex items-center gap-3 mb-5">
+                  <span className="text-[11px] tracking-[0.2em] text-orange-500/80 font-semibold">
+                    0{i + 1}
+                  </span>
+                  <span className="h-px flex-1 bg-white/10" />
+                  <Icon name={c.icon} size={20} className="text-orange-400" />
+                </div>
+                <h3 className="relative text-white text-lg font-semibold mb-3 leading-snug">
+                  {c.title}
+                </h3>
+                <p className="relative text-gray-400 text-[14px] leading-relaxed">{c.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default SpecsSection;

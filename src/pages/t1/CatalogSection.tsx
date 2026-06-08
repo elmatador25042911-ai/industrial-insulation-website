@@ -20,8 +20,8 @@ const CATALOG_SHIP: { name: string; sub: string; img: string; href?: string }[] 
 
 const CATALOG_INDUSTRY: { name: string; sub: string; img: string; href?: string }[] = [
   { name: "Трубная изоляция",          sub: "Вспененный каучук для трубопроводов",      img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/trubnaya-pgs.jpg", href: "/catalog/pgs/trubnaya-izolyaciya" },
-  { name: "Рулонная изоляция",         sub: "Вспененный каучук для поверхностей",       img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/rilonaya-sud.jpg" },
-  { name: "Монтажные материалы",       sub: "Ленты, клеи, очистители",                 img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/montajniemateriali-pgs.jpg" },
+  { name: "Рулонная изоляция",         sub: "Вспененный каучук для поверхностей",       img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/rilonaya-sud.jpg", href: "/catalog/pgs/rulonnaya-izolyaciya" },
+  { name: "Монтажные материалы",       sub: "Ленты, клеи, очистители",                 img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/montajniemateriali-pgs.jpg", href: "/catalog/pgs/montazhnye-materialy" },
   { name: "Защитные материалы",         sub: "Металл и полимерные решения",              img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/zashitniemateriali-pgs.jpg" },
   { name: "Термочехлы",                sub: "Для оборудования и трубопроводов",         img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/termochehol-pgs.jpg" },
   { name: "Каменная вата",             sub: "Теплоизоляция для инженерных систем",      img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/vata-pgs.jpg" },
