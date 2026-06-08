@@ -44,7 +44,7 @@ const DifferenceSection = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ak-section">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
           {/* Текст и карточки */}
           <div className="lg:col-span-7 order-2 lg:order-none">
             <div className="ak-label-row">
@@ -101,9 +101,9 @@ const DifferenceSection = () => {
 
           {/* Изображение */}
           <div className="lg:col-span-5 order-1 lg:order-none">
-            <div className="relative">
+            <div className="relative h-full lg:min-h-[480px]">
               <div className="absolute -inset-6 bg-gradient-to-br from-orange-500/15 via-transparent to-orange-600/10 blur-[60px]" />
-              <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] bg-[#0c0c0e]">
+              <div className="relative aspect-[4/3] lg:aspect-auto lg:absolute lg:inset-0 lg:h-full overflow-hidden rounded-sm border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] bg-[#0c0c0e]">
                 <img
                   src={IMG}
                   alt="Применение покрытия ЗМ.ПАНЦИРЬ.АК на объекте"
