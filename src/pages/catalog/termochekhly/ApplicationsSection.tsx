@@ -111,7 +111,17 @@ export const ApplicationsSection = () => {
               ПРИМЕНЕНИЕ
             </span>
           </div>
-          <h2 className="t-h2 text-white mb-5">
+          <h2
+            className="text-white mb-5"
+            style={{
+              fontFamily: "'Oswald', sans-serif",
+              fontWeight: 700,
+              fontSize: "clamp(1.875rem, 4vw, 3rem)",
+              lineHeight: 1.1,
+              letterSpacing: "-0.01em",
+              textTransform: "uppercase",
+            }}
+          >
             Применение термочехлов{" "}
             <span className="text-orange-500">в судостроении</span>
           </h2>
