@@ -1,7 +1,7 @@
 const CDN = "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/zashchitnye-pokrytiya";
 
 export const coveringImages = {
-  aluTextureClose01: `${CDN}/01_coverings/covering_alu_texture_close_01.jpg`,
+  aluTextureClose01: `${CDN}/01_coverings/alu_flat_material_01.png`,
   cmSheetAngle01: `${CDN}/01_coverings/covering_cm_sheet_angle_01.jpg`,
   metallCorner01: `${CDN}/01_coverings/covering_metall_corner_01.jpg`,
   metallCorner02: `${CDN}/01_coverings/covering_metall_corner_02.jpg`,
