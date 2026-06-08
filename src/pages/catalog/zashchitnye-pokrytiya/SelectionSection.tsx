@@ -59,7 +59,7 @@ const SelectionCard = ({ item, index }: { item: SelectionItem; index: number }) 
     <div className="absolute bottom-2.5 right-2.5 w-5 h-5 border-b-2 border-r-2 border-orange-500/70 transition-colors group-hover:border-orange-500" />
 
     <div className="relative">
-      <div className="flex items-start justify-between gap-3 mb-5">
+      <div className="flex items-start justify-between gap-3 mb-4">
         <div className="w-11 h-11 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
           <Icon name={item.icon} size={20} className="text-orange-400" />
         </div>
@@ -72,19 +72,19 @@ const SelectionCard = ({ item, index }: { item: SelectionItem; index: number }) 
       </div>
 
       {/* Условие */}
-      <div className="t-label text-orange-400/90 tracking-[0.18em] text-[11px] mb-2">
+      <div className="t-label text-orange-400/90 tracking-[0.18em] text-[11px] mb-1.5">
         УСЛОВИЕ
       </div>
       <h3
-        className="text-white text-[17px] sm:text-[18px] leading-tight mb-5"
-        style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, letterSpacing: "0.01em", textTransform: "uppercase" }}
+        className="text-white text-[17px] sm:text-[18px] leading-snug mb-4 flex items-start"
+        style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, letterSpacing: "0.01em", textTransform: "uppercase", minHeight: "calc(2 * 1.375em)" }}
       >
         {item.condition}
       </h3>
 
       {/* Рекомендация */}
       <div className="border-t border-white/10 pt-4 mb-4">
-        <div className="flex items-center gap-2 mb-1.5">
+        <div className="flex items-center gap-2 mb-1">
           <Icon name="ArrowRight" size={14} className="text-orange-400" />
           <span className="t-label text-orange-400/90 tracking-[0.18em] text-[11px]">
             РЕКОМЕНДУЕМОЕ ПОКРЫТИЕ
