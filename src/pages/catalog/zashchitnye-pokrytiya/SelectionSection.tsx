@@ -72,7 +72,7 @@ const SelectionCard = ({ item, index }: { item: SelectionItem; index: number }) 
       </div>
 
       {/* Условие */}
-      <div className="t-label text-orange-400/90 tracking-[0.18em] text-[11px] mb-1.5">
+      <div className="t-label text-orange-400/90 tracking-[0.18em] text-[11px] leading-none mb-2">
         УСЛОВИЕ
       </div>
       <h3
@@ -84,9 +84,9 @@ const SelectionCard = ({ item, index }: { item: SelectionItem; index: number }) 
 
       {/* Рекомендация */}
       <div className="border-t border-white/10 pt-4 mb-4">
-        <div className="flex items-center gap-2 mb-1">
-          <Icon name="ArrowRight" size={14} className="text-orange-400" />
-          <span className="t-label text-orange-400/90 tracking-[0.18em] text-[11px]">
+        <div className="flex items-center gap-2 mb-2">
+          <Icon name="ArrowRight" size={14} className="text-orange-400 flex-shrink-0" />
+          <span className="t-label text-orange-400/90 tracking-[0.18em] text-[11px] leading-none">
             РЕКОМЕНДУЕМОЕ ПОКРЫТИЕ
           </span>
         </div>
