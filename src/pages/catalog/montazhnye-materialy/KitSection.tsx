@@ -103,24 +103,20 @@ const KitCard = ({ item, index }: { item: KitItem; index: number }) => (
         <span className="w-9 h-9 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
           <Icon name={item.icon} size={16} className="text-orange-400" />
         </span>
-        <span className="t-label text-orange-400/90 tracking-[0.18em] text-[11px]">
-          КОМПОНЕНТ {String(index + 1).padStart(2, "0")}
-        </span>
+        <h3
+          className="text-white text-[19px] flex items-center"
+          style={{
+            fontFamily: "'Oswald', sans-serif",
+            fontWeight: 700,
+            lineHeight: 1.2,
+            letterSpacing: "0.01em",
+            textTransform: "uppercase",
+            minHeight: "calc(2 * 1.2em)",
+          }}
+        >
+          {item.title}
+        </h3>
       </div>
-
-      <h3
-        className="text-white text-[19px] mb-3 flex items-end"
-        style={{
-          fontFamily: "'Oswald', sans-serif",
-          fontWeight: 700,
-          lineHeight: 1.2,
-          letterSpacing: "0.01em",
-          textTransform: "uppercase",
-          minHeight: "calc(2 * 1.2em)",
-        }}
-      >
-        {item.title}
-      </h3>
 
       <p className="text-gray-400 text-[14px] leading-[1.65] mb-5">
         {item.description}
