@@ -56,32 +56,34 @@ const AppCard = ({ a, index }: { a: App; index: number }) => (
   >
     <div className="absolute top-0 left-0 h-[2px] w-12 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
 
-    <div className="flex items-center gap-3 mb-5">
+    <div className="flex items-center gap-3 mb-2">
       <span
         className="text-[12px] tracking-[0.22em] text-orange-500/80 font-semibold"
         style={{ fontFamily: "'JetBrains Mono', monospace" }}
       >
         {String(index + 1).padStart(2, "0")}
       </span>
+      <span className="h-px flex-1 bg-gradient-to-r from-orange-500/30 via-white/10 to-transparent" />
+    </div>
+
+    <div className="flex items-center gap-3.5 mb-4">
       <span className="relative w-11 h-11 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
         <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-orange-500" />
         <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-orange-500" />
         <Icon name={a.icon} size={20} className="text-orange-400" />
       </span>
-      <span className="h-px flex-1 bg-gradient-to-r from-orange-500/30 via-white/10 to-transparent" />
+      <h3
+        className="flex-1 text-white text-[17px] sm:text-[18px] leading-[1.15]"
+        style={{
+          fontFamily: "'Oswald', sans-serif",
+          fontWeight: 700,
+          letterSpacing: "0.02em",
+          textTransform: "uppercase",
+        }}
+      >
+        {a.title}
+      </h3>
     </div>
-
-    <h3
-      className="text-white text-[18px] sm:text-[20px] leading-tight mb-3"
-      style={{
-        fontFamily: "'Oswald', sans-serif",
-        fontWeight: 700,
-        letterSpacing: "0.02em",
-        textTransform: "uppercase",
-      }}
-    >
-      {a.title}
-    </h3>
 
     <p className="text-gray-400 text-[14px] leading-[1.65]">{a.text}</p>
   </article>
