@@ -68,7 +68,7 @@ const CoatingCard = ({ c }: { c: Coating }) => (
       <div className="absolute left-5 bottom-5 right-5">
         <div className="flex items-center gap-2">
           <span className="h-px w-6 bg-orange-500" />
-          <span className="t-label text-orange-400/90 tracking-[0.18em] text-[11px]">ПОКРЫТИЕ</span>
+          <span className="cat-label text-orange-400/90 text-[11px]">ПОКРЫТИЕ</span>
         </div>
         <h3
           className="text-white text-[20px] sm:text-[22px] mt-1.5 leading-tight"
@@ -110,9 +110,9 @@ export const CoatingsSection = () => {
         <div className="max-w-3xl">
           <div className="flex items-center gap-3 mb-3">
             <span className="h-px w-10 bg-orange-500" />
-            <span className="t-label text-orange-400/90 tracking-[0.18em]">ПОКРЫТИЯ</span>
+            <span className="cat-label text-orange-400/90">ПОКРЫТИЯ</span>
           </div>
-          <h2 className="t-h2 text-white mb-5">
+          <h2 className="cat-h2 text-white mb-5">
             Исполнения{" "}
             <span className="text-orange-500">защитных покрытий</span>
           </h2>

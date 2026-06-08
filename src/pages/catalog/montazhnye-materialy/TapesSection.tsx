@@ -146,9 +146,9 @@ export const TapesSection = () => {
         <div className="max-w-3xl">
           <div className="flex items-center gap-3 mb-3">
             <span className="h-px w-10 bg-orange-500" />
-            <span className="t-label text-orange-400/90 tracking-[0.18em]">ЛЕНТЫ</span>
+            <span className="cat-label text-orange-400/90">ЛЕНТЫ</span>
           </div>
-          <h2 className="t-h2 text-white mb-5">
+          <h2 className="cat-h2 text-white mb-5">
             Стыковочные ленты <span className="text-orange-500">Unionflex</span>
           </h2>
           <p className="text-gray-400 text-base sm:text-lg leading-[1.7]">

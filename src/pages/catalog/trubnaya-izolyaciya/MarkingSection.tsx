@@ -52,9 +52,9 @@ export const MarkingSection = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <div className="flex items-center gap-3 mb-3">
             <span className="h-px w-10 bg-orange-500" />
-            <span className="t-label text-orange-400/90 tracking-[0.18em]">МАРКИРОВКА</span>
+            <span className="cat-label text-orange-400/90">МАРКИРОВКА</span>
           </div>
-          <h2 className="t-h2 text-white mb-12 max-w-3xl">
+          <h2 className="cat-h2 text-white mb-12 max-w-3xl">
             Как читать <span className="text-orange-500">маркировку</span>
           </h2>
 
@@ -165,9 +165,9 @@ export const MarkingSection = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <div className="flex items-center gap-3 mb-3">
             <span className="h-px w-10 bg-orange-500" />
-            <span className="t-label text-orange-400/90 tracking-[0.18em]">РАЗМЕРЫ</span>
+            <span className="cat-label text-orange-400/90">РАЗМЕРЫ</span>
           </div>
-          <h2 className="t-h2 text-white mb-12 max-w-3xl">
+          <h2 className="cat-h2 text-white mb-12 max-w-3xl">
             Размеры <span className="text-orange-500">изоляционных трубок</span>
           </h2>
 

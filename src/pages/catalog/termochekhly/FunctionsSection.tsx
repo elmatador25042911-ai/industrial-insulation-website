@@ -99,21 +99,11 @@ export const FunctionsSection = () => {
         <div className="max-w-3xl">
           <div className="flex items-center gap-3 mb-3">
             <span className="h-px w-10 bg-orange-500" />
-            <span className="t-label text-orange-400/90 tracking-[0.18em]">
+            <span className="cat-label text-orange-400/90">
               ФУНКЦИИ
             </span>
           </div>
-          <h2
-            className="text-white mb-5"
-            style={{
-              fontFamily: "'Oswald', sans-serif",
-              fontWeight: 700,
-              fontSize: "clamp(1.875rem, 4vw, 3rem)",
-              lineHeight: 1.1,
-              letterSpacing: "-0.01em",
-              textTransform: "uppercase",
-            }}
-          >
+          <h2 className="cat-h2 text-white mb-5">
             Основные функции{" "}
             <span className="text-orange-500">термочехлов</span>
           </h2>

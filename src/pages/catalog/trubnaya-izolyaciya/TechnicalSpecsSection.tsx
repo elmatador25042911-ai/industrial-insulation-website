@@ -61,7 +61,7 @@ const GroupHeader = ({ num, label, icon }: { num: string; label: string; icon: s
   <div className="flex items-center gap-3 mb-5">
     <span className="text-[11px] tracking-[0.22em] text-orange-500/80 font-semibold">{num}</span>
     <Icon name={icon} size={16} className="text-orange-400" />
-    <span className="t-label text-orange-400/90 tracking-[0.18em]">{label}</span>
+    <span className="cat-label text-orange-400/90">{label}</span>
     <span className="h-px flex-1 bg-white/10" />
   </div>
 );
@@ -77,9 +77,9 @@ export const TechnicalSpecsSection = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
         <div className="flex items-center gap-3 mb-3">
           <span className="h-px w-10 bg-orange-500" />
-          <span className="t-label text-orange-400/90 tracking-[0.18em]">СПЕЦИФИКАЦИЯ</span>
+          <span className="cat-label text-orange-400/90">СПЕЦИФИКАЦИЯ</span>
         </div>
-        <h2 className="t-h2 text-white mb-12 max-w-3xl">
+        <h2 className="cat-h2 text-white mb-12 max-w-3xl">
           Технические <span className="text-orange-500">характеристики</span>
         </h2>
 

@@ -520,3 +520,34 @@
   flex-direction: column;
   height: 100%;
 }
+
+/* ── Каталог «Судостроение»: единая типографика заголовков ── */
+
+/* Hero H1 — первый экран страниц каталога */
+.cat-h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+/* Заголовок внутреннего блока */
+.cat-h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.875rem, 3.4vw, 2.875rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+/* Надзаголовок (лейбл) над блоком и в Hero */
+.cat-label {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}

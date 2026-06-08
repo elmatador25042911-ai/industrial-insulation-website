@@ -111,11 +111,11 @@ export const SpecsSection = () => {
         <div className="max-w-3xl">
           <div className="flex items-center gap-3 mb-3">
             <span className="h-px w-10 bg-orange-500" />
-            <span className="t-label text-orange-400/90 tracking-[0.18em]">
+            <span className="cat-label text-orange-400/90">
               ХАРАКТЕРИСТИКИ
             </span>
           </div>
-          <h2 className="t-h2 text-white mb-5">
+          <h2 className="cat-h2 text-white mb-5">
             Основные характеристики{" "}
             <span className="text-orange-500">ИТШМИ ПАНЦИРЬ</span>
           </h2>

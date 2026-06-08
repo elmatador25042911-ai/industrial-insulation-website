@@ -36,7 +36,7 @@ export const HeroSection = () => {
         {/* Хлебная крошка / надзаголовок */}
         <div className="flex items-center gap-3 mb-8 flex-wrap">
           <span className="h-px w-10 bg-orange-500 flex-shrink-0" />
-          <span className="t-label text-orange-400/90 tracking-[0.18em] leading-relaxed">
+          <span className="cat-label text-orange-400/90 leading-relaxed">
             КАТАЛОГ / СУДОСТРОЕНИЕ / ТРУБНАЯ ИЗОЛЯЦИЯ
           </span>
         </div>
@@ -44,17 +44,7 @@ export const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Текстовая часть */}
           <div className="lg:col-span-6 xl:col-span-7">
-            <h1
-              className="text-white mb-7"
-              style={{
-                fontFamily: "'Oswald', sans-serif",
-                fontWeight: 700,
-                fontSize: "clamp(2rem, 5vw, 3.75rem)",
-                lineHeight: 1.05,
-                letterSpacing: "-0.01em",
-                textTransform: "uppercase",
-              }}
-            >
+            <h1 className="cat-h1 text-white mb-7">
               Трубная изоляция
               <br />
               <span className="text-orange-500">для судостроения</span>

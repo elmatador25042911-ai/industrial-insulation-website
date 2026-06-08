@@ -54,9 +54,9 @@ export const ApplicationsSection = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <div className="flex items-center gap-3 mb-3">
             <span className="h-px w-10 bg-orange-500" />
-            <span className="t-label text-orange-400/90 tracking-[0.18em]">ПРИМЕНЕНИЕ</span>
+            <span className="cat-label text-orange-400/90">ПРИМЕНЕНИЕ</span>
           </div>
-          <h2 className="t-h2 text-white mb-12 max-w-3xl">
+          <h2 className="cat-h2 text-white mb-12 max-w-3xl">
             Области применения <span className="text-orange-500">в судостроении</span>
           </h2>
 
@@ -107,9 +107,9 @@ export const ApplicationsSection = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <div className="flex items-center gap-3 mb-3">
             <span className="h-px w-10 bg-orange-500" />
-            <span className="t-label text-orange-400/90 tracking-[0.18em]">ПОКРЫТИЯ</span>
+            <span className="cat-label text-orange-400/90">ПОКРЫТИЯ</span>
           </div>
-          <h2 className="t-h2 text-white mb-12 max-w-3xl">
+          <h2 className="cat-h2 text-white mb-12 max-w-3xl">
             Исполнения <span className="text-orange-500">покрытий</span>
           </h2>
 
