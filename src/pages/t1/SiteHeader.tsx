@@ -66,10 +66,11 @@ const SiteHeader = () => {
                 <span className="text-[11px] text-gray-400 group-hover:text-orange-400 font-medium transition-colors duration-300 leading-none whitespace-nowrap">t1izol@mail.ru</span>
               </a>
             </div>
-            <a href="#contacts"
+            <a href="https://yandex.ru/maps/org/t1_izolyatsiya/83301899150/prices/?ll=30.327649%2C59.878585&z=19"
+              target="_blank" rel="noopener noreferrer"
               className="btn-primary text-white px-5 py-2.5 text-[11px] font-black uppercase tracking-widest transition-all duration-300 hover:opacity-90 whitespace-nowrap"
               style={{ background: GRAD }}>
-              Связаться с нами
+              Перейти к продукции
             </a>
           </div>
 
@@ -85,10 +86,11 @@ const SiteHeader = () => {
                 <span className="text-gray-400 text-xs group-hover:text-orange-400 transition-colors duration-300">t1izol@mail.ru</span>
               </a>
             </div>
-            <a href="#contacts"
+            <a href="https://yandex.ru/maps/org/t1_izolyatsiya/83301899150/prices/?ll=30.327649%2C59.878585&z=19"
+              target="_blank" rel="noopener noreferrer"
               className="btn-primary text-white px-4 py-2 text-xs font-black uppercase tracking-widest transition-all duration-300 hover:opacity-90"
               style={{ background: GRAD }}>
-              Связаться
+              Перейти к продукции
             </a>
           </div>
 
@@ -122,9 +124,11 @@ const SiteHeader = () => {
               t1izol@mail.ru
             </a>
           </div>
-          <a href="#contacts" className="block mt-4 text-white text-center py-3 font-black text-xs uppercase tracking-widest"
+          <a href="https://yandex.ru/maps/org/t1_izolyatsiya/83301899150/prices/?ll=30.327649%2C59.878585&z=19"
+            target="_blank" rel="noopener noreferrer"
+            className="block mt-4 text-white text-center py-3 font-black text-xs uppercase tracking-widest"
             style={{ background: GRAD }}>
-            Связаться с нами
+            Перейти к продукции
           </a>
         </div>
       )}
