@@ -9,9 +9,10 @@ import TechnicalSpecsSection from "./montazhnye-materialy-pgs/TechnicalSpecsSect
 import RequestSection from "./montazhnye-materialy-pgs/RequestSection";
 
 const BADGES = [
-  { icon: "Droplet", text: "Клей / очиститель" },
-  { icon: "Layers", text: "Стыковочные ленты" },
-  { icon: "Pipette", text: "Для трубной и рулонной изоляции" },
+  { icon: "Droplet", text: "Клеи" },
+  { icon: "Pipette", text: "Очистители" },
+  { icon: "Layers", text: "Ленты" },
+  { icon: "Package", text: "Монтажный комплект" },
   { icon: "FileBadge", text: TU_PGS },
 ];
 
@@ -54,14 +55,15 @@ const MontazhnyeMaterialyPgs = () => {
                 </h1>
 
                 <p className="text-gray-200 text-lg sm:text-xl leading-relaxed max-w-2xl mt-7 mb-5">
-                  Клеи, очистители и стыковочные ленты Unionflex для монтажа теплоизоляции
-                  трубопроводов, воздуховодов и инженерных поверхностей.
+                  Клеевые составы, очистители, ленты и вспомогательные материалы для монтажа
+                  трубной и рулонной теплоизоляции на инженерных системах зданий, промышленных
+                  объектах и технологических коммуникациях.
                 </p>
 
                 <p className="text-gray-400 text-[15px] sm:text-base leading-relaxed max-w-2xl">
-                  Материалы применяются при установке трубной и рулонной изоляции, обработке
-                  поверхностей, склеивании стыков и герметизации швов в инженерных системах
-                  зданий.
+                  Применяются при подготовке поверхностей, склеивании стыков, герметизации швов
+                  и обработке примыканий при монтаже теплоизоляции в технических помещениях, на
+                  трубопроводах, воздуховодах и оборудовании.
                 </p>
 
                 {/* Бейджи */}
