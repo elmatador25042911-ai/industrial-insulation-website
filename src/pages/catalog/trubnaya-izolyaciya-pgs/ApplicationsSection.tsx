@@ -104,9 +104,15 @@ export const ApplicationsSection = () => {
             <span className="h-px w-10 bg-orange-500" />
             <span className="cat-label text-orange-400/90">ПОКРЫТИЯ</span>
           </div>
-          <h2 className="cat-h2 text-white mb-12 max-w-3xl">
+          <h2 className="cat-h2 text-white mb-6 max-w-3xl">
             Исполнения <span className="text-orange-500">покрытий</span>
           </h2>
+          <p className="text-gray-300 text-[15px] sm:text-base leading-relaxed max-w-3xl mb-12">
+            Исполнения трубной изоляции подбираются под условия эксплуатации инженерных
+            систем здания или промышленного объекта: температуру, влажность, риск
+            образования конденсата, механические нагрузки и требования к наружному
+            защитному слою.
+          </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {COATINGS.map((c) => (
