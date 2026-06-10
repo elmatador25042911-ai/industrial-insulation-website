@@ -3,6 +3,7 @@ import Icon from "@/components/ui/icon";
 import InternalLayout from "@/components/layouts/InternalLayout";
 import { coveringImages } from "@/assets/zashchitnye-pokrytiya/assets";
 import PurposeSection from "./zashchitnye-materialy-pgs/PurposeSection";
+import LineupSection from "./zashchitnye-materialy-pgs/LineupSection";
 
 const BADGES = [
   { icon: "ShieldCheck", text: "ЗМ.ПАНЦИРЬ" },
@@ -163,6 +164,7 @@ const ZashchitnyeMaterialyPgs = () => {
         </section>
 
         <PurposeSection />
+        <LineupSection />
       </main>
     </InternalLayout>
   );
