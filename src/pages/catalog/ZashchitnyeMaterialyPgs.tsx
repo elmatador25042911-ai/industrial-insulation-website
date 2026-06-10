@@ -6,6 +6,7 @@ import PurposeSection from "./zashchitnye-materialy-pgs/PurposeSection";
 import LineupSection from "./zashchitnye-materialy-pgs/LineupSection";
 import SelectionSection from "./zashchitnye-materialy-pgs/SelectionSection";
 import TechnicalSpecsSection from "./zashchitnye-materialy-pgs/TechnicalSpecsSection";
+import ApplicationsSection from "./zashchitnye-materialy-pgs/ApplicationsSection";
 
 const BADGES = [
   { icon: "ShieldCheck", text: "ЗМ.ПАНЦИРЬ" },
@@ -169,6 +170,7 @@ const ZashchitnyeMaterialyPgs = () => {
         <LineupSection />
         <SelectionSection />
         <TechnicalSpecsSection />
+        <ApplicationsSection />
       </main>
     </InternalLayout>
   );
