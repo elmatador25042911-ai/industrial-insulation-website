@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import InternalLayout from "@/components/layouts/InternalLayout";
 import { coveringImages } from "@/assets/zashchitnye-pokrytiya/assets";
+import PurposeSection from "./zashchitnye-materialy-pgs/PurposeSection";
 
 const BADGES = [
   { icon: "ShieldCheck", text: "ЗМ.ПАНЦИРЬ" },
-  { icon: "Droplets", text: "АкваРос" },
   { icon: "Layers", text: "АЛМ / АЛФ / МБР / ПВХ / СТХ" },
   { icon: "Box", text: "Окожушки" },
   { icon: "FileBadge", text: "ТУ 5760-003-85495285-2015" },
@@ -161,6 +161,8 @@ const ZashchitnyeMaterialyPgs = () => {
             </div>
           </div>
         </section>
+
+        <PurposeSection />
       </main>
     </InternalLayout>
   );
