@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import InternalLayout from "@/components/layouts/InternalLayout";
+import PurposeSection from "./kamennaya-vata-pgs/PurposeSection";
 
 const HERO_IMG =
   "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/vata-pgs.jpg";
@@ -162,6 +163,8 @@ const KamennayaVataPgs = () => {
             </div>
           </div>
         </section>
+
+        <PurposeSection />
       </main>
     </InternalLayout>
   );
