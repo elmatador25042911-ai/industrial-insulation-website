@@ -7,8 +7,6 @@ import SelectionSection from "./kamennaya-vata-pgs/SelectionSection";
 import ManufacturersSection from "./kamennaya-vata-pgs/ManufacturersSection";
 import TechSpecsSection from "./kamennaya-vata-pgs/TechSpecsSection";
 import CylinderSizesSection from "./kamennaya-vata-pgs/CylinderSizesSection";
-import Rwl100SizesSection from "./kamennaya-vata-pgs/Rwl100SizesSection";
-import HotpipeSizesSection from "./kamennaya-vata-pgs/HotpipeSizesSection";
 
 const HERO_IMG =
   "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/vata-pgs.jpg";
@@ -176,8 +174,6 @@ const KamennayaVataPgs = () => {
         <SelectionSection />
         <ManufacturersSection />
         <TechSpecsSection />
-        <Rwl100SizesSection />
-        <HotpipeSizesSection />
         <CylinderSizesSection />
       </main>
     </InternalLayout>
