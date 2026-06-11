@@ -5,6 +5,7 @@ import PurposeSection from "./kamennaya-vata-pgs/PurposeSection";
 import FormsSection from "./kamennaya-vata-pgs/FormsSection";
 import SelectionSection from "./kamennaya-vata-pgs/SelectionSection";
 import ManufacturersSection from "./kamennaya-vata-pgs/ManufacturersSection";
+import TechSpecsSection from "./kamennaya-vata-pgs/TechSpecsSection";
 
 const HERO_IMG =
   "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/vata-pgs.jpg";
@@ -171,6 +172,7 @@ const KamennayaVataPgs = () => {
         <FormsSection />
         <SelectionSection />
         <ManufacturersSection />
+        <TechSpecsSection />
       </main>
     </InternalLayout>
   );
