@@ -8,6 +8,7 @@ import ManufacturersSection from "./kamennaya-vata-pgs/ManufacturersSection";
 import TechSpecsSection from "./kamennaya-vata-pgs/TechSpecsSection";
 import CylinderSizesSection from "./kamennaya-vata-pgs/CylinderSizesSection";
 import CylinderThermalSection from "./kamennaya-vata-pgs/CylinderThermalSection";
+import MatThermalSection from "./kamennaya-vata-pgs/MatThermalSection";
 import TehMatSizesSection from "./kamennaya-vata-pgs/TehMatSizesSection";
 import LamellaMatSizesSection from "./kamennaya-vata-pgs/LamellaMatSizesSection";
 import WiredMat50SizesSection from "./kamennaya-vata-pgs/WiredMat50SizesSection";
@@ -182,6 +183,7 @@ const KamennayaVataPgs = () => {
         <TechSpecsSection />
         <CylinderSizesSection />
         <CylinderThermalSection />
+        <MatThermalSection />
         <TehMatSizesSection />
         <LamellaMatSizesSection />
         <WiredMat50SizesSection />
