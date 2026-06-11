@@ -10,6 +10,7 @@ import CylinderSizesSection from "./kamennaya-vata-pgs/CylinderSizesSection";
 import TehMatSizesSection from "./kamennaya-vata-pgs/TehMatSizesSection";
 import LamellaMatSizesSection from "./kamennaya-vata-pgs/LamellaMatSizesSection";
 import WiredMat50SizesSection from "./kamennaya-vata-pgs/WiredMat50SizesSection";
+import WiredMat105SizesSection from "./kamennaya-vata-pgs/WiredMat105SizesSection";
 
 const HERO_IMG =
   "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/vata-pgs.jpg";
@@ -181,6 +182,7 @@ const KamennayaVataPgs = () => {
         <TehMatSizesSection />
         <LamellaMatSizesSection />
         <WiredMat50SizesSection />
+        <WiredMat105SizesSection />
       </main>
     </InternalLayout>
   );
