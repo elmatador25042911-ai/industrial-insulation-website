@@ -12,6 +12,7 @@ import MatThermalSection from "./kamennaya-vata-pgs/MatThermalSection";
 import WiredMatThermalSection from "./kamennaya-vata-pgs/WiredMatThermalSection";
 import UmatexThermalSection from "./kamennaya-vata-pgs/UmatexThermalSection";
 import ApplicationsSection from "./kamennaya-vata-pgs/ApplicationsSection";
+import RequestSection from "./kamennaya-vata-pgs/RequestSection";
 import TehMatSizesSection from "./kamennaya-vata-pgs/TehMatSizesSection";
 import LamellaMatSizesSection from "./kamennaya-vata-pgs/LamellaMatSizesSection";
 import WiredMat50SizesSection from "./kamennaya-vata-pgs/WiredMat50SizesSection";
@@ -195,6 +196,7 @@ const KamennayaVataPgs = () => {
         <WiredMat50SizesSection />
         <WiredMat105SizesSection />
         <UmatexWiredMat100SizesSection />
+        <RequestSection />
       </main>
     </InternalLayout>
   );
