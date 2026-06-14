@@ -13,7 +13,7 @@ export const GRAD_H = "linear-gradient(90deg, #e63012 0%, #f97316 50%, #fbbf24 1
 
 export const NAV_LINKS = [
   { label: "О нас",                href: "#about" },
-  { label: "Продукция",            href: "#catalog" },
+  { label: "Каталоги",             href: "#catalog" },
   { label: "Отрасли применения",   href: "#industries" },
   { label: "Документация",         href: "#certificates" },
   { label: "Контакты",             href: "#contacts" },

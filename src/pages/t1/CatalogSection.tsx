@@ -185,7 +185,7 @@ export const CatalogSection = () => {
 
         <div className="relative z-10 py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`flex items-center gap-5 mb-8 transition-all duration-700 delay-200 ${catalogVis.visible ? "animate-fadeInUp" : "opacity-0"}`}>
-            <h3 className="t-h3 text-white whitespace-nowrap">Для промышленности и ПГС</h3>
+            <h3 className="t-h3 text-white whitespace-nowrap">Для промышленного и гражданского строительства</h3>
             <div className="flex-1 h-px bg-white/10" />
             <span className="t-label text-orange-500/55 whitespace-nowrap">{CATALOG_INDUSTRY.length} позиций</span>
           </div>
