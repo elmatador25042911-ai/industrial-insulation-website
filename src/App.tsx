@@ -16,6 +16,7 @@ import MontazhnyeMaterialyPgs from "./pages/catalog/MontazhnyeMaterialyPgs";
 import ZashchitnyeMaterialyPgs from "./pages/catalog/ZashchitnyeMaterialyPgs";
 import KamennayaVataPgs from "./pages/catalog/KamennayaVataPgs";
 import Termochekhly from "./pages/catalog/Termochekhly";
+import TermochekhlyPgs from "./pages/catalog/TermochekhlyPgs";
 import AntikondensatnyePokrytiya from "./pages/catalog/AntikondensatnyePokrytiya";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/catalog/pgs/montazhnye-materialy" element={<MontazhnyeMaterialyPgs />} />
           <Route path="/catalog/pgs/zashchitnye-materialy" element={<ZashchitnyeMaterialyPgs />} />
           <Route path="/catalog/pgs/kamennaya-vata" element={<KamennayaVataPgs />} />
+          <Route path="/catalog/pgs/termochekhly" element={<TermochekhlyPgs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
