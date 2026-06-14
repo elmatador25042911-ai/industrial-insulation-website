@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import InternalLayout from "@/components/layouts/InternalLayout";
-import FunctionsSection from "./termochekhly/FunctionsSection";
+import FunctionsSection from "./termochekhly-pgs/FunctionsSection";
 import ApplicationsSection from "./termochekhly-pgs/ApplicationsSection";
 import ProcessSection from "./termochekhly/ProcessSection";
 import SpecsSection from "./termochekhly/SpecsSection";
@@ -130,7 +130,7 @@ const TermochekhlyPgs = () => {
                     {/* Hero-изображение */}
                     <img
                       src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/termochekhly/sudostroenie_termochekhly_hero_main_01.png"
-                      alt="Термочехлы ИТШМИ ПАНЦИРЬ для промышленности и гражданского строительства"
+                      alt="Термочехлы ИТШМИ ПАНЦИРЬ для промышленного и гражданского строительства"
                       loading="eager"
                       className="absolute inset-0 w-full h-full object-cover"
                     />
