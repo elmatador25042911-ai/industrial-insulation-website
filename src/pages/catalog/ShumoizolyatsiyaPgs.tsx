@@ -3,6 +3,7 @@ import Icon from "@/components/ui/icon";
 import InternalLayout from "@/components/layouts/InternalLayout";
 import VariantsSection from "./shumoizolyatsiya-pgs/VariantsSection";
 import ApplicationsSection from "./shumoizolyatsiya-pgs/ApplicationsSection";
+import HighlightsSection from "./shumoizolyatsiya-pgs/HighlightsSection";
 import RequestSection from "./termochekhly/RequestSection";
 
 const HERO_IMG =
@@ -174,6 +175,7 @@ const ShumoizolyatsiyaPgs = () => {
         </section>
 
         <VariantsSection />
+        <HighlightsSection />
         <ApplicationsSection />
         <RequestSection />
       </main>
