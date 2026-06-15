@@ -11,10 +11,9 @@ const HERO_IMG =
 const BADGES = [
   { icon: "Layers", text: "Стандарт" },
   { icon: "Layers2", text: "Стандарт-AL" },
+  { icon: "Layers3", text: "Премиум" },
   { icon: "Layers3", text: "Премиум-AL" },
   { icon: "AudioWaveform", text: "R500 до 32 дБ" },
-  { icon: "Ruler", text: "Толщина 12–16 мм" },
-  { icon: "AlignJustify", text: "1–5 слоёв" },
 ];
 
 const ShumoizolyatsiyaPgs = () => {
