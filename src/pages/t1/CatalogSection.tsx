@@ -25,7 +25,7 @@ const CATALOG_INDUSTRY: { name: string; sub: string; img: string; href?: string 
   { name: "Защитные материалы",         sub: "Металл и полимерные решения",              img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/zashitniemateriali-pgs.jpg", href: "/catalog/pgs/zashchitnye-materialy" },
   { name: "Термочехлы",                sub: "Для оборудования и трубопроводов",         img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/termochehol-pgs.jpg", href: "/catalog/pgs/termochekhly" },
   { name: "Каменная вата",             sub: "Теплоизоляция для инженерных систем",      img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/vata-pgs.jpg", href: "/catalog/pgs/kamennaya-vata" },
-  { name: "Шумоизоляция",              sub: "Снижение шума оборудования и систем",      img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/shumoizol-pgs.png" },
+  { name: "Шумоизоляция",              sub: "Снижение шума оборудования и систем",      img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/shumoizol-pgs.png", href: "/catalog/pgs/shumoizolyatsiya" },
   { name: "Опоры и подвесы",           sub: "Крепление трубопроводов и систем",         img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/podves-pgs.jpg" },
 ];
 
