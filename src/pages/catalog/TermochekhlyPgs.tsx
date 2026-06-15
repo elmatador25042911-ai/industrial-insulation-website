@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon";
 import InternalLayout from "@/components/layouts/InternalLayout";
 import FunctionsSection from "./termochekhly-pgs/FunctionsSection";
 import ApplicationsSection from "./termochekhly-pgs/ApplicationsSection";
-import ProcessSection from "./termochekhly/ProcessSection";
+import ProcessSection from "./termochekhly-pgs/ProcessSection";
 import SpecsSection from "./termochekhly/SpecsSection";
 import CompositionSection from "./termochekhly/CompositionSection";
 import RequestSection from "./termochekhly/RequestSection";
