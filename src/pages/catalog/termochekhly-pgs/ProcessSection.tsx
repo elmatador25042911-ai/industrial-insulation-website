@@ -84,7 +84,7 @@ const STEPS: Step[] = [
     icon: "HardHat",
     visualIcon: "ShieldHalf",
     visualCaption: "Монтаж на объекте / документация",
-    img: `${CDN}/process_08_supervision_docs_01.png`,
+    img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/2aa8c190-9fda-486d-b312-4a6edced16cd.jpg",
   },
 ];
 
