@@ -29,6 +29,7 @@ const CASINGS: Spec[] = [
     value: "алюминиевые / оцинкованные / из нержавеющей стали",
     icon: "Box",
     accent: true,
+    wide: true,
   },
   { label: "ТУ", value: "ТУ 25.99.29-001-85495285-2019", icon: "FileBadge" },
   { label: "Алюминиевая окожушка", value: "толщина 0,7 мм", icon: "Ruler" },
