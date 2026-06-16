@@ -7,15 +7,10 @@ import ProductSection, { type ProductData } from "./opory-i-podvesy-pgs/ProductS
 import SpecsSection, { type SpecsData } from "./opory-i-podvesy-pgs/SpecsSection";
 import RequestSection from "./opory-i-podvesy-pgs/RequestSection";
 
-const HERO_IMG =
-  "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/podves-pgs.jpg";
-
-const HOTPIPE_GENERAL =
-  "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/a089622e-d5c1-4eb9-8206-65b713b26c99.jpg";
-const HOTPIPE_CLOSEUP_1 =
-  "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/eea8d092-d6f4-4325-a712-736189b57e0a.jpg";
-const HOTPIPE_CLOSEUP_2 =
-  "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/323ce1b8-ffb5-40de-b2db-f1b6f8d1ee7a.jpg";
+const HOTPIPE_IMG =
+  "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/508c64fe-4516-4515-ab18-1df0a6e0fa29.jpg";
+const PERIMETR_IMG =
+  "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/6a4ef83e-87c9-4d9a-8611-1b88a4ad4584.jpg";
 
 const BADGES = [
   { icon: "Component", text: "СОП «ПЕРИМЕТР»" },
@@ -28,7 +23,7 @@ const OPORY: ProductData = {
   id: "opory",
   label: "ОПОРЫ",
   title: "Опоры СОП «ПЕРИМЕТР»",
-  image: HERO_IMG,
+  image: PERIMETR_IMG,
   imageCaption: "СОП «ПЕРИМЕТР»",
   description:
     "Опоры СОП «ПЕРИМЕТР» предназначены для крепления трубопроводов с опорой на металлоконструкции и строительные конструкции. Конструкция исключает прямой контакт трубопровода с опорой и предотвращает образование «мостиков холода».",
@@ -43,6 +38,8 @@ const OPORY: ProductData = {
 const OPORY_SPECS: SpecsData = {
   label: "ОПОРЫ",
   title: "Опоры СОП «ПЕРИМЕТР»",
+  image: PERIMETR_IMG,
+  imageCaption: "СОП «ПЕРИМЕТР»",
   specs: [
     { name: "Назначение", value: "Крепление трубопроводов" },
     { name: "Тип крепления", value: "Опорное" },
@@ -68,7 +65,7 @@ const PODVESY: ProductData = {
   id: "podvesy",
   label: "ПОДВЕСЫ",
   title: "Подвесы Хотпайп",
-  image: HOTPIPE_CLOSEUP_1,
+  image: HOTPIPE_IMG,
   imageCaption: "ХОТПАЙП",
   description:
     "Подвесы Хотпайп предназначены для крепления трубопроводов с подвесом к перекрытиям и несущим конструкциям. Конструкция обеспечивает надёжную фиксацию и снижает теплопотери в узле крепления.",
@@ -84,8 +81,8 @@ const PODVESY: ProductData = {
 const PODVESY_SPECS: SpecsData = {
   label: "ПОДВЕСЫ",
   title: "Подвесы Хотпайп",
-  image: HOTPIPE_CLOSEUP_2,
-  imageCaption: "ХОТПАЙП — РАЗРЕЗ",
+  image: HOTPIPE_IMG,
+  imageCaption: "ХОТПАЙП",
   specs: [
     { name: "Назначение", value: "Крепление трубопроводов" },
     { name: "Тип крепления", value: "Подвесное" },
@@ -203,7 +200,7 @@ const OporyIPodvesyPgs = () => {
                   >
                     {/* Hero-изображение */}
                     <img
-                      src={HOTPIPE_GENERAL}
+                      src={HOTPIPE_IMG}
                       alt="Опоры и подвесы Хотпайп для трубопроводов"
                       loading="eager"
                       className="absolute inset-0 w-full h-full object-cover object-center"
