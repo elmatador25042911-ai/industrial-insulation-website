@@ -38,8 +38,6 @@ const OPORY: ProductData = {
 const OPORY_SPECS: SpecsData = {
   label: "ОПОРЫ",
   title: "Опоры СОП «ПЕРИМЕТР»",
-  image: PERIMETR_IMG,
-  imageCaption: "СОП «ПЕРИМЕТР»",
   specs: [
     { name: "Назначение", value: "Крепление трубопроводов" },
     { name: "Тип крепления", value: "Опорное" },
@@ -81,8 +79,6 @@ const PODVESY: ProductData = {
 const PODVESY_SPECS: SpecsData = {
   label: "ПОДВЕСЫ",
   title: "Подвесы Хотпайп",
-  image: HOTPIPE_IMG,
-  imageCaption: "ХОТПАЙП",
   specs: [
     { name: "Назначение", value: "Крепление трубопроводов" },
     { name: "Тип крепления", value: "Подвесное" },
