@@ -10,6 +10,13 @@ import RequestSection from "./opory-i-podvesy-pgs/RequestSection";
 const HERO_IMG =
   "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/podves-pgs.jpg";
 
+const HOTPIPE_GENERAL =
+  "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/a089622e-d5c1-4eb9-8206-65b713b26c99.jpg";
+const HOTPIPE_CLOSEUP_1 =
+  "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/eea8d092-d6f4-4325-a712-736189b57e0a.jpg";
+const HOTPIPE_CLOSEUP_2 =
+  "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/323ce1b8-ffb5-40de-b2db-f1b6f8d1ee7a.jpg";
+
 const BADGES = [
   { icon: "Component", text: "СОП «ПЕРИМЕТР»" },
   { icon: "Link", text: "Хотпайп" },
@@ -61,7 +68,7 @@ const PODVESY: ProductData = {
   id: "podvesy",
   label: "ПОДВЕСЫ",
   title: "Подвесы Хотпайп",
-  image: HERO_IMG,
+  image: HOTPIPE_CLOSEUP_1,
   imageCaption: "ХОТПАЙП",
   description:
     "Подвесы Хотпайп предназначены для крепления трубопроводов с подвесом к перекрытиям и несущим конструкциям. Конструкция обеспечивает надёжную фиксацию и снижает теплопотери в узле крепления.",
@@ -77,6 +84,8 @@ const PODVESY: ProductData = {
 const PODVESY_SPECS: SpecsData = {
   label: "ПОДВЕСЫ",
   title: "Подвесы Хотпайп",
+  image: HOTPIPE_CLOSEUP_2,
+  imageCaption: "ХОТПАЙП — РАЗРЕЗ",
   specs: [
     { name: "Назначение", value: "Крепление трубопроводов" },
     { name: "Тип крепления", value: "Подвесное" },
@@ -192,12 +201,12 @@ const OporyIPodvesyPgs = () => {
                         "radial-gradient(120% 90% at 20% 0%, rgba(255,138,0,0.10) 0%, rgba(20,20,22,0.85) 45%, rgba(10,10,12,0.95) 100%)",
                     }}
                   >
-                    {/* Hero-изображение (временное) */}
+                    {/* Hero-изображение */}
                     <img
-                      src={HERO_IMG}
-                      alt="Опоры и подвесы для трубопроводов"
+                      src={HOTPIPE_GENERAL}
+                      alt="Опоры и подвесы Хотпайп для трубопроводов"
                       loading="eager"
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover object-center"
                     />
 
                     <div className="absolute left-6 right-6 bottom-6 z-10 flex items-end justify-between gap-3">

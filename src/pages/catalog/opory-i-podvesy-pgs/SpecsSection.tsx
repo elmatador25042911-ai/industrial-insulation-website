@@ -3,6 +3,8 @@ import Icon from "@/components/ui/icon";
 export interface SpecsData {
   label: string;
   title: string;
+  image?: string;
+  imageCaption?: string;
   specs: { name: string; value: string }[];
   table: {
     columns: string[];
@@ -21,6 +23,27 @@ export const SpecsSection = ({ data }: { data: SpecsData }) => (
           style={{ boxShadow: "0 24px 60px -25px rgba(0,0,0,0.8)" }}
         >
           <div className="absolute top-0 left-0 h-[2px] w-12 bg-orange-500" />
+          {data.image && (
+            <div className="relative aspect-[16/10] overflow-hidden rounded-sm border border-white/10 mb-6">
+              <img
+                src={data.image}
+                alt={data.title}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e]/60 via-transparent to-transparent" />
+              <div className="absolute top-2.5 left-2.5 w-5 h-5 border-t-2 border-l-2 border-orange-500" />
+              <div className="absolute bottom-2.5 right-2.5 w-5 h-5 border-b-2 border-r-2 border-orange-500" />
+              {data.imageCaption && (
+                <div
+                  className="absolute left-4 bottom-3 text-[10px] tracking-[0.18em] text-gray-300 uppercase"
+                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                >
+                  {data.imageCaption}
+                </div>
+              )}
+            </div>
+          )}
           <div className="flex items-center gap-3 mb-6">
             <Icon name="ListChecks" size={18} className="text-orange-400" />
             <h3
