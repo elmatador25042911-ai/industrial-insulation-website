@@ -4,6 +4,7 @@ import InternalLayout from "@/components/layouts/InternalLayout";
 import VariantsSection from "./shumoizolyatsiya-pgs/VariantsSection";
 import ApplicationsSection from "./shumoizolyatsiya-pgs/ApplicationsSection";
 import HighlightsSection from "./shumoizolyatsiya-pgs/HighlightsSection";
+import AdvantagesSection from "./shumoizolyatsiya-pgs/AdvantagesSection";
 import RequestSection from "./termochekhly/RequestSection";
 
 const HERO_IMG =
@@ -176,6 +177,7 @@ const ShumoizolyatsiyaPgs = () => {
 
         <VariantsSection />
         <HighlightsSection />
+        <AdvantagesSection />
         <ApplicationsSection />
         <RequestSection />
       </main>
