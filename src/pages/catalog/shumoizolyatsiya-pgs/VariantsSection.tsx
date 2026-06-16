@@ -50,22 +50,22 @@ const VARIANTS: Variant[] = [
 
 const VariantCard = ({ v }: { v: Variant }) => (
   <article
-    className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] transition-colors duration-300 hover:border-orange-500/40 flex flex-col"
+    className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] transition-colors duration-300 hover:border-orange-500/40 flex flex-col sm:flex-row"
     style={{ boxShadow: "0 24px 60px -25px rgba(0,0,0,0.8)" }}
   >
     <div className="absolute top-0 left-0 z-10 h-[2px] w-12 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
 
-    <div className="relative overflow-hidden border-b border-white/[0.08]">
+    <div className="relative overflow-hidden border-b sm:border-b-0 sm:border-r border-white/[0.08] sm:w-[42%] flex-shrink-0">
       <img
         src={v.image}
         alt={`Система шумоизоляции ${v.title}`}
         loading="lazy"
-        className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+        className="w-full h-52 sm:h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e] via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-[#0c0c0e] via-transparent to-transparent" />
     </div>
 
-    <div className="p-4 sm:p-5 flex flex-col flex-1">
+    <div className="p-5 sm:p-6 flex flex-col flex-1">
     <div className="flex items-center gap-3 mb-1.5">
       <span
         className="text-[12px] tracking-[0.22em] text-orange-500/80 font-semibold"
@@ -144,7 +144,7 @@ export const VariantsSection = () => {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
           {VARIANTS.map((v) => (
             <VariantCard key={v.title} v={v} />
           ))}
