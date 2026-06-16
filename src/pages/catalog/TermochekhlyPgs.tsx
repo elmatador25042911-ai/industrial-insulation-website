@@ -179,11 +179,11 @@ const TermochekhlyPgs = () => {
           </div>
         </section>
 
+        <CompositionSection />
         <FunctionsSection />
         <ApplicationsSection />
         <ProcessSection />
         <SpecsSection />
-        <CompositionSection />
         <RequestSection />
       </main>
     </InternalLayout>
