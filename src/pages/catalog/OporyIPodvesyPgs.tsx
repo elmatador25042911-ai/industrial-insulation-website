@@ -11,6 +11,8 @@ const HOTPIPE_IMG =
   "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/508c64fe-4516-4515-ab18-1df0a6e0fa29.jpg";
 const PERIMETR_IMG =
   "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/6a4ef83e-87c9-4d9a-8611-1b88a4ad4584.jpg";
+const HERO_IMG =
+  "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/0e4080a1-6ff0-486f-87ee-e06570a357b9.jpg";
 
 const BADGES = [
   { icon: "Component", text: "СОП «ПЕРИМЕТР»" },
@@ -196,8 +198,8 @@ const OporyIPodvesyPgs = () => {
                   >
                     {/* Hero-изображение */}
                     <img
-                      src={HOTPIPE_IMG}
-                      alt="Опоры и подвесы Хотпайп для трубопроводов"
+                      src={HERO_IMG}
+                      alt="Опоры и подвесы Хотпайп и СОП «ПЕРИМЕТР» для трубопроводов"
                       loading="eager"
                       className="absolute inset-0 w-full h-full object-cover object-center"
                     />
@@ -207,13 +209,13 @@ const OporyIPodvesyPgs = () => {
                         className="text-[10px] sm:text-[11px] tracking-[0.22em] text-gray-300 uppercase"
                         style={{ fontFamily: "'JetBrains Mono', monospace" }}
                       >
-                        СОП «ПЕРИМЕТР»
+                        ХОТПАЙП
                       </div>
                       <div
                         className="text-[10px] sm:text-[11px] tracking-[0.22em] text-gray-300 uppercase"
                         style={{ fontFamily: "'JetBrains Mono', monospace" }}
                       >
-                        ХОТПАЙП
+                        СОП «ПЕРИМЕТР»
                       </div>
                     </div>
 
