@@ -55,7 +55,7 @@ export const ApplicationsSection = () => {
             кондиционирования, водоснабжения и технологических линий.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             {APPLICATIONS.map((a, i) => (
               <div
                 key={a.title}
@@ -92,7 +92,13 @@ export const ApplicationsSection = () => {
           </div>
         </div>
       </section>
+    </>
+  );
+};
 
+export const CoatingsSection = () => {
+  return (
+    <>
       {/* ── Варианты покрытий ── */}
       <section className="relative overflow-hidden border-t border-white/5">
         <div className="absolute inset-0 pointer-events-none">
@@ -174,4 +180,11 @@ export const ApplicationsSection = () => {
   );
 };
 
-export default ApplicationsSection;
+const ApplicationsAndCoatings = () => (
+  <>
+    <ApplicationsSection />
+    <CoatingsSection />
+  </>
+);
+
+export default ApplicationsAndCoatings;

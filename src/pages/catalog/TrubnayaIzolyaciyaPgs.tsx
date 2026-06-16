@@ -1,6 +1,12 @@
 import HeroSection from "./trubnaya-izolyaciya-pgs/HeroSection";
-import SpecsSection from "./trubnaya-izolyaciya-pgs/SpecsSection";
-import ApplicationsSection from "./trubnaya-izolyaciya-pgs/ApplicationsSection";
+import {
+  KeySpecsSection,
+  MaterialDescriptionSection,
+} from "./trubnaya-izolyaciya-pgs/SpecsSection";
+import {
+  ApplicationsSection,
+  CoatingsSection,
+} from "./trubnaya-izolyaciya-pgs/ApplicationsSection";
 import MarkingSection from "./trubnaya-izolyaciya-pgs/MarkingSection";
 import TubeTypesSection from "./trubnaya-izolyaciya-pgs/TubeTypesSection";
 import TechnicalSpecsSection from "./trubnaya-izolyaciya-pgs/TechnicalSpecsSection";
@@ -12,7 +18,9 @@ const TrubnayaIzolyaciyaPgs = () => {
     <InternalLayout>
       <main className="min-h-screen bg-[#0a0a0a] text-white">
         <HeroSection />
-        <SpecsSection />
+        <MaterialDescriptionSection />
+        <CoatingsSection />
+        <KeySpecsSection />
         <ApplicationsSection />
         <MarkingSection />
         <TubeTypesSection />

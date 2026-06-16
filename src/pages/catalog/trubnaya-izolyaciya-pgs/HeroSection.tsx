@@ -1,13 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import { getCatalogReturnPath } from "@/lib/catalog-return";
-import { TU_PGS } from "@/lib/catalog-tu";
 
 const BADGES = [
   { icon: "Thermometer", text: "от −200 до +110 °C" },
   { icon: "Flame", text: "Г1 / В1" },
   { icon: "Droplets", text: "μ ≥ 10 000" },
-  { icon: "FileBadge", text: TU_PGS },
+  { icon: "FileBadge", text: "ТУ 22.19.20-001-17563055-2020 изм. 3" },
 ];
 
 export const HeroSection = () => {

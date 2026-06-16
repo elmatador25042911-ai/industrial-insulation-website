@@ -28,7 +28,7 @@ const DESCRIPTION_CARDS: { icon: string; title: string; text: string }[] = [
   },
 ];
 
-export const SpecsSection = () => {
+export const KeySpecsSection = () => {
   return (
     <>
       {/* ── Ключевые характеристики ── */}
@@ -70,7 +70,13 @@ export const SpecsSection = () => {
           </div>
         </div>
       </section>
+    </>
+  );
+};
 
+export const MaterialDescriptionSection = () => {
+  return (
+    <>
       {/* ── Описание материала ── */}
       <section className="relative overflow-hidden border-t border-white/5">
         <div className="absolute inset-0 pointer-events-none">
@@ -111,5 +117,12 @@ export const SpecsSection = () => {
     </>
   );
 };
+
+const SpecsSection = () => (
+  <>
+    <KeySpecsSection />
+    <MaterialDescriptionSection />
+  </>
+);
 
 export default SpecsSection;
