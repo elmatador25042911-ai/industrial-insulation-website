@@ -132,11 +132,18 @@ export const SelectionSection = () => {
           </p>
         </div>
 
-        {/* Сетка карточек */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-          {CASES.map((c, i) => (
-            <SelectionCard key={c.title} c={c} index={i} />
-          ))}
+        {/* Сетка карточек: ряд 3 + ряд 2 (центрированный) */}
+        <div className="mt-12 space-y-5 sm:space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+            {CASES.slice(0, 3).map((c, i) => (
+              <SelectionCard key={c.title} c={c} index={i} />
+            ))}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:max-w-[66.666%] lg:mx-auto">
+            {CASES.slice(3).map((c, i) => (
+              <SelectionCard key={c.title} c={c} index={i + 3} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

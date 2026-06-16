@@ -106,11 +106,18 @@ export const ApplicationsSection = () => {
           </p>
         </div>
 
-        {/* Сетка 3 + 2 */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-          {APPLICATIONS.map((a, i) => (
-            <ApplicationCard key={a.title} a={a} index={i} />
-          ))}
+        {/* Сетка: ряд 3 + ряд 2 (центрированный) */}
+        <div className="mt-12 space-y-5 sm:space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+            {APPLICATIONS.slice(0, 3).map((a, i) => (
+              <ApplicationCard key={a.title} a={a} index={i} />
+            ))}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:max-w-[66.666%] lg:mx-auto">
+            {APPLICATIONS.slice(3).map((a, i) => (
+              <ApplicationCard key={a.title} a={a} index={i + 3} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import Icon from "@/components/ui/icon";
 
-type Spec = { label: string; value: string; icon: string; accent?: boolean };
+type Spec = { label: string; value: string; icon: string; accent?: boolean; wide?: boolean };
 
 const COVERINGS: Spec[] = [
   { label: "Материалы", value: "АЛМ / АЛФ / МБР / ПВХ / СТХ", icon: "Layers", accent: true },
@@ -17,6 +17,7 @@ const COVERINGS: Spec[] = [
     value:
       "Защита теплоизоляционных и шумоизоляционных конструкций от механических повреждений, УФ-излучения, атмосферных осадков и внешних воздействий",
     icon: "ShieldCheck",
+    wide: true,
   },
   { label: "Условия применения", value: "Внутри помещений и на наружных участках", icon: "MapPin" },
   { label: "Срок службы", value: "более 25 лет", icon: "CalendarDays", accent: true },
@@ -38,17 +39,21 @@ const CASINGS: Spec[] = [
     value:
       "Защита теплоизоляции трубопроводов на прямых участках от внешних воздействий и механических повреждений",
     icon: "ShieldCheck",
+    wide: true,
   },
   {
     label: "Поставка",
     value: "готовые металлические кожухи для монтажа на трубопровод",
     icon: "Package",
+    wide: true,
   },
 ];
 
 const SpecRow = ({ s }: { s: Spec }) => (
   <div
     className={`group flex items-start gap-4 p-4 sm:p-5 rounded-sm border transition-colors ${
+      s.wide ? "sm:col-span-2" : ""
+    } ${
       s.accent
         ? "border-orange-500/30 bg-orange-500/[0.04] hover:border-orange-500/60"
         : "border-white/10 bg-white/[0.025] hover:border-orange-500/40"
