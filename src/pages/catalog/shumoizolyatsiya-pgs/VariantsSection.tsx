@@ -6,6 +6,7 @@ type Variant = {
   title: string;
   text: string;
   specs: string[];
+  image: string;
 };
 
 const VARIANTS: Variant[] = [
@@ -15,6 +16,8 @@ const VARIANTS: Variant[] = [
     title: "Стандарт",
     text: "Базовое исполнение системы шумоизоляции для инженерных коммуникаций жилых и общественных зданий.",
     specs: ["Толщина 12–16 мм", "1–5 слоёв", "R500 до 32 дБ"],
+    image:
+      "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/cbe3bf8a-5b6b-421d-ac96-e666c9ab9835.jpg",
   },
   {
     num: "02",
@@ -22,6 +25,8 @@ const VARIANTS: Variant[] = [
     title: "Стандарт-AL",
     text: "Исполнение с алюминиевым покрытием для трубопроводов и воздуховодов на объектах с повышенными требованиями.",
     specs: ["Толщина 12–16 мм", "1–5 слоёв", "R500 до 32 дБ"],
+    image:
+      "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/282e4dfc-03b5-47c2-b7c2-a6540977cf08.jpg",
   },
   {
     num: "03",
@@ -29,6 +34,8 @@ const VARIANTS: Variant[] = [
     title: "Премиум",
     text: "Усиленное исполнение без алюминиевого покрытия для снижения шума на ответственных участках инженерных систем.",
     specs: ["Толщина 12–16 мм", "1–5 слоёв", "R500 до 32 дБ"],
+    image:
+      "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/d598abb4-4970-4c0c-a80f-e25c8c907396.jpg",
   },
   {
     num: "04",
@@ -36,16 +43,29 @@ const VARIANTS: Variant[] = [
     title: "Премиум-AL",
     text: "Усиленное исполнение с алюминиевым покрытием для максимального снижения шума на наиболее ответственных участках инженерных систем.",
     specs: ["Толщина 12–16 мм", "1–5 слоёв", "R500 до 32 дБ"],
+    image:
+      "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/3bf4e35c-8288-41aa-b682-c96bcfeaccce.jpg",
   },
 ];
 
 const VariantCard = ({ v }: { v: Variant }) => (
   <article
-    className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-6 sm:p-7 transition-colors duration-300 hover:border-orange-500/40 flex flex-col"
+    className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] transition-colors duration-300 hover:border-orange-500/40 flex flex-col"
     style={{ boxShadow: "0 24px 60px -25px rgba(0,0,0,0.8)" }}
   >
-    <div className="absolute top-0 left-0 h-[2px] w-12 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
+    <div className="absolute top-0 left-0 z-10 h-[2px] w-12 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
 
+    <div className="relative overflow-hidden border-b border-white/[0.08]">
+      <img
+        src={v.image}
+        alt={`Система шумоизоляции ${v.title}`}
+        loading="lazy"
+        className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e] via-transparent to-transparent" />
+    </div>
+
+    <div className="p-6 sm:p-7 flex flex-col flex-1">
     <div className="flex items-center gap-3 mb-2">
       <span
         className="text-[12px] tracking-[0.22em] text-orange-500/80 font-semibold"
@@ -87,6 +107,7 @@ const VariantCard = ({ v }: { v: Variant }) => (
           <span className="text-gray-300 text-[13.5px] leading-snug">{s}</span>
         </div>
       ))}
+    </div>
     </div>
   </article>
 );
