@@ -105,8 +105,8 @@ export const ApplicationsSection = () => {
           </p>
         </div>
 
-        {/* Сетка 3×2 */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        {/* Сетка 2×2 */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
           {APPLICATIONS.map((app, i) => (
             <ApplicationCard key={app.title} app={app} index={i} />
           ))}

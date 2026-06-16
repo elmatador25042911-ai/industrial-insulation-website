@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import InternalLayout from "@/components/layouts/InternalLayout";
-import { TU_PGS } from "@/lib/catalog-tu";
 import KitSection from "./montazhnye-materialy-pgs/KitSection";
 import TapesSection from "./montazhnye-materialy-pgs/TapesSection";
 import ApplicationsSection from "./montazhnye-materialy-pgs/ApplicationsSection";
@@ -13,7 +12,7 @@ const BADGES = [
   { icon: "Pipette", text: "Очистители" },
   { icon: "Layers", text: "Ленты" },
   { icon: "Package", text: "Монтажный комплект" },
-  { icon: "FileBadge", text: TU_PGS },
+  { icon: "FileBadge", text: "ТУ 22.19.20-001-17563055-2020 изм. 3" },
 ];
 
 const MontazhnyeMaterialyPgs = () => {
