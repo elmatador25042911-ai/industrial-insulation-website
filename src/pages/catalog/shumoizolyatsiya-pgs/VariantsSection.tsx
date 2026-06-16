@@ -60,13 +60,13 @@ const VariantCard = ({ v }: { v: Variant }) => (
         src={v.image}
         alt={`Система шумоизоляции ${v.title}`}
         loading="lazy"
-        className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+        className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-[1.04]"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e] via-transparent to-transparent" />
     </div>
 
-    <div className="p-6 sm:p-7 flex flex-col flex-1">
-    <div className="flex items-center gap-3 mb-2">
+    <div className="p-4 sm:p-5 flex flex-col flex-1">
+    <div className="flex items-center gap-3 mb-1.5">
       <span
         className="text-[12px] tracking-[0.22em] text-orange-500/80 font-semibold"
         style={{ fontFamily: "'JetBrains Mono', monospace" }}
@@ -76,14 +76,14 @@ const VariantCard = ({ v }: { v: Variant }) => (
       <span className="h-px flex-1 bg-gradient-to-r from-orange-500/30 via-white/10 to-transparent" />
     </div>
 
-    <div className="flex items-center gap-3.5 mb-4">
-      <span className="relative w-11 h-11 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
+    <div className="flex items-center gap-3 mb-3">
+      <span className="relative w-9 h-9 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
         <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-orange-500" />
         <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-orange-500" />
-        <Icon name={v.icon} size={20} className="text-orange-400" />
+        <Icon name={v.icon} size={17} className="text-orange-400" />
       </span>
       <h3
-        className="flex-1 text-white text-[18px] sm:text-[20px] leading-[1.15]"
+        className="flex-1 text-white text-[16px] sm:text-[17px] leading-[1.15]"
         style={{
           fontFamily: "'Oswald', sans-serif",
           fontWeight: 700,
@@ -95,16 +95,16 @@ const VariantCard = ({ v }: { v: Variant }) => (
       </h3>
     </div>
 
-    <p className="text-gray-400 text-[14px] leading-[1.65] mb-5">{v.text}</p>
+    <p className="text-gray-400 text-[13px] leading-[1.6] mb-4">{v.text}</p>
 
     <div className="mt-auto space-y-0">
       {v.specs.map((s) => (
         <div
           key={s}
-          className="flex items-center gap-2.5 py-2.5 border-t border-white/[0.06]"
+          className="flex items-center gap-2.5 py-2 border-t border-white/[0.06]"
         >
-          <Icon name="Check" size={14} className="text-orange-400 flex-shrink-0" />
-          <span className="text-gray-300 text-[13.5px] leading-snug">{s}</span>
+          <Icon name="Check" size={13} className="text-orange-400 flex-shrink-0" />
+          <span className="text-gray-300 text-[12.5px] leading-snug">{s}</span>
         </div>
       ))}
     </div>
