@@ -11,7 +11,7 @@ const HERO_IMG =
   "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/podves-pgs.jpg";
 
 const BADGES = [
-  { icon: "Anchor", text: "СОП «ПЕРИМЕТР»" },
+  { icon: "Component", text: "СОП «ПЕРИМЕТР»" },
   { icon: "Link", text: "Хотпайп S" },
   { icon: "BadgeCheck", text: "Сделано в России" },
   { icon: "Factory", text: "Для ПГС и промышленности" },
@@ -19,7 +19,7 @@ const BADGES = [
 
 const OPORY: ProductData = {
   id: "opory",
-  label: "ОПОРЫ — СОП «ПЕРИМЕТР»",
+  label: "ОПОРЫ",
   title: "Опоры СОП «ПЕРИМЕТР»",
   image: HERO_IMG,
   imageCaption: "СОП «ПЕРИМЕТР»",
@@ -34,7 +34,7 @@ const OPORY: ProductData = {
 };
 
 const OPORY_SPECS: SpecsData = {
-  label: "ОПОРЫ — СОП «ПЕРИМЕТР»",
+  label: "ОПОРЫ",
   title: "Опоры СОП «ПЕРИМЕТР»",
   specs: [
     { name: "Назначение", value: "Крепление трубопроводов" },
@@ -49,7 +49,7 @@ const OPORY_SPECS: SpecsData = {
 
 const PODVESY: ProductData = {
   id: "podvesy",
-  label: "ПОДВЕСЫ — ХОТПАЙП S",
+  label: "ПОДВЕСЫ",
   title: "Подвесы Хотпайп S",
   image: HERO_IMG,
   imageCaption: "ХОТПАЙП S",
@@ -65,7 +65,7 @@ const PODVESY: ProductData = {
 };
 
 const PODVESY_SPECS: SpecsData = {
-  label: "ПОДВЕСЫ — ХОТПАЙП S",
+  label: "ПОДВЕСЫ",
   title: "Подвесы Хотпайп S",
   specs: [
     { name: "Назначение", value: "Крепление трубопроводов" },
@@ -103,7 +103,7 @@ const OporyIPodvesyPgs = () => {
             <div className="flex items-center gap-3 mb-8 flex-wrap">
               <span className="h-px w-10 bg-orange-500 flex-shrink-0" />
               <span className="cat-label text-orange-400/90 leading-relaxed">
-                КАТАЛОГ / ПРОМЫШЛЕННОСТЬ И ПГС / ОПОРЫ И ПОДВЕСЫ
+                КАТАЛОГ / ПРОМЫШЛЕННОЕ И ГРАЖДАНСКОЕ СТРОИТЕЛЬСТВО / ОПОРЫ И ПОДВЕСЫ
               </span>
             </div>
 

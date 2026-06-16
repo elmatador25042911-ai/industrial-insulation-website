@@ -12,7 +12,7 @@ const POINTS = [
     text: "Берут на себя вес трубопровода и снимают нагрузку с теплоизоляционного слоя, сохраняя его целостность.",
   },
   {
-    icon: "Anchor",
+    icon: "Wrench",
     title: "Надёжное крепление",
     text: "Обеспечивают устойчивую фиксацию трубопроводов и инженерных коммуникаций в проектном положении.",
   },
@@ -24,7 +24,7 @@ export const PurposeSection = () => (
       <div className="max-w-3xl">
         <div className="flex items-center gap-3 mb-3">
           <span className="h-px w-10 bg-orange-500" />
-          <span className="cat-label text-orange-400/90">КРАТКО О ПРОДУКТЕ</span>
+          <span className="cat-label text-orange-400/90">О ПРОДУКТЕ</span>
         </div>
         <h2 className="cat-h2 text-white mb-6">
           Зачем нужны <span className="text-orange-500">опоры и подвесы</span>
