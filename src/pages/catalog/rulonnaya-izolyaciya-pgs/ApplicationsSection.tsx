@@ -43,7 +43,7 @@ export const ApplicationsSection = () => {
           ёмкостей, технологических поверхностей и участков сложной формы.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {APPLICATIONS.map((a, i) => (
             <div
               key={a.title}

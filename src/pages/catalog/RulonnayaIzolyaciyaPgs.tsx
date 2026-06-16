@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import InternalLayout from "@/components/layouts/InternalLayout";
-import { TU_PGS } from "@/lib/catalog-tu";
 import SpecsSection from "./rulonnaya-izolyaciya-pgs/SpecsSection";
 import DescriptionSection from "./rulonnaya-izolyaciya-pgs/DescriptionSection";
 import ApplicationsSection from "./rulonnaya-izolyaciya-pgs/ApplicationsSection";
@@ -16,7 +15,7 @@ const BADGES = [
   { icon: "Flame", text: "Г1 / В1" },
   { icon: "Droplets", text: "μ ≥ 10 000" },
   { icon: "Ruler", text: "толщина 03–50 мм" },
-  { icon: "FileBadge", text: TU_PGS },
+  { icon: "FileBadge", text: "ТУ 22.19.20-001-17563055-2020 изм. 3" },
 ];
 
 const RulonnayaIzolyaciyaPgs = () => {
@@ -169,10 +168,10 @@ const RulonnayaIzolyaciyaPgs = () => {
           </div>
         </section>
 
-        <SpecsSection />
         <DescriptionSection />
-        <ApplicationsSection />
         <CoatingsSection />
+        <SpecsSection />
+        <ApplicationsSection />
         <SizesSection />
         <MarkingSection />
         <RollTypesSection />
