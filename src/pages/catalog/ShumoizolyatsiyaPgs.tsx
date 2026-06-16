@@ -43,7 +43,7 @@ const ShumoizolyatsiyaPgs = () => {
             <div className="flex items-center gap-3 mb-8 flex-wrap">
               <span className="h-px w-10 bg-orange-500 flex-shrink-0" />
               <span className="cat-label text-orange-400/90 leading-relaxed">
-                КАТАЛОГ / ПРОМЫШЛЕННОСТЬ И ПГС / ШУМОИЗОЛЯЦИЯ
+                КАТАЛОГ / ПРОМЫШЛЕННОЕ И ГРАЖДАНСКОЕ СТРОИТЕЛЬСТВО / ШУМОИЗОЛЯЦИЯ
               </span>
             </div>
 
