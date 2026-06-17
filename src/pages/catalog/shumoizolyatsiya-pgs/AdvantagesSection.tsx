@@ -105,10 +105,17 @@ export const AdvantagesSection = () => {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-          {ADVANTAGES.map((a, i) => (
-            <AdvantageCard key={a.title} a={a} index={i} />
-          ))}
+        <div className="mt-12 space-y-5 sm:space-y-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+            {ADVANTAGES.slice(0, 3).map((a, i) => (
+              <AdvantageCard key={a.title} a={a} index={i} />
+            ))}
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 lg:max-w-[66.666%] lg:mx-auto">
+            {ADVANTAGES.slice(3).map((a, i) => (
+              <AdvantageCard key={a.title} a={a} index={i + 3} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
