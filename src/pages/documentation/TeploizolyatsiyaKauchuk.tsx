@@ -65,6 +65,17 @@ const TeploizolyatsiyaKauchuk = () => {
               <span className="text-orange-500">вспененного каучука</span>
             </h1>
 
+            {/* Кнопка «Назад к документации» */}
+            <div className="mt-7">
+              <Link
+                to="/#certificates"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 border border-white/20 hover:border-orange-500 hover:text-orange-400 text-white font-semibold tracking-wide transition-colors rounded-sm"
+              >
+                <Icon name="ArrowLeft" size={18} />
+                Назад к документации
+              </Link>
+            </div>
+
             {/* Сетка карточек: 2 в ряд */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
               {DOCS.map((doc) => (
