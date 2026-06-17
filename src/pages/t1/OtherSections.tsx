@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import { IMG_BOILER, IMG_PIPE, IMG_SHIP, IMG_HERO, GRAD, INDUSTRIES, CERTIFICATES, PROCESS, useVisible, useLoopVideo } from "./data";
 
@@ -96,10 +97,13 @@ export const CertificatesSection = () => {
 
         {/* Карточки */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-[136px] auto-rows-fr">
-          {CERTIFICATES.map((cert, i) => (
-            <div
+          {CERTIFICATES.map((cert, i) => {
+            const Card = cert.link ? Link : "div";
+            return (
+            <Card
               key={cert.title}
-              className={`group relative overflow-hidden border border-white/10 rounded-2xl p-6 hover:border-orange-500/40 hover:shadow-2xl hover:shadow-orange-500/10 hover:scale-[1.02] transition-all duration-500 ease-out flex flex-col h-full min-h-[200px]
+              {...(cert.link ? { to: cert.link } : {})}
+              className={`group relative overflow-hidden border border-white/10 rounded-2xl p-6 hover:border-orange-500/40 hover:shadow-2xl hover:shadow-orange-500/10 hover:scale-[1.02] transition-all duration-500 ease-out flex flex-col h-full min-h-[200px] ${cert.link ? "cursor-pointer" : ""}
                 ${certVis.visible ? `animate-fadeInUp delay-${(i + 1) * 100}` : "opacity-0"}`}
               style={{
                 background: "linear-gradient(145deg, rgba(20,20,20,0.85) 0%, rgba(10,10,10,0.92) 100%)",
@@ -135,8 +139,9 @@ export const CertificatesSection = () => {
                 {cert.title}
               </h3>
               <p className="relative t-body text-[13px] leading-snug transition-colors duration-300 group-hover:!text-white" style={{ color: "#94a3b8" }}>{cert.desc}</p>
-            </div>
-          ))}
+            </Card>
+            );
+          })}
         </div>
 
       </div>
