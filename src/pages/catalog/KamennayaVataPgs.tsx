@@ -27,7 +27,7 @@ const BADGES = [
   { icon: "Cylinder", text: "Вырезные цилиндры" },
   { icon: "Layers", text: "Лёгкие и ламельные маты" },
   { icon: "Grid2x2", text: "Прошивные маты" },
-  { icon: "Flame", text: "НГ" },
+  { icon: "Flame", text: "Г1-НГ" },
   { icon: "Thermometer", text: "До +680 °C" },
 ];
 
