@@ -16,7 +16,7 @@ const HERO_IMG =
 
 const BADGES = [
   { icon: "Component", text: "СОП «ПЕРИМЕТР»" },
-  { icon: "Link", text: "Хотпайп" },
+  { icon: "Link", text: "XOTPIPE / ХОТПАЙП" },
   { icon: "BadgeCheck", text: "Сделано в России" },
 ];
 
@@ -64,11 +64,11 @@ const OPORY_SPECS: SpecsData = {
 const PODVESY: ProductData = {
   id: "podvesy",
   label: "ПОДВЕСЫ",
-  title: "Подвесы Хотпайп",
+  title: "Подвесы XOTPIPE / ХОТПАЙП",
   image: HOTPIPE_IMG,
-  imageCaption: "ХОТПАЙП",
+  imageCaption: "XOTPIPE / ХОТПАЙП",
   description:
-    "Подвесы Хотпайп предназначены для крепления трубопроводов с подвесом к перекрытиям и несущим конструкциям. Конструкция обеспечивает надёжную фиксацию и снижает теплопотери в узле крепления.",
+    "Подвесы XOTPIPE / ХОТПАЙП предназначены для крепления трубопроводов с подвесом к перекрытиям и несущим конструкциям. Конструкция обеспечивает надёжную фиксацию и снижает теплопотери в узле крепления.",
   advantages: [
     "Предотвращение образования «мостиков холода»",
     "Разгрузка теплоизоляции трубопровода",
@@ -80,7 +80,7 @@ const PODVESY: ProductData = {
 
 const PODVESY_SPECS: SpecsData = {
   label: "ПОДВЕСЫ",
-  title: "Подвесы Хотпайп",
+  title: "Подвесы XOTPIPE / ХОТПАЙП",
   specs: [
     { name: "Назначение", value: "Крепление трубопроводов" },
     { name: "Тип крепления", value: "Подвесное" },
@@ -209,7 +209,7 @@ const OporyIPodvesyPgs = () => {
                         className="text-[10px] sm:text-[11px] tracking-[0.22em] text-gray-300 uppercase"
                         style={{ fontFamily: "'JetBrains Mono', monospace" }}
                       >
-                        ХОТПАЙП
+                        XOTPIPE / ХОТПАЙП
                       </div>
                       <div
                         className="text-[10px] sm:text-[11px] tracking-[0.22em] text-gray-300 uppercase"
