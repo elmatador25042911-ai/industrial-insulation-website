@@ -67,7 +67,7 @@ const TeploizolyatsiyaKauchuk = () => {
 
             {/* Сетка карточек: 2 в ряд */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-              {DOCS.map((doc, i) => (
+              {DOCS.map((doc) => (
                 <article
                   key={doc.file}
                   className="group relative overflow-hidden rounded-lg border border-white/[0.06] bg-gradient-to-br from-[#141416] to-[#0c0c0e] transition-all duration-300 hover:border-orange-500/30 hover:-translate-y-1"
@@ -75,23 +75,17 @@ const TeploizolyatsiyaKauchuk = () => {
                 >
                   <div className="absolute top-0 left-0 h-[2px] w-12 bg-orange-500 z-10 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
 
-                  <div className="relative aspect-[4/3] overflow-hidden bg-[#0f0f10]">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-[#0f0f10] flex items-center justify-center">
                     <img
                       src={`${CDN}/${doc.file}`}
                       alt={doc.title}
                       loading="lazy"
-                      className="absolute inset-0 w-full h-full object-contain p-4"
+                      className="w-[78%] h-[78%] object-contain"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e]/40 via-transparent to-transparent pointer-events-none" />
                   </div>
 
-                  <div className="p-6 sm:p-7 text-center">
-                    <span
-                      className="block text-[12px] tracking-[0.22em] text-orange-500/80 font-semibold mb-2"
-                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
-                    >
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
+                  <div className="px-6 sm:px-7 pb-6 sm:pb-7 pt-3 text-center">
                     <h3
                       className="text-white text-[18px] sm:text-[20px] leading-[1.2] mb-5"
                       style={{
