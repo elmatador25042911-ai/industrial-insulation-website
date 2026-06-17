@@ -6,7 +6,7 @@ type Table = { name: string; rows: Row[] };
 
 const TABLES: Table[] = [
   {
-    name: "RWL 100",
+    name: "ROCKWOOL / РОКВУЛ 100",
     rows: [
       { temp: "50", value: "0,040" },
       { temp: "100", value: "0,046" },
@@ -19,7 +19,7 @@ const TABLES: Table[] = [
     ],
   },
   {
-    name: "RWL 150",
+    name: "ROCKWOOL / РОКВУЛ 150",
     rows: [
       { temp: "50", value: "0,040" },
       { temp: "100", value: "0,046" },

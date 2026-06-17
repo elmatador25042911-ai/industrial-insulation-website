@@ -24,6 +24,7 @@ const HERO_IMG =
 
 const BADGES = [
   { icon: "Cylinder", text: "Навивные цилиндры" },
+  { icon: "Cylinder", text: "Вырезные цилиндры" },
   { icon: "Layers", text: "Лёгкие и ламельные маты" },
   { icon: "Grid2x2", text: "Прошивные маты" },
   { icon: "Flame", text: "НГ" },
@@ -182,6 +183,7 @@ const KamennayaVataPgs = () => {
 
         <PurposeSection />
         <FormsSection />
+        <ApplicationsSection />
         <SelectionSection />
         <ManufacturersSection />
         <TechSpecsSection />
@@ -190,7 +192,6 @@ const KamennayaVataPgs = () => {
         <MatThermalSection />
         <WiredMatThermalSection />
         <UmatexThermalSection />
-        <ApplicationsSection />
         <TehMatSizesSection />
         <LamellaMatSizesSection />
         <WiredMat50SizesSection />

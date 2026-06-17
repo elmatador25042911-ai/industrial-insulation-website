@@ -15,7 +15,7 @@ const GROUPS: Group[] = [
     icon: "Cylinder",
     cards: [
       {
-        title: "RWL 100",
+        title: "ROCKWOOL / РОКВУЛ 100",
         density: "114 кг/м³",
         temp: "+650 °C",
         rows: [
@@ -28,7 +28,7 @@ const GROUPS: Group[] = [
         ],
       },
       {
-        title: "RWL 150",
+        title: "ROCKWOOL / РОКВУЛ 150",
         density: "145 кг/м³",
         temp: "+680 °C",
         rows: [
@@ -41,7 +41,7 @@ const GROUPS: Group[] = [
         ],
       },
       {
-        title: "HOTPIPE SP 100",
+        title: "XOTPIPE / ХОТПАЙП Вырезные цилиндры SP 100",
         density: "100 кг/м³",
         temp: "+550 °C",
         rows: [

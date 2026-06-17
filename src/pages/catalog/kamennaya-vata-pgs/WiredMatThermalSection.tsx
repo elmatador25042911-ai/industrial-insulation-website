@@ -113,7 +113,7 @@ export const WiredMatThermalSection = () => {
           </div>
           <h2 className="cat-h2 text-white">
             Теплопроводность{" "}
-            <span className="text-orange-500">прошивных матов RWL</span>
+            <span className="text-orange-500">прошивных матов ROCKWOOL / РОКВУЛ</span>
           </h2>
           <p className="text-gray-300 text-[15px] sm:text-base leading-relaxed mt-6">
             Коэффициент теплопроводности зависит от средней температуры теплоизоляционного слоя и
