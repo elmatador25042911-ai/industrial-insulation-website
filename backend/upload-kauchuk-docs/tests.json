@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "name": "Upload docs and return CDN urls",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": { "files": "array" },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
