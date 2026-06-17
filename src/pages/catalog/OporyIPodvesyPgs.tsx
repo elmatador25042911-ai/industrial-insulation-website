@@ -18,7 +18,6 @@ const BADGES = [
   { icon: "Component", text: "СОП «ПЕРИМЕТР»" },
   { icon: "Link", text: "Хотпайп" },
   { icon: "BadgeCheck", text: "Сделано в России" },
-  { icon: "Factory", text: "Для ПГС и промышленности" },
 ];
 
 const OPORY: ProductData = {
@@ -59,6 +58,7 @@ const OPORY_SPECS: SpecsData = {
     ],
     note: "Возможны другие комбинации размеров по индивидуальному техническому заданию.",
   },
+  compact: true,
 };
 
 const PODVESY: ProductData = {

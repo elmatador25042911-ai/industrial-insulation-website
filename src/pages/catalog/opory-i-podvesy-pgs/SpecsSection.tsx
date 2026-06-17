@@ -11,6 +11,7 @@ export interface SpecsData {
     rows: string[][];
     note?: string;
   };
+  compact?: boolean;
 }
 
 export const SpecsSection = ({ data }: { data: SpecsData }) => (
@@ -110,15 +111,26 @@ export const SpecsSection = ({ data }: { data: SpecsData }) => (
               </thead>
               <tbody>
                 {data.table.rows.map((row, i) => (
-                  <tr key={i} className="border-t border-white/[0.07]">
+                  <tr
+                    key={i}
+                    className={`border-t border-white/[0.07] ${
+                      data.compact && i % 2 === 1 ? "bg-white/[0.02]" : ""
+                    }`}
+                  >
                     {row.map((cell, j) => (
                       <td
                         key={j}
-                        className={`py-3 pr-3 text-[13px] leading-snug ${
-                          j === 0 ? "text-white font-medium" : "text-gray-300"
-                        }`}
+                        className={`pr-3 text-[13px] leading-snug ${
+                          data.compact ? "py-2.5" : "py-3"
+                        } ${j === 0 ? "text-white font-medium" : "text-gray-300"}`}
                       >
-                        {cell}
+                        {data.compact && j !== 0 ? (
+                          <span className="inline-block rounded-sm border border-white/10 bg-white/[0.03] px-2 py-1 text-gray-200">
+                            {cell}
+                          </span>
+                        ) : (
+                          cell
+                        )}
                       </td>
                     ))}
                   </tr>
