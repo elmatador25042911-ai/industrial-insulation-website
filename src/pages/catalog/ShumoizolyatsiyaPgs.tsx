@@ -5,7 +5,7 @@ import VariantsSection from "./shumoizolyatsiya-pgs/VariantsSection";
 import ApplicationsSection from "./shumoizolyatsiya-pgs/ApplicationsSection";
 import HighlightsSection from "./shumoizolyatsiya-pgs/HighlightsSection";
 import AdvantagesSection from "./shumoizolyatsiya-pgs/AdvantagesSection";
-import RequestSection from "./termochekhly/RequestSection";
+import RequestSection from "./shumoizolyatsiya-pgs/RequestSection";
 
 const HERO_IMG =
   "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/catalog/shumoizol-pgs.png";
@@ -16,6 +16,7 @@ const BADGES = [
   { icon: "Layers3", text: "Премиум" },
   { icon: "Layers3", text: "Премиум-AL" },
   { icon: "AudioWaveform", text: "R500 до 32 дБ" },
+  { icon: "BadgeCheck", text: "Техносонус" },
 ];
 
 const ShumoizolyatsiyaPgs = () => {
