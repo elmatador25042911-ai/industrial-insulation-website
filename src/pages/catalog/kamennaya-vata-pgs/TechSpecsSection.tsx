@@ -11,11 +11,11 @@ type Group = { name: string; icon: string; cards: Spec[] };
 
 const GROUPS: Group[] = [
   {
-    name: "Навивные цилиндры",
+    name: "Цилиндры",
     icon: "Cylinder",
     cards: [
       {
-        title: "ROCKWOOL / РОКВУЛ 100",
+        title: "ROCKWOOL / РОКВУЛ 100 Навивные цилиндры",
         density: "114 кг/м³",
         temp: "+650 °C",
         rows: [
@@ -28,7 +28,7 @@ const GROUPS: Group[] = [
         ],
       },
       {
-        title: "ROCKWOOL / РОКВУЛ 150",
+        title: "ROCKWOOL / РОКВУЛ 150 Навивные цилиндры",
         density: "145 кг/м³",
         temp: "+680 °C",
         rows: [

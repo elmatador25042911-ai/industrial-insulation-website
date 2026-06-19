@@ -84,7 +84,7 @@ export const RequestSection = () => {
             </ul>
 
             {/* Контакты */}
-            <div className="space-y-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <a
                 href="tel:+78126426742"
                 className="group flex items-center gap-3 p-4 rounded-sm border border-white/10 bg-white/[0.025] hover:border-orange-500/40 transition-colors"
