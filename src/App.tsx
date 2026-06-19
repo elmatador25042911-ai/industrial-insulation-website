@@ -27,6 +27,7 @@ import ZashchitnyeMaterialyDoc from "./pages/documentation/ZashchitnyeMaterialyD
 import TermochekhlyDoc from "./pages/documentation/TermochekhlyDoc";
 import AntikondensatnyePokrytiyaDoc from "./pages/documentation/AntikondensatnyePokrytiyaDoc";
 import MontazhnyeMaterialyDoc from "./pages/documentation/MontazhnyeMaterialyDoc";
+import ShumoizolyatsiyaDoc from "./pages/documentation/ShumoizolyatsiyaDoc";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -62,6 +63,7 @@ const App = () => (
           <Route path="/documentation/termochekhly" element={<TermochekhlyDoc />} />
           <Route path="/documentation/antikondensatnye-pokrytiya" element={<AntikondensatnyePokrytiyaDoc />} />
           <Route path="/documentation/montazhnye-materialy" element={<MontazhnyeMaterialyDoc />} />
+          <Route path="/documentation/shumoizolyatsiya" element={<ShumoizolyatsiyaDoc />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
