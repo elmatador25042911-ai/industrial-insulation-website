@@ -27,6 +27,12 @@ const FORMS: Form[] = [
     text: "Маты из каменной ваты с металлической сеткой и прошивкой для промышленного оборудования, трубопроводов, вентиляционных каналов, газоходов и высокотемпературных участков.",
     tag: "Для высоких температур",
   },
+  {
+    title: "Вырезные цилиндры",
+    icon: "CircleDot",
+    text: "Цилиндры из каменной ваты с вырезом для быстрого монтажа на трубопроводы и оборудование.",
+    tag: "Для трубопроводов",
+  },
 ];
 
 const FormCard = ({ f, index }: { f: Form; index: number }) => (
@@ -103,10 +109,15 @@ export const FormsSection = () => {
           </p>
         </div>
 
-        {/* Сетка 2 × 2 */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-          {FORMS.map((f, i) => (
+        {/* Сетка 3 + 2 */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+          {FORMS.slice(0, 3).map((f, i) => (
             <FormCard key={f.title} f={f} index={i} />
+          ))}
+        </div>
+        <div className="mt-5 sm:mt-6 grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+          {FORMS.slice(3).map((f, i) => (
+            <FormCard key={f.title} f={f} index={i + 3} />
           ))}
         </div>
 
