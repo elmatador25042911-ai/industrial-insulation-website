@@ -72,7 +72,7 @@ export const CERTIFICATES = [
   { icon: "Droplet",     title: "Антиконденсатные покрытия",                      desc: "Предотвращение образования конденсата",              category: "Покрытия", iconStrike: true, link: "/documentation/antikondensatnye-pokrytiya" },
   { icon: "Brush",       title: "Монтажные материалы / аксессуары",               desc: "Ленты, клеи, очистители и комплектующие",            category: "Аксессуары", link: "/documentation/montazhnye-materialy" },
   { icon: "AudioLines",  title: "Шумоизоляция",                                   desc: "Снижение шума инженерных и промышленных систем",     category: "Шум", link: "/documentation/shumoizolyatsiya" },
-  { icon: "Wrench",      title: "Опоры и подвесы",                                desc: "Элементы крепления трубопроводов и оборудования",    category: "Крепёж" },
+  { icon: "Wrench",      title: "Опоры и подвесы",                                desc: "Элементы крепления трубопроводов и оборудования",    category: "Крепёж", link: "/documentation/opory-i-podvesy" },
 ];
 
 export const CONTACTS_INFO = [
