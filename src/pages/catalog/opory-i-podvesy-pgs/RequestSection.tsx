@@ -63,7 +63,7 @@ export const RequestSection = () => {
               ))}
             </ul>
 
-            <div className="space-y-3 mb-6">
+            <div className="space-y-3">
               <a
                 href="tel:+78126426742"
                 className="group flex items-center gap-3 p-4 rounded-sm border border-white/10 bg-white/[0.025] hover:border-orange-500/40 transition-colors"
@@ -97,14 +97,6 @@ export const RequestSection = () => {
                 </div>
               </a>
             </div>
-
-            <a
-              href="tel:+78126426742"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/20 hover:border-orange-500 hover:text-orange-400 text-white font-semibold tracking-wide rounded-sm transition-colors text-[13px] uppercase"
-            >
-              <Icon name="PhoneCall" size={16} />
-              Связаться
-            </a>
           </div>
 
           {/* Правая колонка — форма */}
