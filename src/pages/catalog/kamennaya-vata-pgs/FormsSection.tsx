@@ -10,6 +10,12 @@ const FORMS: Form[] = [
     tag: "Для трубопроводов",
   },
   {
+    title: "Вырезные цилиндры",
+    icon: "CircleDot",
+    text: "Цилиндры из каменной ваты с вырезом для быстрого монтажа на трубопроводы и оборудование.",
+    tag: "Для трубопроводов",
+  },
+  {
     title: "Лёгкие маты",
     icon: "Layers",
     text: "Гибкие маты для теплоизоляции промышленного оборудования, трубопроводов и инженерных систем зданий. Могут выпускаться без покрытия или с алюминиевой фольгой.",
@@ -26,12 +32,6 @@ const FORMS: Form[] = [
     icon: "Grid2x2",
     text: "Маты из каменной ваты с металлической сеткой и прошивкой для промышленного оборудования, трубопроводов, вентиляционных каналов, газоходов и высокотемпературных участков.",
     tag: "Для высоких температур",
-  },
-  {
-    title: "Вырезные цилиндры",
-    icon: "CircleDot",
-    text: "Цилиндры из каменной ваты с вырезом для быстрого монтажа на трубопроводы и оборудование.",
-    tag: "Для трубопроводов",
   },
 ];
 
@@ -109,15 +109,15 @@ export const FormsSection = () => {
           </p>
         </div>
 
-        {/* Сетка 3 + 2 */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-          {FORMS.slice(0, 3).map((f, i) => (
+        {/* Сетка 2 + 3 */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+          {FORMS.slice(0, 2).map((f, i) => (
             <FormCard key={f.title} f={f} index={i} />
           ))}
         </div>
-        <div className="mt-5 sm:mt-6 grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-          {FORMS.slice(3).map((f, i) => (
-            <FormCard key={f.title} f={f} index={i + 3} />
+        <div className="mt-5 sm:mt-6 grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+          {FORMS.slice(2).map((f, i) => (
+            <FormCard key={f.title} f={f} index={i + 2} />
           ))}
         </div>
 
