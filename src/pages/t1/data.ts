@@ -70,7 +70,7 @@ export const CERTIFICATES = [
   { icon: "ShieldCheck", title: "Защитные материалы",                             desc: "Материалы для промышленной изоляции и защиты",       category: "Материалы", link: "/documentation/zashchitnye-materialy" },
   { icon: "Package",     title: "Термочехлы",                                     desc: "Съёмные решения для оборудования и арматуры",        category: "Чехлы", link: "/documentation/termochekhly" },
   { icon: "Droplet",     title: "Антиконденсатные покрытия",                      desc: "Предотвращение образования конденсата",              category: "Покрытия", iconStrike: true, link: "/documentation/antikondensatnye-pokrytiya" },
-  { icon: "Brush",       title: "Монтажные материалы / аксессуары",               desc: "Ленты, клеи, очистители и комплектующие",            category: "Аксессуары" },
+  { icon: "Brush",       title: "Монтажные материалы / аксессуары",               desc: "Ленты, клеи, очистители и комплектующие",            category: "Аксессуары", link: "/documentation/montazhnye-materialy" },
   { icon: "AudioLines",  title: "Шумоизоляция",                                   desc: "Снижение шума инженерных и промышленных систем",     category: "Шум" },
   { icon: "Wrench",      title: "Опоры и подвесы",                                desc: "Элементы крепления трубопроводов и оборудования",    category: "Крепёж" },
 ];
