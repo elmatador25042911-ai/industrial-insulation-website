@@ -22,6 +22,7 @@ import OporyIPodvesyPgs from "./pages/catalog/OporyIPodvesyPgs";
 import AntikondensatnyePokrytiya from "./pages/catalog/AntikondensatnyePokrytiya";
 import TeploizolyatsiyaKauchuk from "./pages/documentation/TeploizolyatsiyaKauchuk";
 import TeploizolyatsiyaKamennayaVata from "./pages/documentation/TeploizolyatsiyaKamennayaVata";
+import ZashchitnyePokrytiyaDoc from "./pages/documentation/ZashchitnyePokrytiyaDoc";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/catalog/pgs/opory-i-podvesy" element={<OporyIPodvesyPgs />} />
           <Route path="/documentation/teploizolyatsiya-kauchuk" element={<TeploizolyatsiyaKauchuk />} />
           <Route path="/documentation/teploizolyatsiya-kamennaya-vata" element={<TeploizolyatsiyaKamennayaVata />} />
+          <Route path="/documentation/zashchitnye-pokrytiya" element={<ZashchitnyePokrytiyaDoc />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -66,7 +66,7 @@ export const PROCESS = [
 export const CERTIFICATES = [
   { icon: "Sword",       title: "Теплоизоляция на основе вспененного каучука",   desc: "Для инженерных систем и промышленного оборудования", category: "Изоляция", iconRotate: -15, link: "/documentation/teploizolyatsiya-kauchuk" },
   { icon: "Layers",      title: "Теплоизоляция из минеральной \"каменной\" ваты", desc: "Для высокотемпературных и промышленных объектов",    category: "Изоляция", link: "/documentation/teploizolyatsiya-kamennaya-vata" },
-  { icon: "Shield",      title: "Защитные покрытия",                              desc: "Для защиты теплоизоляции и оборудования",            category: "Покрытия" },
+  { icon: "Shield",      title: "Защитные покрытия",                              desc: "Для защиты теплоизоляции и оборудования",            category: "Покрытия", link: "/documentation/zashchitnye-pokrytiya" },
   { icon: "ShieldCheck", title: "Защитные материалы",                             desc: "Материалы для промышленной изоляции и защиты",       category: "Материалы" },
   { icon: "Package",     title: "Термочехлы",                                     desc: "Съёмные решения для оборудования и арматуры",        category: "Чехлы" },
   { icon: "Droplet",     title: "Антиконденсатные покрытия",                      desc: "Предотвращение образования конденсата",              category: "Покрытия", iconStrike: true },
