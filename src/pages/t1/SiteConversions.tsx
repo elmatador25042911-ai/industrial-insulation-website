@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import { LOGO_SYMBOL, IMG_SHIP, IMG_PIPE, IMG_BOILER, GRAD, NAV_LINKS, CONTACTS_INFO, useVisible } from "./data";
+import { sendRequest } from "@/lib/sendRequest";
+import { toast } from "sonner";
 
 const Logo = ({ className = "" }: { className?: string }) => (
   <div className={`flex items-center ${className}`}>
@@ -27,6 +29,7 @@ export const CtaSection = () => {
   const ctaVis = useVisible(0.1);
   const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   return (
     <section id="request" className="overflow-hidden relative" ref={ctaVis.ref}>
@@ -98,7 +101,18 @@ export const CtaSection = () => {
                 <p className="text-gray-400 text-[14px]">Мы свяжемся с вами в ближайшее время</p>
               </div>
             ) : (
-              <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} className="space-y-4">
+              <form onSubmit={async (e) => {
+                e.preventDefault();
+                setLoading(true);
+                try {
+                  await sendRequest({ ...formData, source: "Главная — Коммерческое предложение" });
+                  setSubmitted(true);
+                } catch {
+                  toast.error("Не удалось отправить заявку. Попробуйте позвонить нам.");
+                } finally {
+                  setLoading(false);
+                }
+              }} className="space-y-4">
                 <div>
                   <label className={labelCls}>Ваше имя *</label>
                   <input type="text" required value={formData.name}
@@ -121,10 +135,10 @@ export const CtaSection = () => {
                     rows={3}
                     className={`${inputCls(false)} resize-none`} />
                 </div>
-                <button type="submit"
-                  className="btn-primary w-full text-white py-4 font-bold uppercase tracking-widest text-[12px] hover:opacity-90 transition-opacity flex items-center justify-center gap-2.5 group"
+                <button type="submit" disabled={loading}
+                  className="btn-primary w-full text-white py-4 font-bold uppercase tracking-widest text-[12px] hover:opacity-90 transition-opacity flex items-center justify-center gap-2.5 group disabled:opacity-60"
                   style={{ background: GRAD }}>
-                  Получить коммерческое предложение
+                  {loading ? "Отправка..." : "Получить коммерческое предложение"}
                   <Icon name="ArrowRight" size={13} className="group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
                 <p className="text-gray-400 text-[12px] text-center">
@@ -145,6 +159,7 @@ export const ContactsSection = () => {
   const contVis = useVisible(0.1);
   const [submitted2, setSubmitted2] = useState(false);
   const [form2Data, setForm2Data] = useState({ name: "", phone: "", message: "" });
+  const [loading2, setLoading2] = useState(false);
 
   return (
     <section id="contacts" className="section-pad bg-white overflow-hidden relative" ref={contVis.ref}>
@@ -199,7 +214,18 @@ export const ContactsSection = () => {
                 <p className="text-gray-400 text-[14px]">Мы свяжемся с вами в ближайшее время</p>
               </div>
             ) : (
-              <form onSubmit={(e) => { e.preventDefault(); setSubmitted2(true); }} className="space-y-4">
+              <form onSubmit={async (e) => {
+                e.preventDefault();
+                setLoading2(true);
+                try {
+                  await sendRequest({ ...form2Data, source: "Главная — Оставьте заявку" });
+                  setSubmitted2(true);
+                } catch {
+                  toast.error("Не удалось отправить заявку. Попробуйте позвонить нам.");
+                } finally {
+                  setLoading2(false);
+                }
+              }} className="space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className={labelCls}>Имя *</label>
@@ -224,10 +250,10 @@ export const ContactsSection = () => {
                     rows={3}
                     className={`${inputCls(true)} resize-none`} />
                 </div>
-                <button type="submit"
-                  className="btn-primary w-full text-white py-4 font-bold uppercase tracking-widest text-[12px] hover:opacity-90 transition-opacity"
+                <button type="submit" disabled={loading2}
+                  className="btn-primary w-full text-white py-4 font-bold uppercase tracking-widest text-[12px] hover:opacity-90 transition-opacity disabled:opacity-60"
                   style={{ background: GRAD }}>
-                  Отправить заявку
+                  {loading2 ? "Отправка..." : "Отправить заявку"}
                 </button>
                 <p className="text-gray-600 text-[12px] text-center">
                   Нажимая кнопку, вы соглашаетесь с{" "}

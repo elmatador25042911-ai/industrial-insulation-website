@@ -1,4 +1,5 @@
 {
+  "send-request": "https://functions.poehali.dev/3445d857-11e4-43db-aab7-d52c1a346136",
   "upload-kauchuk-docs": "https://functions.poehali.dev/889c5ded-cdf0-40fb-8f81-1ebdcb5ab900",
   "import-antikondensat": "https://functions.poehali.dev/ef8419a8-8d7d-4844-9e63-4594a9225fb4",
   "import-yadisk": "https://functions.poehali.dev/5b69371e-f0e7-4abe-8e58-e1c6993e32fd",

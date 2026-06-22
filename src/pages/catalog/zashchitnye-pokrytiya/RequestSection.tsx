@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 import { GRAD } from "@/pages/t1/data";
+import { sendRequest } from "@/lib/sendRequest";
+import { toast } from "sonner";
 
 const inputCls =
   "w-full bg-[#0f0f10] border border-white/10 rounded-sm px-4 py-3.5 outline-none text-[14px] font-medium text-white placeholder-gray-600 transition-all duration-200 focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500";
@@ -10,6 +12,7 @@ const labelCls = "block text-[11px] tracking-[0.18em] text-gray-500 uppercase mb
 export const RequestSection = () => {
   const [data, setData] = useState({ name: "", phone: "", company: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   return (
     <section id="request" className="relative overflow-hidden border-t border-white/5">
@@ -136,9 +139,17 @@ export const RequestSection = () => {
                 </div>
               ) : (
                 <form
-                  onSubmit={(e) => {
+                  onSubmit={async (e) => {
                     e.preventDefault();
-                    setSubmitted(true);
+                    setLoading(true);
+                    try {
+                      await sendRequest({ ...data, source: "Защитные покрытия (судостроение)" });
+                      setSubmitted(true);
+                    } catch {
+                      toast.error("Не удалось отправить заявку. Попробуйте позвонить нам.");
+                    } finally {
+                      setLoading(false);
+                    }
                   }}
                   className="space-y-4"
                 >
@@ -188,10 +199,11 @@ export const RequestSection = () => {
                   </div>
                   <button
                     type="submit"
-                    className="group w-full text-white py-4 font-bold uppercase tracking-widest text-[12px] hover:opacity-90 transition-opacity flex items-center justify-center gap-2.5 rounded-sm"
+                    disabled={loading}
+                    className="group w-full text-white py-4 font-bold uppercase tracking-widest text-[12px] hover:opacity-90 transition-opacity flex items-center justify-center gap-2.5 rounded-sm disabled:opacity-60"
                     style={{ background: GRAD }}
                   >
-                    Отправить запрос
+                    {loading ? "Отправка..." : "Отправить запрос"}
                     <Icon
                       name="ArrowRight"
                       size={14}
