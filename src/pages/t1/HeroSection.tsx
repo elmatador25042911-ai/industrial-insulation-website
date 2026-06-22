@@ -42,7 +42,7 @@ export const HeroSection = () => {
             </div>
 
             {/* H1 */}
-            <h1 className="t-h1 text-white mb-5 max-w-4xl">
+            <h1 className="t-h1 text-white mb-5 max-w-4xl font-bold text-8xl">
               Теплоизоляция для инженерных систем и оборудования
             </h1>
 
