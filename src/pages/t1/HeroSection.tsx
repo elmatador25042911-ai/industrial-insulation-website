@@ -37,7 +37,7 @@ export const HeroSection = () => {
                 src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/fc83d999-cc8d-4bd8-8750-9f3963771f41.jpg"
                 alt="Т1 Изоляция"
                 className="object-contain drop-shadow-2xl"
-                style={{ height: "clamp(120px, 18vw, 180px)", width: "auto" }}
+                style={{ height: "clamp(120px, 18vw, 180px)", width: "auto", mixBlendMode: "screen" }}
               />
             </div>
 
