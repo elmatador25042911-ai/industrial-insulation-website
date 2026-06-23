@@ -28,30 +28,33 @@ export const IndustriesSection = () => {
         </div>
 
         {/* Сетка отраслей */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-px bg-white/[0.04] rounded-2xl overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6">
           {INDUSTRIES.map((ind, i) => (
             <div
               key={ind.title}
-              className={`group relative flex flex-col items-center text-center p-6 sm:p-8 overflow-hidden cursor-default bg-gray-950
+              className={`group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-gray-900/40 cursor-default transition-all duration-400 ease-out hover:-translate-y-1.5 hover:border-orange-500/40 hover:shadow-2xl hover:shadow-orange-500/10
                 ${indVis.visible ? `animate-fadeInUp delay-${(i + 1) * 100}` : "opacity-0"}`}
-              style={{ transition: "transform 0.35s ease, box-shadow 0.35s ease" }}
-              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.02)"; (e.currentTarget as HTMLDivElement).style.zIndex = "10"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; (e.currentTarget as HTMLDivElement).style.zIndex = ""; }}
             >
-              {/* Фото — появляется при hover */}
-              <img
-                src={ind.img}
-                alt=""
-                aria-hidden
-                className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 scale-[1.06] group-hover:scale-100 transition-[opacity,transform] duration-[380ms] ease-out"
-              />
-              {/* Overlay для читаемости текста */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-950/75 via-gray-950/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[380ms]" />
-              {/* Контент */}
-              <div className="relative z-10 flex flex-col items-center">
-                <Icon name={ind.icon} size={26} className="text-gray-500 group-hover:text-orange-400 transition-colors duration-300 mb-3" />
-                <h3 className="text-gray-300 group-hover:text-white font-semibold text-[13px] transition-colors leading-snug mb-1">{ind.title}</h3>
-                <p className="text-gray-600 group-hover:text-orange-100/80 text-[11px] transition-colors leading-snug">{ind.desc}</p>
+              {/* Верх — фото (постоянно видимое) */}
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src={ind.img}
+                  alt={ind.title}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/85 via-gray-950/15 to-transparent" />
+                {/* Иконка-бейдж */}
+                <div className="absolute top-3 left-3 w-11 h-11 rounded-xl border border-white/15 bg-gray-950/55 backdrop-blur-sm flex items-center justify-center group-hover:border-orange-500/50 group-hover:bg-orange-500 transition-all duration-300">
+                  <Icon name={ind.icon} size={20} className="text-orange-400 group-hover:text-white transition-colors duration-300" />
+                </div>
+              </div>
+
+              {/* Низ — текст */}
+              <div className="relative flex flex-col flex-1 p-5">
+                <div className="absolute top-0 left-5 right-5 h-px bg-gradient-to-r from-orange-500/40 via-orange-500/10 to-transparent" />
+                <h3 className="text-white font-bold text-[17px] leading-snug mb-1.5" style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "-0.01em" }}>{ind.title}</h3>
+                <p className="text-gray-400 group-hover:text-gray-300 text-[13px] leading-relaxed transition-colors duration-300">{ind.desc}</p>
               </div>
             </div>
           ))}
