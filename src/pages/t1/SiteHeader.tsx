@@ -5,7 +5,7 @@ import { LOGO_SYMBOL, NAV_LINKS, GRAD } from "./data";
 const Logo = ({ className = "" }: { className?: string }) => (
   <div className={`flex items-center ${className}`}>
     <img
-      src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/e1571518-2651-4e86-8bc8-d46bcc148b11.jpeg"
+      src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/7410d2ac-e9fe-4b82-a007-4b319ca3b084.jpg"
       alt="Т1 Изоляция"
       className="object-contain flex-shrink-0 h-10 lg:h-12 w-auto"
     />
