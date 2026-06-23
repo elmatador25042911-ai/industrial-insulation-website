@@ -10,6 +10,7 @@ import MarkingSection from "./rulonnaya-izolyaciya-pgs/MarkingSection";
 import RollTypesSection from "./rulonnaya-izolyaciya-pgs/RollTypesSection";
 import TechnicalSpecsSection from "./rulonnaya-izolyaciya-pgs/TechnicalSpecsSection";
 import RequestSection from "./rulonnaya-izolyaciya-pgs/RequestSection";
+import HighDensitySection from "./shared/HighDensitySection";
 
 const BADGES = [
   { icon: "Flame", text: "Г1 / В1" },
@@ -171,6 +172,7 @@ const RulonnayaIzolyaciyaPgs = () => {
         <DescriptionSection />
         <CoatingsSection />
         <SpecsSection />
+        <HighDensitySection />
         <ApplicationsSection />
         <SizesSection />
         <MarkingSection />
