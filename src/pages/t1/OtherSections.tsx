@@ -55,9 +55,9 @@ export const IndustriesSection = () => {
               </div>
 
               {/* Низ — текст */}
-              <div className="relative flex flex-col flex-1 px-4 pt-4 pb-5 -mt-px">
-                <div className="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-orange-500/50 via-orange-500/15 to-transparent" />
-                <h3 className="text-white font-bold text-[15px] sm:text-[16px] leading-snug mb-1.5" style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "-0.01em" }}>{ind.title}</h3>
+              <div className="relative flex flex-col flex-1 items-center text-center px-5 pt-5 pb-6 -mt-px">
+                <div className="absolute top-0 left-5 right-5 h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent" />
+                <h3 className="text-white font-extrabold text-[17px] sm:text-[19px] leading-snug mb-2" style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "-0.01em" }}>{ind.title}</h3>
                 <p className="text-gray-400 group-hover:text-gray-300 text-[12px] sm:text-[12.5px] leading-relaxed transition-colors duration-300">{ind.desc}</p>
               </div>
             </div>
