@@ -123,22 +123,20 @@ export const HighDensitySection = () => {
             Основные характеристики
           </span>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
           {SPECS.map((s) => (
             <div
               key={s.label}
-              className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-6 transition-all duration-300 hover:border-orange-500/50 hover:-translate-y-1"
+              className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-5 flex flex-col items-center text-center transition-all duration-300 hover:border-orange-500/50 hover:-translate-y-1"
             >
               <div className="absolute top-0 left-0 h-[2px] w-10 bg-orange-500 transition-all duration-300 group-hover:w-full group-hover:opacity-60" />
-              <div className="flex items-start gap-3 mb-5">
-                <div className="flex-shrink-0 w-10 h-10 rounded-sm border border-orange-500/30 bg-orange-500/5 flex items-center justify-center">
-                  <Icon name={s.icon} size={18} className="text-orange-400" />
-                </div>
-                <span className="text-[11px] sm:text-[12px] tracking-[0.14em] text-gray-500 uppercase leading-snug pt-1">
-                  {s.label}
-                </span>
+              <div className="flex-shrink-0 w-11 h-11 rounded-sm border border-orange-500/30 bg-orange-500/5 flex items-center justify-center mb-4">
+                <Icon name={s.icon} size={20} className="text-orange-400" />
               </div>
-              <div className="text-white text-lg sm:text-xl font-semibold tracking-wide">
+              <span className="text-[10px] sm:text-[11px] tracking-[0.14em] text-gray-500 uppercase leading-snug mb-2">
+                {s.label}
+              </span>
+              <div className="mt-auto text-white text-base sm:text-lg font-semibold tracking-wide leading-tight">
                 {s.value}
               </div>
             </div>
