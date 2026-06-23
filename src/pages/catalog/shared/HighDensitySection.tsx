@@ -6,12 +6,14 @@ const VARIANTS: {
   subtitle: string;
   features: string[];
   icon: string;
+  img: string;
 }[] = [
   {
     code: "HD",
     name: "Исполнение HD",
     subtitle: "Высокоплотный рулон без дополнительного покрытия.",
     icon: "Layers",
+    img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/492921b8-2fba-4914-930a-6db46a76bdbb.png",
     features: [
       "Без покрытия — раскрой по месту монтажа",
       "Повышенная плотность 70–150 кг/м³",
@@ -24,6 +26,7 @@ const VARIANTS: {
     name: "Исполнение HD CM",
     subtitle: "Высокоплотный рулон с самоклеящимся слоем для ускоренного монтажа.",
     icon: "Sticker",
+    img: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/f38a9dd0-fa82-4af5-aa28-f010d5d1e9f5.png",
     features: [
       "Самоклеящийся слой на внутренней стороне",
       "Ускоренный монтаж без дополнительного клея",
@@ -82,36 +85,72 @@ export const HighDensitySection = () => {
           {VARIANTS.map((v) => (
             <div
               key={v.code}
-              className="relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] p-7 sm:p-9 transition-all duration-300 hover:border-orange-500/50"
+              className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] transition-all duration-300 hover:border-orange-500/50"
             >
-              <div className="absolute top-0 left-0 h-[2px] w-20 bg-orange-500" />
-              <div className="flex items-center gap-4 mb-5">
-                <div className="flex-shrink-0 w-12 h-12 rounded-sm border border-orange-500/30 bg-orange-500/5 flex items-center justify-center">
-                  <Icon name={v.icon} size={22} className="text-orange-400" />
-                </div>
-                <div>
-                  <span className="text-[11px] tracking-[0.22em] text-orange-500/80 font-semibold">
+              <div className="absolute top-0 left-0 z-20 h-[2px] w-20 bg-orange-500" />
+
+              {/* Фото рулона */}
+              <div
+                className="relative aspect-[16/10] overflow-hidden"
+                style={{
+                  background:
+                    "radial-gradient(120% 90% at 30% 0%, rgba(255,138,0,0.10) 0%, rgba(20,20,22,0.85) 50%, rgba(10,10,12,0.95) 100%)",
+                }}
+              >
+                <div
+                  className="absolute inset-0 opacity-[0.05] pointer-events-none"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
+                    backgroundSize: "36px 36px",
+                  }}
+                />
+                <img
+                  src={v.img}
+                  alt={v.name}
+                  className="absolute inset-0 w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                />
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      "radial-gradient(ellipse at center, transparent 55%, rgba(10,10,12,0.45) 92%, rgba(10,10,12,0.85) 100%)",
+                  }}
+                />
+                <div className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-orange-500" />
+                <div className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-orange-500" />
+                <div className="absolute left-4 right-4 bottom-0 h-px bg-gradient-to-r from-transparent via-orange-500/60 to-transparent" />
+
+                {/* Бейдж с кодом исполнения */}
+                <div className="absolute top-5 left-5 flex items-center gap-2 px-3 py-1.5 rounded-sm border border-orange-500/40 bg-[#0a0a0a]/70 backdrop-blur-sm">
+                  <Icon name={v.icon} size={14} className="text-orange-400" />
+                  <span className="text-[11px] tracking-[0.22em] text-orange-300 font-semibold">
                     {v.code}
                   </span>
-                  <h3 className="text-white text-xl sm:text-2xl font-bold tracking-wide leading-[1.2]">
-                    {v.name}
-                  </h3>
                 </div>
               </div>
-              <p className="text-gray-400 text-[14px] sm:text-[15px] leading-[1.75] mb-7">
-                {v.subtitle}
-              </p>
-              <div className="h-px w-full bg-white/5 mb-7" />
-              <ul className="space-y-3.5">
-                {v.features.map((f) => (
-                  <li key={f} className="flex items-start gap-3">
-                    <span className="mt-[9px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-orange-500" />
-                    <span className="text-gray-200 text-[14px] sm:text-[14.5px] leading-[1.7]">
-                      {f}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+
+              {/* Контент */}
+              <div className="p-7 sm:p-9">
+                <h3 className="text-white text-xl sm:text-2xl font-bold tracking-wide leading-[1.2] mb-3">
+                  {v.name}
+                </h3>
+                <p className="text-gray-400 text-[14px] sm:text-[15px] leading-[1.75] mb-7">
+                  {v.subtitle}
+                </p>
+                <div className="h-px w-full bg-white/5 mb-7" />
+                <ul className="space-y-3.5">
+                  {v.features.map((f) => (
+                    <li key={f} className="flex items-start gap-3">
+                      <span className="mt-[9px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-orange-500" />
+                      <span className="text-gray-200 text-[14px] sm:text-[14.5px] leading-[1.7]">
+                        {f}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
