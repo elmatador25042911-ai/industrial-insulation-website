@@ -27,34 +27,38 @@ export const IndustriesSection = () => {
           <p className="t-body max-w-sm mx-auto mt-4 !text-white">Опыт поставок на объекты — от районной котельной до нефтеперерабатывающих заводов  и судостроительных верфей</p>
         </div>
 
-        {/* Сетка отраслей */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6">
+        {/* Сетка отраслей — 4 + 3, вертикальные плитки */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-12 gap-4 sm:gap-5">
           {INDUSTRIES.map((ind, i) => (
             <div
               key={ind.title}
-              className={`group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-gray-900/40 cursor-default transition-all duration-400 ease-out hover:-translate-y-1.5 hover:border-orange-500/40 hover:shadow-2xl hover:shadow-orange-500/10
+              className={`group relative flex flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-b from-gray-900/60 to-gray-950 cursor-default transition-all duration-500 ease-out hover:-translate-y-2 hover:border-orange-500/40 hover:shadow-[0_24px_60px_-12px_rgba(249,115,22,0.25)]
+                ${i < 4 ? "lg:col-span-3" : "lg:col-span-4"}
                 ${indVis.visible ? `animate-fadeInUp delay-${(i + 1) * 100}` : "opacity-0"}`}
             >
-              {/* Верх — фото (постоянно видимое) */}
-              <div className="relative aspect-[16/10] overflow-hidden">
+              {/* Верх — фото (вертикальное, постоянно видимое) */}
+              <div className="relative aspect-[4/5] sm:aspect-[3/4] overflow-hidden">
                 <img
                   src={ind.img}
                   alt={ind.title}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.07]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/85 via-gray-950/15 to-transparent" />
+                {/* Деликатное затемнение снизу для перехода к тексту */}
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/20 to-transparent" />
+                {/* Тонкое осветление сверху при hover */}
+                <div className="absolute inset-0 bg-gradient-to-b from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/10 transition-all duration-500" />
                 {/* Иконка-бейдж */}
-                <div className="absolute top-3 left-3 w-11 h-11 rounded-xl border border-white/15 bg-gray-950/55 backdrop-blur-sm flex items-center justify-center group-hover:border-orange-500/50 group-hover:bg-orange-500 transition-all duration-300">
-                  <Icon name={ind.icon} size={20} className="text-orange-400 group-hover:text-white transition-colors duration-300" />
+                <div className="absolute top-3 left-3 w-10 h-10 rounded-xl border border-white/15 bg-gray-950/50 backdrop-blur-md flex items-center justify-center group-hover:border-orange-500/60 group-hover:bg-orange-500 transition-all duration-300">
+                  <Icon name={ind.icon} size={18} className="text-orange-400 group-hover:text-white transition-colors duration-300" />
                 </div>
               </div>
 
               {/* Низ — текст */}
-              <div className="relative flex flex-col flex-1 p-5">
-                <div className="absolute top-0 left-5 right-5 h-px bg-gradient-to-r from-orange-500/40 via-orange-500/10 to-transparent" />
-                <h3 className="text-white font-bold text-[17px] leading-snug mb-1.5" style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "-0.01em" }}>{ind.title}</h3>
-                <p className="text-gray-400 group-hover:text-gray-300 text-[13px] leading-relaxed transition-colors duration-300">{ind.desc}</p>
+              <div className="relative flex flex-col flex-1 px-4 pt-4 pb-5 -mt-px">
+                <div className="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-orange-500/50 via-orange-500/15 to-transparent" />
+                <h3 className="text-white font-bold text-[15px] sm:text-[16px] leading-snug mb-1.5" style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "-0.01em" }}>{ind.title}</h3>
+                <p className="text-gray-400 group-hover:text-gray-300 text-[12px] sm:text-[12.5px] leading-relaxed transition-colors duration-300">{ind.desc}</p>
               </div>
             </div>
           ))}
