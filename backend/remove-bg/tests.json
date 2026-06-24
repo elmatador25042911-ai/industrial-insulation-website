@@ -1,0 +1,1 @@
+{"tests": [{"name": "Generate transparent logo", "method": "GET", "path": "/", "expectedStatus": 200, "expectedBody": {"url": "string"}, "bodyMatcher": "partial"}]}
