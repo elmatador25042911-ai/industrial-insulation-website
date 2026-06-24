@@ -22,7 +22,7 @@ def handler(event: dict, context) -> dict:
             'body': '',
         }
 
-    src_url = 'https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/5f5f6a5b-dcd6-4bd8-a7dd-1f04f6762f37.png'
+    src_url = 'https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/e20fbdc3-c042-430e-89cc-4750dfc6ce63.png'
     raw = urllib.request.urlopen(src_url).read()
     img = Image.open(io.BytesIO(raw)).convert('RGBA')
 
@@ -43,7 +43,7 @@ def handler(event: dict, context) -> dict:
     img.save(out, format='PNG')
     out.seek(0)
 
-    key = 'logos/hero-logo-transparent.png'
+    key = 'logos/hero-logo-v2.png'
     s3 = boto3.client(
         's3',
         endpoint_url='https://bucket.poehali.dev',
