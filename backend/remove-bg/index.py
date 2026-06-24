@@ -29,7 +29,10 @@ def handler(event: dict, context) -> dict:
     datas = img.getdata()
     new_data = []
     for r, g, b, a in datas:
-        if r > 240 and g > 240 and b > 240:
+        mx, mn = max(r, g, b), min(r, g, b)
+        is_grayish = (mx - mn) <= 18
+        is_light = mn >= 170
+        if is_grayish and is_light:
             new_data.append((r, g, b, 0))
         else:
             new_data.append((r, g, b, a))
@@ -43,7 +46,7 @@ def handler(event: dict, context) -> dict:
     img.save(out, format='PNG')
     out.seek(0)
 
-    key = 'logos/hero-logo-v2.png'
+    key = 'logos/hero-logo-v3.png'
     s3 = boto3.client(
         's3',
         endpoint_url='https://bucket.poehali.dev',
