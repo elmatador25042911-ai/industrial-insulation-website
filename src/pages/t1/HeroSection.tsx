@@ -31,16 +31,6 @@ export const HeroSection = () => {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 text-white">
           <div className={`flex flex-col items-center text-center transition-all duration-1000 ${heroVis.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
 
-            {/* Логотип */}
-            <div className="mb-8 sm:mb-10">
-              <img
-                src="https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/logos/hero-logo-v3.png"
-                alt="Т1 Изоляция"
-                className="object-contain drop-shadow-2xl"
-                style={{ height: "clamp(120px, 18vw, 180px)", width: "auto" }}
-              />
-            </div>
-
             {/* H1 */}
             <h1 className="t-h1 text-white mb-5 max-w-4xl font-bold break-words hyphens-auto">
               Теплоизоляция для инженерных систем и оборудования
