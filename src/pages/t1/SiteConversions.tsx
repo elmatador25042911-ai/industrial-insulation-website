@@ -292,9 +292,7 @@ export const SiteFooter = () => {
               Промышленная теплоизоляция. Поставка и монтаж изоляции трубопроводов, оборудования и судов. По всей России.
             </p>
             <a href="mailto:t1izol@mail.ru"
-              className="text-gray-400 hover:text-orange-400 transition-colors text-[13px] font-medium">
-              t1izol@mail.ru
-            </a>
+              className="text-gray-400 hover:text-orange-400 transition-colors text-[13px] font-medium"></a>
           </div>
 
           {/* Nav */}
