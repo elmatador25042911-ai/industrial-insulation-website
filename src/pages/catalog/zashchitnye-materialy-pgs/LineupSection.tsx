@@ -49,7 +49,7 @@ const MATERIALS: Material[] = [
     subtitle: "Металлические оболочки",
     icon: "Box",
     text: "Готовые металлические кожухи для защиты теплоизоляции трубопроводов на прямых участках. Доступные исполнения: алюминий, оцинкованная сталь, нержавеющая сталь.",
-    image: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/839330f9-ec36-40e9-b330-1b3745f71329.jpg",
+    image: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/528ee9ca-94be-4114-b7b4-0c9091a7025b.png",
   },
 ];
 
