@@ -5,6 +5,7 @@ type Material = {
   subtitle: string;
   icon: string;
   text: string;
+  image: string;
 };
 
 const MATERIALS: Material[] = [
@@ -13,57 +14,75 @@ const MATERIALS: Material[] = [
     subtitle: "Алюминиевое защитное покрытие",
     icon: "Shield",
     text: "Для защиты поверхностей теплоизоляционных и шумоизоляционных конструкций от механических повреждений, УФ-излучения и атмосферных воздействий. Температурный режим: от −60 до +120 °C.",
+    image: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/f9ca39b0-d8e8-473c-8b60-750b67982c1a.jpg",
   },
   {
     code: "АЛФ",
     subtitle: "Покрытие из алюминиевой фольги",
     icon: "Layers",
     text: "Фольгированный покровный материал для защиты изоляции на трубопроводах, воздуховодах, инженерных системах и технологических поверхностях. Температурный режим: от −60 до +120 °C.",
+    image: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/e7251db5-49c6-473b-acfd-564157746691.jpg",
   },
   {
     code: "МБР",
     subtitle: "Мембранное покрытие",
     icon: "Grid2x2",
     text: "Многослойный материал с мембраной и армированием стеклосеткой для защиты тепло- и шумоизоляции от атмосферных осадков, УФ-излучения и механических повреждений. Температурный режим: от −60 до +120 °C.",
+    image: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/cae85a3e-09de-476e-b5cb-eb6a41afd061.jpg",
   },
   {
     code: "ПВХ",
     subtitle: "Поливинилхлоридное покрытие",
     icon: "ShieldCheck",
     text: "Однослойное или многослойное ПВХ-покрытие для защиты изоляции от ультрафиолета, атмосферных осадков и механических повреждений. Температурный режим: от −30 до +60 °C.",
+    image: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/e00ad1de-e75f-4398-9e5b-f0fa377ff911.jpg",
   },
   {
     code: "СТХ",
     subtitle: "Покрытие на основе стеклохолста",
     icon: "Scroll",
     text: "Покровный материал на основе стеклохолста для защиты тепло- и шумоизоляционных конструкций от внешних эксплуатационных воздействий. Температурный режим: от −60 до +120 °C.",
+    image: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/bucket/2bd5fd05-5013-4b7b-a47f-eb476eb84e02.jpg",
   },
   {
     code: "Окожушки",
     subtitle: "Металлические оболочки",
     icon: "Box",
     text: "Готовые металлические кожухи для защиты теплоизоляции трубопроводов на прямых участках. Доступные исполнения: алюминий, оцинкованная сталь, нержавеющая сталь.",
+    image: "https://cdn.poehali.dev/projects/666206ac-09b6-496e-92d3-ecbea5df546a/files/839330f9-ec36-40e9-b330-1b3745f71329.jpg",
   },
 ];
 
 const MaterialCard = ({ m, index }: { m: Material; index: number }) => (
   <article
-    className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] transition-colors duration-300 hover:border-orange-500/40 p-6 sm:p-7 flex flex-col"
+    className="group relative overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-[#141416] to-[#0c0c0e] transition-colors duration-300 hover:border-orange-500/40 flex flex-col"
     style={{ boxShadow: "0 24px 60px -25px rgba(0,0,0,0.8)" }}
   >
-    {/* Угловые акценты */}
-    <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-orange-500" />
-    <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-orange-500" />
+    {/* Фото материала */}
+    <div className="relative overflow-hidden h-52 sm:h-56 flex-shrink-0">
+      <img
+        src={m.image}
+        alt={m.subtitle}
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e] via-transparent to-transparent" />
 
-    {/* Индекс */}
-    <div
-      className="absolute top-4 right-4 text-[11px] tracking-[0.2em] text-gray-500"
-      style={{ fontFamily: "'JetBrains Mono', monospace" }}
-    >
-      {String(index + 1).padStart(2, "0")}
+      {/* Индекс */}
+      <div
+        className="absolute top-4 right-4 text-[11px] tracking-[0.2em] text-gray-300 bg-black/40 px-2 py-1 rounded-sm backdrop-blur-sm"
+        style={{ fontFamily: "'JetBrains Mono', monospace" }}
+      >
+        {String(index + 1).padStart(2, "0")}
+      </div>
     </div>
 
-    <div className="flex items-center gap-3 mb-1.5 mt-2 pr-10">
+    {/* Угловые акценты */}
+    <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-orange-500 z-10" />
+    <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-orange-500 z-10" />
+
+    <div className="p-6 sm:p-7 flex flex-col flex-1">
+    <div className="flex items-center gap-3 mb-1.5">
       <span className="w-10 h-10 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
         <Icon name={m.icon} size={18} className="text-orange-400" />
       </span>
@@ -85,6 +104,7 @@ const MaterialCard = ({ m, index }: { m: Material; index: number }) => (
     </p>
 
     <p className="text-gray-400 text-[14px] leading-[1.7]">{m.text}</p>
+    </div>
 
     {/* Тонкая оранжевая линия снизу */}
     <div className="absolute left-6 right-6 bottom-0 h-px bg-gradient-to-r from-transparent via-orange-500/40 to-transparent" />
