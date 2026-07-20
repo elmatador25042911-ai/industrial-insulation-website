@@ -110,7 +110,7 @@ const PolitikaKonfidencialnosti = () => {
         {/* Документы */}
         <section className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 space-y-16">
           {/* Политика конфиденциальности */}
-          <article id="policy" className="scroll-mt-28">
+          <article id="policy" className="scroll-mt-32">
             <div className="flex items-start gap-4 mb-6 pb-6 border-b border-white/[0.08]">
               <span className="w-11 h-11 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
                 <Icon name="ShieldCheck" size={20} className="text-orange-400" />
@@ -249,9 +249,13 @@ const PolitikaKonfidencialnosti = () => {
 
               <H3>9. Использование файлов cookie</H3>
               <P>
-                9.1. Сайт может использовать файлы cookie и аналогичные технологии для обеспечения корректной работы
-                Сайта, улучшения пользовательского опыта и анализа посещаемости. Пользователь может ограничить или
-                отключить использование cookie в настройках своего браузера.
+                9.1. Сайт использует файлы cookie и аналогичные технологии для обеспечения корректной работы Сайта,
+                сохранения пользовательских настроек, улучшения пользовательского опыта и сбора статистики посещаемости.
+              </P>
+              <P>
+                9.2. Продолжая использовать Сайт, пользователь соглашается на использование файлов cookie. Пользователь
+                может в любой момент ограничить или отключить использование cookie в настройках своего браузера. При
+                отключении cookie некоторые функции Сайта могут работать некорректно.
               </P>
 
               <H3>10. Изменение Политики</H3>
@@ -292,7 +296,7 @@ const PolitikaKonfidencialnosti = () => {
           </article>
 
           {/* Согласие на обработку персональных данных */}
-          <article id="agreement" className="scroll-mt-28">
+          <article id="agreement" className="scroll-mt-32">
             <div className="flex items-start gap-4 mb-6 pb-6 border-b border-white/[0.08]">
               <span className="w-11 h-11 rounded-sm border border-orange-500/40 bg-orange-500/[0.08] flex items-center justify-center flex-shrink-0">
                 <Icon name="FileCheck" size={20} className="text-orange-400" />
