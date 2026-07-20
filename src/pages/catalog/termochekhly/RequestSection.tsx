@@ -222,7 +222,7 @@ export const RequestSection = () => {
                   <p className="text-gray-500 text-[12px] text-center">
                     Нажимая кнопку, вы соглашаетесь с{" "}
                     <a
-                      href="#privacy"
+                      href="/politika-konfidencialnosti#policy"
                       className="underline hover:text-orange-400 transition-colors"
                     >
                       политикой конфиденциальности

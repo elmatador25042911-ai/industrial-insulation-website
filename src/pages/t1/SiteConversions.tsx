@@ -143,7 +143,7 @@ export const CtaSection = () => {
                 </button>
                 <p className="text-gray-400 text-[12px] text-center">
                   Нажимая кнопку, вы соглашаетесь с{" "}
-                  <a href="#privacy" className="underline hover:text-orange-500 transition-colors">политикой конфиденциальности</a>
+                  <RouterLink to="/politika-konfidencialnosti#policy" className="underline hover:text-orange-500 transition-colors">политикой конфиденциальности</RouterLink>
                 </p>
               </form>
             )}
@@ -257,7 +257,7 @@ export const ContactsSection = () => {
                 </button>
                 <p className="text-gray-600 text-[12px] text-center">
                   Нажимая кнопку, вы соглашаетесь с{" "}
-                  <a href="#privacy" className="underline hover:text-orange-400 transition-colors">политикой конфиденциальности</a>
+                  <RouterLink to="/politika-konfidencialnosti#policy" className="underline hover:text-orange-400 transition-colors">политикой конфиденциальности</RouterLink>
                 </p>
               </form>
             )}
@@ -339,8 +339,8 @@ export const SiteFooter = () => {
               © {new Date().getFullYear()} Т1 ИЗОЛЯЦИЯ. Все права защищены.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-              <a href={toHash("#privacy")} className="text-gray-700 hover:text-gray-400 text-[12px] transition-colors">Политика конфиденциальности</a>
-              <a href={toHash("#privacy")} className="text-gray-700 hover:text-gray-400 text-[12px] transition-colors">Обработка персональных данных</a>
+              <RouterLink to="/politika-konfidencialnosti#policy" className="text-gray-700 hover:text-gray-400 text-[12px] transition-colors">Политика конфиденциальности</RouterLink>
+              <RouterLink to="/politika-konfidencialnosti#agreement" className="text-gray-700 hover:text-gray-400 text-[12px] transition-colors">Обработка персональных данных</RouterLink>
             </div>
           </div>
           <p className="text-gray-700 text-[11px] text-center sm:text-left leading-relaxed">
