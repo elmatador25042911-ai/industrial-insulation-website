@@ -52,7 +52,7 @@ const ZashchitnyeMaterialyPgs = () => {
                 <h1 className="cat-h1 text-white">
                   Защитные материалы ЗМ.ПАНЦИРЬ
                   <br />
-                  <span className="text-orange-500">для промышленности и ПГС</span>
+                  <span className="text-orange-500">для промышленного и гражданского строительства</span>
                 </h1>
 
                 <p className="text-gray-200 text-lg sm:text-xl leading-relaxed max-w-2xl mt-7 mb-5">
