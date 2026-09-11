@@ -30,6 +30,7 @@ import MontazhnyeMaterialyDoc from "./pages/documentation/MontazhnyeMaterialyDoc
 import ShumoizolyatsiyaDoc from "./pages/documentation/ShumoizolyatsiyaDoc";
 import OporyIPodvesyDoc from "./pages/documentation/OporyIPodvesyDoc";
 import PolitikaKonfidencialnosti from "./pages/PolitikaKonfidencialnosti";
+import PolitikaPersonalnyhDannyh from "./pages/PolitikaPersonalnyhDannyh";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -68,6 +69,7 @@ const App = () => (
           <Route path="/documentation/shumoizolyatsiya" element={<ShumoizolyatsiyaDoc />} />
           <Route path="/documentation/opory-i-podvesy" element={<OporyIPodvesyDoc />} />
           <Route path="/politika-konfidencialnosti" element={<PolitikaKonfidencialnosti />} />
+          <Route path="/politika-personalnyh-dannyh" element={<PolitikaPersonalnyhDannyh />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
